@@ -36,10 +36,8 @@ theme-cli init
 ```
 
 #### 2.2 白屏问题解决
-由于生成页面会出现白屏无反应的问题，以下有两种方式：
-#### PLAN A
-在config中设置locales配置项后之后，bug就会消失。在主题配置里添加以下内容即可。
-
+由于生成页面会出现白屏无反应的问题，需要在config中设置locales配置项。在主题配置里添加以下内容即可。
+![添加位置](doc/pic/planA.png)
 ```TypeScript
 locales: {
       // 键名是该语言所属的子路径
@@ -51,7 +49,12 @@ locales: {
       },
     },
 ```
-#### PLAN B
-在报错的文件中对local是否为undefine进行判空，bug就会消失。如下所示：
-
-
+#### 2.3 运行
+- **本地运行**
+```shell
+npm run dev
+```
+- **本地编译**
+```shell
+npm run build
+```
