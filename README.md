@@ -1,4 +1,4 @@
-# hgocn2.github.io 仓库分支说明
+# 仓库分支说明
 
 ## gh-page分支
 vuepress-reco2生成的可部署的html代码，用于提供给blog page。
@@ -6,6 +6,10 @@ vuepress-reco2生成的可部署的html代码，用于提供给blog page。
 ## master分支
 vuepress-reco2的工程文件，包括文档目录`doc`和其他文章目录`blog`。如果在新环境中，请按照以下具体步骤进行部署。
 > [vuepress-reco2主页](https://vuepress-theme-reco.recoluan.com/)
+
+---
+
+# 新环境配置指南
 
 ### 1. 安装node.js
 ```shell
@@ -34,6 +38,6 @@ theme-cli init
 #### 2.2 白屏问题解决
 由于生成页面会出现白屏无反应的问题，以下有两种方式：
 #### PLAN 1
-
+在config中设置locales配置项后之后，bug就会消失。
 
    
