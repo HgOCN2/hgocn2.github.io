@@ -60,4 +60,4 @@ npm run build
 ```
 参考
 > - [vuepress-reco2主页](https://vuepress-theme-reco.recoluan.com/)
-> - [白屏问题解决方案](https://vuepress-theme-reco.recoluan.com/](https://github.com/vuepress-reco/vuepress-theme-reco/issues/257)https://github.com/vuepress-reco/vuepress-theme-reco/issues/257)
+> - [白屏问题解决方案](https://github.com/vuepress-reco/vuepress-theme-reco/issues/257)
