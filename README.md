@@ -37,7 +37,21 @@ theme-cli init
 
 #### 2.2 白屏问题解决
 由于生成页面会出现白屏无反应的问题，以下有两种方式：
-#### PLAN 1
-在config中设置locales配置项后之后，bug就会消失。
+#### PLAN A
+在config中设置locales配置项后之后，bug就会消失。在主题配置里添加以下内容即可。
 
-   
+```TypeScript
+locales: {
+      // 键名是该语言所属的子路径
+      // 作为特例，默认语言可以使用 '/' 作为其路径。
+      '/': {
+        lang: 'zh-CN',
+        title: 'VuePress',
+        description: 'Vue 驱动的静态网站生成器',
+      },
+    },
+```
+#### PLAN B
+在报错的文件中对local是否为undefine进行判空，bug就会消失。如下所示：
+
+
