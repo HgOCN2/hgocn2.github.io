@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-11e6ad3e\",\"path\":\"/docs/machine-learning/autopilot/control/llm-based-control/PaLM-E/PaLM-E.html\",\"title\":\"PaLM-E: An Embodied Multimodal Language Model\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/autopilot/control/llm-based-control/PaLM-E/PaLM-E.md\"}")

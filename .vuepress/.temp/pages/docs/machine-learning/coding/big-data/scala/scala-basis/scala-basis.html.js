@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-31ed5c46\",\"path\":\"/docs/machine-learning/coding/big-data/scala/scala-basis/scala-basis.html\",\"title\":\"Scala基础\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/coding/big-data/scala/scala-basis/scala-basis.md\"}")

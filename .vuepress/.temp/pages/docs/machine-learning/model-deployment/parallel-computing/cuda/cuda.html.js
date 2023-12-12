@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-6edc92f5\",\"path\":\"/docs/machine-learning/model-deployment/parallel-computing/cuda/cuda.html\",\"title\":\"CUDA\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/model-deployment/parallel-computing/cuda/cuda.md\"}")

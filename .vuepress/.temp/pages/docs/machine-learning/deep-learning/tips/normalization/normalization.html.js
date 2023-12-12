@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-3d882fa5\",\"path\":\"/docs/machine-learning/deep-learning/tips/normalization/normalization.html\",\"title\":\"深度学习中的正则化\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/deep-learning/tips/normalization/normalization.md\"}")

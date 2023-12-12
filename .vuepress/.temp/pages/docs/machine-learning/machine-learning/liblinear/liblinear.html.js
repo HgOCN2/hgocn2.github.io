@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-49e7358f\",\"path\":\"/docs/machine-learning/machine-learning/liblinear/liblinear.html\",\"title\":\"LIBLINEAR\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/machine-learning/liblinear/liblinear.md\"}")

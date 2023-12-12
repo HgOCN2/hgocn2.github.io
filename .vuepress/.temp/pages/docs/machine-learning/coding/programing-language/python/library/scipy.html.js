@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-1bf4447e\",\"path\":\"/docs/machine-learning/coding/programing-language/python/library/scipy.html\",\"title\":\"scipy\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/coding/programing-language/python/library/scipy.md\"}")

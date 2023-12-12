@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-0616055c\",\"path\":\"/docs/machine-learning/machine-learning-framework/tensorflow/tools/get-weight/get-weight.html\",\"title\":\"得到模型参数值\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/machine-learning-framework/tensorflow/tools/get-weight/get-weight.md\"}")

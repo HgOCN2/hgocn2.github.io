@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-3d295725\",\"path\":\"/docs/machine-learning/natural-language-processing/word2vec/word2vec.html\",\"title\":\"word2vec\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/natural-language-processing/word2vec/word2vec.md\"}")

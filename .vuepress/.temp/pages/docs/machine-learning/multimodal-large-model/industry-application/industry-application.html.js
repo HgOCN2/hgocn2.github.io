@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-6099240b\",\"path\":\"/docs/machine-learning/multimodal-large-model/industry-application/industry-application.html\",\"title\":\"业界应用\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/multimodal-large-model/industry-application/industry-application.md\"}")

@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-1d51374a\",\"path\":\"/docs/machine-learning/machine-learning/support-vector-machine/svm-summary/svm-summary.html\",\"title\":\"SVM总结\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/machine-learning/support-vector-machine/svm-summary/svm-summary.md\"}")

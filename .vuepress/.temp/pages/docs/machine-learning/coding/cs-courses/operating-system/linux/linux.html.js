@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-35573855\",\"path\":\"/docs/machine-learning/coding/cs-courses/operating-system/linux/linux.html\",\"title\":\"Linux\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/coding/cs-courses/operating-system/linux/linux.md\"}")

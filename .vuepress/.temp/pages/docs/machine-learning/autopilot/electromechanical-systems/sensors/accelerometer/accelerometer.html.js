@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-3c13c3f3\",\"path\":\"/docs/machine-learning/autopilot/electromechanical-systems/sensors/accelerometer/accelerometer.html\",\"title\":\"加速度计\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/autopilot/electromechanical-systems/sensors/accelerometer/accelerometer.md\"}")

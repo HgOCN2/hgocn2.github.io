@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-2b770030\",\"path\":\"/docs/machine-learning/coding/programing-language/python/grammar/process-control/process-control.html\",\"title\":\"过程控制\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/coding/programing-language/python/grammar/process-control/process-control.md\"}")

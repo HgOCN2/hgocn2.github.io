@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-1a89dd5a\",\"path\":\"/docs/machine-learning/mathematics/linear-algebra/linear-algebra.html\",\"title\":\"线性代数\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/mathematics/linear-algebra/linear-algebra.md\"}")

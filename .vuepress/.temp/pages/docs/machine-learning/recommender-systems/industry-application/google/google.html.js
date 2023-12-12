@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-76e2ac4e\",\"path\":\"/docs/machine-learning/recommender-systems/industry-application/google/google.html\",\"title\":\"Google\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/recommender-systems/industry-application/google/google.md\"}")

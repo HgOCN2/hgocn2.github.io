@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-a3622436\",\"path\":\"/docs/machine-learning/mathematics/gradient-update-algorithm/offline-learning/nadam/nadam.html\",\"title\":\"Nadam\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/mathematics/gradient-update-algorithm/offline-learning/nadam/nadam.md\"}")

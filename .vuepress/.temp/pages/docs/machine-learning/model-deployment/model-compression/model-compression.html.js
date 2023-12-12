@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-59d7047a\",\"path\":\"/docs/machine-learning/model-deployment/model-compression/model-compression.html\",\"title\":\"模型压缩\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/model-deployment/model-compression/model-compression.md\"}")

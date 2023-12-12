@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-6a1bc4d8\",\"path\":\"/docs/machine-learning/artificial-general-intelligence/autopilot/planning/planning.html\",\"title\":\"规划\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/artificial-general-intelligence/autopilot/planning/planning.md\"}")

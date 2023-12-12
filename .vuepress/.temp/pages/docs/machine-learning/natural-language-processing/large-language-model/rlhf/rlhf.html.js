@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-f932aa90\",\"path\":\"/docs/machine-learning/natural-language-processing/large-language-model/rlhf/rlhf.html\",\"title\":\"RLHF基于人工反馈的强化学习方法\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/natural-language-processing/large-language-model/rlhf/rlhf.md\"}")

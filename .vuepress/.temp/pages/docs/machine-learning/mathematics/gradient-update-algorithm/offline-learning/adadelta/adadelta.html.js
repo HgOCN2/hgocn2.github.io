@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-1ada0a21\",\"path\":\"/docs/machine-learning/mathematics/gradient-update-algorithm/offline-learning/adadelta/adadelta.html\",\"title\":\"Adadelta\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/mathematics/gradient-update-algorithm/offline-learning/adadelta/adadelta.md\"}")

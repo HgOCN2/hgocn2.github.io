@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-999658f6\",\"path\":\"/docs/machine-learning/machine-learning/support-vector-machine/support-vector-machine.html\",\"title\":\"支持向量机\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/machine-learning/support-vector-machine/support-vector-machine.md\"}")

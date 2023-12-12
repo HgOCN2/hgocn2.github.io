@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-342f7a61\",\"path\":\"/docs/machine-learning/mathematics/math-courses/variational-principle/variational-principle.html\",\"title\":\"变分原理\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/mathematics/math-courses/variational-principle/variational-principle.md\"}")

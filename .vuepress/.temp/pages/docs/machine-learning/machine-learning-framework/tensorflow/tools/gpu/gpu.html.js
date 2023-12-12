@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-15028a62\",\"path\":\"/docs/machine-learning/machine-learning-framework/tensorflow/tools/gpu/gpu.html\",\"title\":\"Tensorflow中使用GPU\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/machine-learning-framework/tensorflow/tools/gpu/gpu.md\"}")

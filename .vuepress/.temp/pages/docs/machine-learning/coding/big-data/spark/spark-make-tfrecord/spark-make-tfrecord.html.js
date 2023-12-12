@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-12cc06ce\",\"path\":\"/docs/machine-learning/coding/big-data/spark/spark-make-tfrecord/spark-make-tfrecord.html\",\"title\":\"利用spark生成tfrecord文件\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/coding/big-data/spark/spark-make-tfrecord/spark-make-tfrecord.md\"}")

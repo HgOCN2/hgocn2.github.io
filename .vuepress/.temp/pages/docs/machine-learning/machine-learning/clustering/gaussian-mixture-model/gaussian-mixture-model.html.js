@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-47477996\",\"path\":\"/docs/machine-learning/machine-learning/clustering/gaussian-mixture-model/gaussian-mixture-model.html\",\"title\":\"高斯混合模型\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/machine-learning/clustering/gaussian-mixture-model/gaussian-mixture-model.md\"}")

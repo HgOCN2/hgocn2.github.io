@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-216b2b68\",\"path\":\"/docs/machine-learning/mathematics/linear-algebra/matrix-derivative/matrix-derivative.html\",\"title\":\"矩阵求导\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/mathematics/linear-algebra/matrix-derivative/matrix-derivative.md\"}")

@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-40b0a4d4\",\"path\":\"/docs/machine-learning/mathematics/calculus/convolution/convolution.html\",\"title\":\"卷积\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/mathematics/calculus/convolution/convolution.md\"}")

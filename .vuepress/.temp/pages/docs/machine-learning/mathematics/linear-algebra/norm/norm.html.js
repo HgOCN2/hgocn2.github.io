@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-17231ad0\",\"path\":\"/docs/machine-learning/mathematics/linear-algebra/norm/norm.html\",\"title\":\"范数\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/mathematics/linear-algebra/norm/norm.md\"}")

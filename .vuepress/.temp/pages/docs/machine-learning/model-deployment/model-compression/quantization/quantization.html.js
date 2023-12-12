@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-0f9041e6\",\"path\":\"/docs/machine-learning/model-deployment/model-compression/quantization/quantization.html\",\"title\":\"量化quantization\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/model-deployment/model-compression/quantization/quantization.md\"}")

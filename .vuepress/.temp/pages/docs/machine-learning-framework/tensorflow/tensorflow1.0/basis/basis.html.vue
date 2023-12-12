@@ -1,0 +1,145 @@
+<template><div><h1 id="tensorflow基础" tabindex="-1"><a class="header-anchor" href="#tensorflow基础" aria-hidden="true">#</a> TensorFlow基础</h1>
+<ul>
+<li><RouterLink to="/docs/machine-learning-framework/tensorflow/tensorflow1.0/tensorflow1.0.html">返回上层目录</RouterLink></li>
+<li><a href="#%E5%9F%BA%E7%A1%80%E7%BB%83%E4%B9%A0">基础练习</a></li>
+<li><a href="#%E7%BB%BC%E5%90%88%E7%BB%83%E4%B9%A0">综合练习</a></li>
+</ul>
+<h1 id="基础练习" tabindex="-1"><a class="header-anchor" href="#基础练习" aria-hidden="true">#</a> 基础练习</h1>
+<p>我们来实现下图所示的计算流程：</p>
+<p><img src="@source/docs/machine-learning-framework/tensorflow/tensorflow1.0/basis/pic/basic-practice-model.png" alt="basic-practice-model"></p>
+<p>导入TensorFlow库：</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code><span class="token keyword">import</span> tensorflow <span class="token keyword">as</span> tf
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>然后定义默认的Graph，并用Session进行运算，然后写入磁盘中：</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code>data <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
+a <span class="token operator">=</span> tf<span class="token punctuation">.</span>constant<span class="token punctuation">(</span>data<span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">"input_a"</span><span class="token punctuation">)</span>
+b <span class="token operator">=</span> tf<span class="token punctuation">.</span>reduce_prod<span class="token punctuation">(</span>a<span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">"mul_b"</span><span class="token punctuation">)</span>
+c <span class="token operator">=</span> tf<span class="token punctuation">.</span>reduce_sum<span class="token punctuation">(</span>a<span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">"add_c"</span><span class="token punctuation">)</span>
+<span class="token comment">#d = tf.add(c, b, name="add_d")</span>
+d <span class="token operator">=</span> c <span class="token operator">+</span> b
+sess <span class="token operator">=</span> tf<span class="token punctuation">.</span>Session<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>sess<span class="token punctuation">.</span>run<span class="token punctuation">(</span>d<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment"># 23</span>
+writer <span class="token operator">=</span> tf<span class="token punctuation">.</span>summary<span class="token punctuation">.</span>FileWriter<span class="token punctuation">(</span><span class="token string">'my_graph'</span><span class="token punctuation">,</span> sess<span class="token punctuation">.</span>graph<span class="token punctuation">)</span>
+
+writer<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+sess<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>定义的图如下所示：</p>
+<p><img src="@source/docs/machine-learning-framework/tensorflow/tensorflow1.0/basis/pic/basic-practice-tensor-board-graph.png" alt="basic-practice-tensor-board-graph"></p>
+<h1 id="综合练习" tabindex="-1"><a class="header-anchor" href="#综合练习" aria-hidden="true">#</a> 综合练习</h1>
+<p>下面通过一个综合练习来掌握前面我们学过的所有组件：</p>
+<ul>
+<li>Tensor对象</li>
+<li>Graph对象</li>
+<li>Op操作符</li>
+<li>Variable对象</li>
+<li>占位符</li>
+<li>Session对象</li>
+<li>名称作用域</li>
+<li>TensorBoard汇总数据</li>
+</ul>
+<p>最终目的是，通过此练习能自如地搭建基本的TensorFlow数据流图，并在TensorBoard中对其进行研究。</p>
+<p>本练习的模型为：</p>
+<p><img src="@source/docs/machine-learning-framework/tensorflow/tensorflow1.0/basis/pic/combined-practice-model.png" alt="combined-practice-model"></p>
+<p>本练习的数据流图为：</p>
+<p><img src="@source/docs/machine-learning-framework/tensorflow/tensorflow1.0/basis/pic/combined-practice-dataflow.png" alt="combined-practice-dataflow"></p>
+<p>下面开始动手实践：</p>
+<p>（1）首先导入TensorFlow库：</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code><span class="token keyword">import</span> tensorflow <span class="token keyword">as</span> tf
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>（2）接下来构造图，显示创建一个Graph对象加以使用，不使用默认的Graph对象：</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code>graph <span class="token operator">=</span> tf<span class="token punctuation">.</span>Graph<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># 将构建的心的Graph对象设为默认的Graph对象：</span>
+<span class="token keyword">with</span> graph<span class="token punctuation">.</span>as_default<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">with</span> tf<span class="token punctuation">.</span>name_scope<span class="token punctuation">(</span><span class="token string">"variable"</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># 记录数据流图运行次数的Variable对象</span>
+        global_step <span class="token operator">=</span> tf<span class="token punctuation">.</span>Variable<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> dtype<span class="token operator">=</span>tf<span class="token punctuation">.</span>int32<span class="token punctuation">,</span> trainable<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">"global_step"</span><span class="token punctuation">)</span>
+        <span class="token comment"># 追踪该模型的所有输出随时间的累加和的Variable对象</span>
+        total_output <span class="token operator">=</span> tf<span class="token punctuation">.</span>Variable<span class="token punctuation">(</span><span class="token number">0.0</span><span class="token punctuation">,</span> dtype<span class="token operator">=</span>tf<span class="token punctuation">.</span>float32<span class="token punctuation">,</span> trainable<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">"total_output"</span><span class="token punctuation">)</span>
+    
+    <span class="token keyword">with</span> tf<span class="token punctuation">.</span>name_scope<span class="token punctuation">(</span><span class="token string">"transformation"</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># 独立的输入层</span>
+        <span class="token keyword">with</span> tf<span class="token punctuation">.</span>name_scope<span class="token punctuation">(</span><span class="token string">"input"</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token comment"># 创建输出占位符，用于接受一个向量</span>
+            a <span class="token operator">=</span> tf<span class="token punctuation">.</span>placeholder<span class="token punctuation">(</span>tf<span class="token punctuation">.</span>float32<span class="token punctuation">,</span> shape<span class="token operator">=</span><span class="token punctuation">[</span><span class="token boolean">None</span><span class="token punctuation">]</span><span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">"input_placeholder_a"</span><span class="token punctuation">)</span>
+        <span class="token comment"># 独立的中间层</span>
+        <span class="token keyword">with</span> tf<span class="token punctuation">.</span>name_scope<span class="token punctuation">(</span><span class="token string">"intermediate_layer"</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            b <span class="token operator">=</span> tf<span class="token punctuation">.</span>reduce_prod<span class="token punctuation">(</span>a<span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">"product_b"</span><span class="token punctuation">)</span>
+            c <span class="token operator">=</span> tf<span class="token punctuation">.</span>reduce_sum<span class="token punctuation">(</span>a<span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">"sum_c"</span><span class="token punctuation">)</span>
+        <span class="token comment"># 独立的输出层</span>
+        <span class="token keyword">with</span> tf<span class="token punctuation">.</span>name_scope<span class="token punctuation">(</span><span class="token string">"output"</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            output <span class="token operator">=</span> tf<span class="token punctuation">.</span>add<span class="token punctuation">(</span>b<span class="token punctuation">,</span> c<span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">"output"</span><span class="token punctuation">)</span>
+    
+    <span class="token keyword">with</span> tf<span class="token punctuation">.</span>name_scope<span class="token punctuation">(</span><span class="token string">"update"</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># 用最新的输出更新Variable对象total_output</span>
+        update_total <span class="token operator">=</span> total_output<span class="token punctuation">.</span>assign_add<span class="token punctuation">(</span>output<span class="token punctuation">)</span>
+        <span class="token comment"># 将前面的Variable对象globle_step增1，只要数据流图运行，该操作便需要进行</span>
+        increment_step <span class="token operator">=</span> global_step<span class="token punctuation">.</span>assign_add<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+    
+    <span class="token keyword">with</span> tf<span class="token punctuation">.</span>name_scope<span class="token punctuation">(</span><span class="token string">"summaries"</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        avg <span class="token operator">=</span> tf<span class="token punctuation">.</span>math<span class="token punctuation">.</span>divide<span class="token punctuation">(</span>update_total<span class="token punctuation">,</span> tf<span class="token punctuation">.</span>cast<span class="token punctuation">(</span>increment_step<span class="token punctuation">,</span> tf<span class="token punctuation">.</span>float32<span class="token punctuation">)</span><span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">"average"</span><span class="token punctuation">)</span>
+        <span class="token comment"># 为了输出节点创建汇总数据</span>
+        tf<span class="token punctuation">.</span>summary<span class="token punctuation">.</span>scalar<span class="token punctuation">(</span><span class="token string">"output_summary"</span><span class="token punctuation">,</span> output<span class="token punctuation">)</span>
+        tf<span class="token punctuation">.</span>summary<span class="token punctuation">.</span>scalar<span class="token punctuation">(</span><span class="token string">"total_summary"</span><span class="token punctuation">,</span> update_total<span class="token punctuation">)</span>
+        tf<span class="token punctuation">.</span>summary<span class="token punctuation">.</span>scalar<span class="token punctuation">(</span><span class="token string">"average_summary"</span><span class="token punctuation">,</span> avg<span class="token punctuation">)</span>
+    
+    <span class="token keyword">with</span> tf<span class="token punctuation">.</span>name_scope<span class="token punctuation">(</span><span class="token string">"global_ops"</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># 初始化 OP</span>
+        init <span class="token operator">=</span> tf<span class="token punctuation">.</span>global_variables_initializer<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token comment"># 将所有汇总数据合并到一个Op中</span>
+        merged_summaries <span class="token operator">=</span> tf<span class="token punctuation">.</span>summary<span class="token punctuation">.</span>merge_all<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>上一段代码构建的数据流图如下两图所示：</p>
+<p>数据流图总览：</p>
+<p><img src="@source/docs/machine-learning-framework/tensorflow/tensorflow1.0/basis/pic/combined-practice-tensor-board-graph.png" alt="combined-practice-tensor-board-graph"></p>
+<p>数据流图详细展示：</p>
+<p><img src="@source/docs/machine-learning-framework/tensorflow/tensorflow1.0/basis/pic/combined-practice-tensor-board-graph-expand.png" alt="combined-practice-tensor-board-graph-expand"></p>
+<p>注：上两图都是在TensorBoard中打开的。接下来会详细讲TensorBoard。</p>
+<p>（3）构建好数据流图以后，接下来运行该数据流图。</p>
+<p>打开一个Session对象，并加载已经创建好的Graph对象，也可以打开tf.summary.FileWriter对象，方便利用其保存数据。</p>
+<p>Session对象启动后，在做其他事之前，先对各Variable对象进行初始化：</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code>sess <span class="token operator">=</span> tf<span class="token punctuation">.</span>Session<span class="token punctuation">(</span>graph<span class="token operator">=</span>graph<span class="token punctuation">)</span>
+writer <span class="token operator">=</span> tf<span class="token punctuation">.</span>summary<span class="token punctuation">.</span>FileWriter<span class="token punctuation">(</span><span class="token string">'./improved_graph'</span><span class="token punctuation">,</span> graph<span class="token punctuation">)</span>
+sess<span class="token punctuation">.</span>run<span class="token punctuation">(</span>init<span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>为了运行该数据，需要创建一个辅助函数run_graph()，这样以后便无需反复输入相同的代码。</p>
+<p>我们将输入向量传给该函数，该函数将运行数据流图，并将汇总数据保存下来：</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code><span class="token keyword">def</span> <span class="token function">run_graph</span><span class="token punctuation">(</span>input_tensor<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    feed_dict <span class="token operator">=</span> <span class="token punctuation">{</span>a<span class="token punctuation">:</span> input_tensor<span class="token punctuation">}</span>
+    _<span class="token punctuation">,</span> step<span class="token punctuation">,</span> summary <span class="token operator">=</span> sess<span class="token punctuation">.</span>run<span class="token punctuation">(</span><span class="token punctuation">[</span>output<span class="token punctuation">,</span> increment_step<span class="token punctuation">,</span> merged_summaries<span class="token punctuation">]</span><span class="token punctuation">,</span> feed_dict<span class="token operator">=</span>feed_dict<span class="token punctuation">)</span>
+    writer<span class="token punctuation">.</span>add_summary<span class="token punctuation">(</span>summary<span class="token punctuation">,</span> global_step<span class="token operator">=</span>step<span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>下面来实际使用这个函数，可变换向量的长度来多次调用run_graph()函数：</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code>run_graph<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+run_graph<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+run_graph<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+run_graph<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+run_graph<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+run_graph<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+run_graph<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+run_graph<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+run_graph<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+run_graph<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>上述调用可反复进行。</p>
+<p>下图是tf.summary.scalar值的随运行次数的变化情况：</p>
+<p><img src="@source/docs/machine-learning-framework/tensorflow/tensorflow1.0/basis/pic/combined-practice-average-summary.png" alt="combined-practice-average-summary"><img src="@source/docs/machine-learning-framework/tensorflow/tensorflow1.0/basis/pic/combined-practice-output-summary.png" alt="combined-practice-output-summary"><img src="@source/docs/machine-learning-framework/tensorflow/tensorflow1.0/basis/pic/combined-practice-total-summary.png" alt="combined-practice-total-summary"></p>
+<p>注：上三图都是在TensorBoard中打开查看的。</p>
+<p>数据填充完毕后，用下面的代码将汇总数据写入磁盘：</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code><span class="token comment"># 将汇总数据写入磁盘</span>
+writer<span class="token punctuation">.</span>flush<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>（4）tf.summary.FileWriter对象和Session对象已经使用完毕，我们将其关闭，以完成一些清理工作。</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code>writer<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+sess<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>以上便是全部的TensorFlow代码了。</p>
+<p>下面我们打开TensorBoard，看看上图所示的结果吧。</p>
+<p>启动Terminal，<code v-pre>cd</code>到运行上述代码的目录（确保<code v-pre>improved_graph</code>目录在该路径下），并运行下列命令：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><pre v-pre class="language-bash"><code>tensorboard <span class="token parameter variable">--logdir</span> <span class="token string">"imroved_graph"</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>该命令会在6006端口启动一个TensorBoar服务器，并托管存储在<code v-pre>improved_graph</code>中的数据。在浏览器中观察得到的结果。这里就不放图了，因为前面几个图就是其结果。</p>
+<p>好了，本练习至此就全部结束了。虽然有点长，但是还不至于理解不了。希望能够熟练掌握如何基于虚拟草图创建TensorFlow数据流图，以及如何利用TensorBoard做一些基础的数据汇总工作。</p>
+<h1 id="参考资料" tabindex="-1"><a class="header-anchor" href="#参考资料" aria-hidden="true">#</a> 参考资料</h1>
+<ul>
+<li>《面向机器智TensorFlow实践》</li>
+</ul>
+<p>本文主要参考此书对应章节。</p>
+</div></template>
+
+

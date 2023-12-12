@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-4dc78931\",\"path\":\"/docs/machine-learning/coding/big-data/hadoop/map-reduce/map-reduce.html\",\"title\":\"MapReduce\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/coding/big-data/hadoop/map-reduce/map-reduce.md\"}")

@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-2c90d83a\",\"path\":\"/docs/machine-learning/machine-learning/support-vector-machine/linear-svm/linear-svm.html\",\"title\":\"线性支持向量机与软间隔最大化\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/machine-learning/support-vector-machine/linear-svm/linear-svm.md\"}")

@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-01f78655\",\"path\":\"/docs/machine-learning/mathematics/statistics/bayesian-analysis/bayesian-analysis.html\",\"title\":\"贝叶斯分析方法\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/mathematics/statistics/bayesian-analysis/bayesian-analysis.md\"}")

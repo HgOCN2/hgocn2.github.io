@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-180d6262\",\"path\":\"/docs/machine-learning/coding/cs-courses/compiler-principles/cmake/cmake.html\",\"title\":\"CMake\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/coding/cs-courses/compiler-principles/cmake/cmake.md\"}")

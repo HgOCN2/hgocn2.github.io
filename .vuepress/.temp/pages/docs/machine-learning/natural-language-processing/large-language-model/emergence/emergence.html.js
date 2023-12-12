@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-a6d02a08\",\"path\":\"/docs/machine-learning/natural-language-processing/large-language-model/emergence/emergence.html\",\"title\":\"Emergence涌现现象\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/natural-language-processing/large-language-model/emergence/emergence.md\"}")

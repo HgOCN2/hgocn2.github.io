@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-73a95440\",\"path\":\"/docs/machine-learning/model-deployment/parallel-computing/parallel-computing.html\",\"title\":\"并行计算\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/model-deployment/parallel-computing/parallel-computing.md\"}")

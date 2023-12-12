@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-75246cb5\",\"path\":\"/docs/machine-learning/mathematics/gradient-update-algorithm/offline-learning/amsgrad/amsgrad.html\",\"title\":\"AMSGrad\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/mathematics/gradient-update-algorithm/offline-learning/amsgrad/amsgrad.md\"}")

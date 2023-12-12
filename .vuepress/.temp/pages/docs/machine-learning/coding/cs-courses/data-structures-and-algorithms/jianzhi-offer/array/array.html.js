@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-517a4df3\",\"path\":\"/docs/machine-learning/coding/cs-courses/data-structures-and-algorithms/jianzhi-offer/array/array.html\",\"title\":\"数组\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/coding/cs-courses/data-structures-and-algorithms/jianzhi-offer/array/array.md\"}")

@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-1dbbc02f\",\"path\":\"/docs/machine-learning/reinforcement-learning/sim2real/sim2real.html\",\"title\":\"Sim2Real\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/reinforcement-learning/sim2real/sim2real.md\"}")

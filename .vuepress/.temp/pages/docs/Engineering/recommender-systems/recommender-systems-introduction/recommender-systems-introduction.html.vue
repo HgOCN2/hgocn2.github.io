@@ -1,0 +1,37 @@
+<template><div><h1 id="推荐系统概述" tabindex="-1"><a class="header-anchor" href="#推荐系统概述" aria-hidden="true">#</a> 推荐系统概述</h1>
+<ul>
+<li><RouterLink to="/docs/Engineering/recommender-systems/recommender-systems.html">返回上层目录</RouterLink></li>
+<li><a href="#%E5%B7%A5%E4%B8%9A%E7%BA%A7%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84">工业级推荐系统架构</a>
+<ul>
+<li><a href="#%E5%8F%AC%E5%9B%9E">召回</a></li>
+<li><a href="#%E6%8E%92%E5%BA%8F">排序</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="工业级推荐系统架构" tabindex="-1"><a class="header-anchor" href="#工业级推荐系统架构" aria-hidden="true">#</a> 工业级推荐系统架构</h1>
+<p><img src="@source/docs/Engineering/recommender-systems/recommender-systems-introduction/pic/recommend-system-architecture.jpeg" alt="recommend-system-architecture"></p>
+<h2 id="召回" tabindex="-1"><a class="header-anchor" href="#召回" aria-hidden="true">#</a> 召回</h2>
+<p>召回的类别主要分为三类：</p>
+<ul>
+<li>
+<p>user-&gt;user-&gt;item</p>
+<p>即找到和用户相似的用户，再把相似用户喜欢的商品推送给用户。</p>
+</li>
+<li>
+<p>user-&gt;item-&gt;item</p>
+<p>即找到用户喜欢的商品，再把和用户喜欢的商品相似的商品推送给用户。</p>
+</li>
+<li>
+<p>user-&gt;item</p>
+<p>直接把用户可能喜欢的商品推送给用户。</p>
+</li>
+</ul>
+<p>具体如下图所示：</p>
+<p><img src="@source/docs/Engineering/recommender-systems/recommender-systems-introduction/pic/recall-type.jpg" alt="recall-type"></p>
+<h2 id="排序" tabindex="-1"><a class="header-anchor" href="#排序" aria-hidden="true">#</a> 排序</h2>
+<h1 id="参考资料" tabindex="-1"><a class="header-anchor" href="#参考资料" aria-hidden="true">#</a> 参考资料</h1>
+<p>===</p>
+<p><a href="https://mp.weixin.qq.com/s/n5ZplTadX6jtXIwJmXHivg" target="_blank" rel="noopener noreferrer">深度学习与推荐系统完结篇（知识、论文、源码、数据集&amp;行业应用）<ExternalLinkIcon/></a></p>
+</div></template>
+
+

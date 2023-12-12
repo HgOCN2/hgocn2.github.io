@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-78fc681e\",\"path\":\"/docs/machine-learning/mathematics/gradient-update-algorithm/online-learning/ftrl/ftrl.html\",\"title\":\"FTRL\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/mathematics/gradient-update-algorithm/online-learning/ftrl/ftrl.md\"}")

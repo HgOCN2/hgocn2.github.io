@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-8ebe4b12\",\"path\":\"/docs/machine-learning/multimodal-large-model/industry-application/openai/openai.html\",\"title\":\"OpenAI\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/multimodal-large-model/industry-application/openai/openai.md\"}")

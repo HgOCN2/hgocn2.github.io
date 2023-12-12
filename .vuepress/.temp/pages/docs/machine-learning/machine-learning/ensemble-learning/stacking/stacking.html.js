@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-721ef4b2\",\"path\":\"/docs/machine-learning/machine-learning/ensemble-learning/stacking/stacking.html\",\"title\":\"Stacking\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/machine-learning/ensemble-learning/stacking/stacking.md\"}")

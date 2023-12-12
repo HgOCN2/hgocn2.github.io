@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-2b6b29ec\",\"path\":\"/docs/machine-learning/autopilot/control/llm-based-control/llm-based-control.html\",\"title\":\"基于LLM大语言模型的控制\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/autopilot/control/llm-based-control/llm-based-control.md\"}")

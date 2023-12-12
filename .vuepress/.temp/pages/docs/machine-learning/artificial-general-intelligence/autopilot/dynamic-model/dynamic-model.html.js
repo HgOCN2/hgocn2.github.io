@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-4e20fa00\",\"path\":\"/docs/machine-learning/artificial-general-intelligence/autopilot/dynamic-model/dynamic-model.html\",\"title\":\"规划\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/artificial-general-intelligence/autopilot/dynamic-model/dynamic-model.md\"}")

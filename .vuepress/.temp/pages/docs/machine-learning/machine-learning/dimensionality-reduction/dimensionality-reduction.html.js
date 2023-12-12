@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-4c8833f6\",\"path\":\"/docs/machine-learning/machine-learning/dimensionality-reduction/dimensionality-reduction.html\",\"title\":\"降维\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/machine-learning/dimensionality-reduction/dimensionality-reduction.md\"}")

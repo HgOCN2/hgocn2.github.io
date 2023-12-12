@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-52428b7e\",\"path\":\"/docs/machine-learning/deep-learning/tips/feature-crossing/feature-crossing.html\",\"title\":\"深度学习的高阶特征交叉原理\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/deep-learning/tips/feature-crossing/feature-crossing.md\"}")

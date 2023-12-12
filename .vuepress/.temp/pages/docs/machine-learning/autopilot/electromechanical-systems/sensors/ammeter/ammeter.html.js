@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-d38ab852\",\"path\":\"/docs/machine-learning/autopilot/electromechanical-systems/sensors/ammeter/ammeter.html\",\"title\":\"电流计\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/autopilot/electromechanical-systems/sensors/ammeter/ammeter.md\"}")

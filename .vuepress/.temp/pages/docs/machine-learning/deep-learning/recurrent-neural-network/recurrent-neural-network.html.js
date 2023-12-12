@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-5203048a\",\"path\":\"/docs/machine-learning/deep-learning/recurrent-neural-network/recurrent-neural-network.html\",\"title\":\"RNN循环神经网络\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/deep-learning/recurrent-neural-network/recurrent-neural-network.md\"}")

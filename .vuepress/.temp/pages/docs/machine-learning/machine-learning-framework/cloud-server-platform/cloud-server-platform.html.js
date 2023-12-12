@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-b7bd8d70\",\"path\":\"/docs/machine-learning/machine-learning-framework/cloud-server-platform/cloud-server-platform.html\",\"title\":\"模型训练云服务器平台\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/machine-learning-framework/cloud-server-platform/cloud-server-platform.md\"}")

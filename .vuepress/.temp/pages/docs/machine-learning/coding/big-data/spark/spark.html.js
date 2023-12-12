@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-0dfae911\",\"path\":\"/docs/machine-learning/coding/big-data/spark/spark.html\",\"title\":\"Spark\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/coding/big-data/spark/spark.md\"}")

@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-749d0065\",\"path\":\"/docs/machine-learning/natural-language-processing/tf-idf/tf-idf.html\",\"title\":\"TF-IDF\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/natural-language-processing/tf-idf/tf-idf.md\"}")

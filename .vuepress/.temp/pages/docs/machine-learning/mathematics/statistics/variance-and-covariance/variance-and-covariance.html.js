@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-5ab80326\",\"path\":\"/docs/machine-learning/mathematics/statistics/variance-and-covariance/variance-and-covariance.html\",\"title\":\"方差与协方差\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/mathematics/statistics/variance-and-covariance/variance-and-covariance.md\"}")

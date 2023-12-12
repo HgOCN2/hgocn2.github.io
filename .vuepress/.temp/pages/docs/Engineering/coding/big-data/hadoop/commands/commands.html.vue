@@ -1,0 +1,116 @@
+<template><div><h1 id="hadoop常用命令" tabindex="-1"><a class="header-anchor" href="#hadoop常用命令" aria-hidden="true">#</a> Hadoop常用命令</h1>
+<ul>
+<li><RouterLink to="/docs/Engineering/coding/big-data/hadoop/commands/hadoop.html">返回上层目录</RouterLink></li>
+</ul>
+<p>hadoop常用命令：</p>
+<ul>
+<li>
+<p>hadoop fs</p>
+<p>查看Hadoop HDFS支持的所有命令</p>
+</li>
+<li>
+<p>hadoop fs –ls</p>
+<p>列出目录及文件信息</p>
+</li>
+<li>
+<p>hadoop fs –lsr</p>
+<p>循环列出目录、子目录及文件信息</p>
+</li>
+<li>
+<p>hadoop fs –put test.txt /user/sunlightcs</p>
+<p>将本地文件系统的test.txt复制到HDFS文件系统的/user/sunlightcs目录下</p>
+</li>
+<li>
+<p>hadoop fs –get /user/sunlightcs/test.txt</p>
+<p>将HDFS中的test.txt复制到本地文件系统中，与-put命令相反</p>
+</li>
+<li>
+<p>hadoop fs –cat /user/sunlightcs/test.txt</p>
+<p>查看HDFS文件系统里test.txt的内容</p>
+</li>
+<li>
+<p>hadoop fs –tail /user/sunlightcs/test.txt</p>
+<p>查看最后1KB的内容</p>
+</li>
+<li>
+<p>hadoop fs –rm /user/sunlightcs/test.txt</p>
+<p>从HDFS文件系统删除test.txt文件，rm命令也可以删除空目录</p>
+</li>
+<li>
+<p>hadoop fs –rmr /user/sunlightcs</p>
+<p>删除/user/sunlightcs目录以及所有子目录</p>
+</li>
+<li>
+<p>hadoop fs –copyFromLocal test.txt /user/sunlightcs/test.txt</p>
+<p>从本地文件系统复制文件到HDFS文件系统，等同于put命令</p>
+</li>
+<li>
+<p>hadoop fs –copyToLocal /user/sunlightcs/test.txt test.txt</p>
+<p>从HDFS文件系统复制文件到本地文件系统，等同于get命令</p>
+</li>
+<li>
+<p>hadoop fs –chgrp [-R] /user/sunlightcs</p>
+<p>修改HDFS系统中/user/sunlightcs目录所属群组，选项-R递归执行，跟linux命令一样</p>
+</li>
+<li>
+<p>hadoop fs –chown [-R] /user/sunlightcs</p>
+<p>修改HDFS系统中/user/sunlightcs目录拥有者，选项-R递归执行</p>
+</li>
+<li>
+<p>hadoop fs –chmod [-R] MODE /user/sunlightcs</p>
+<p>修改HDFS系统中/user/sunlightcs目录权限，MODE可以为相应权限的3位数或+/-{rwx}，选项-R递归执行</p>
+</li>
+<li>
+<p>hadoop fs –count [-q] PATH</p>
+<p>查看PATH目录下，子目录数、文件数、文件大小、文件名/目录名</p>
+</li>
+<li>
+<p>hadoop fs –cp SRC [SRC …] DST</p>
+<p>将文件从SRC复制到DST，如果指定了多个SRC，则DST必须为一个目录</p>
+</li>
+<li>
+<p>hadoop fs –du PATH</p>
+<p>显示该目录中每个文件或目录的大小</p>
+</li>
+<li>
+<p>hadoop fs –dus PATH</p>
+<p>类似于du，PATH为目录时，会显示该目录的总大小</p>
+</li>
+<li>
+<p>hadoop fs –expunge</p>
+<p>清空回收站，文件被删除时，它首先会移到临时目录.Trash/中，当超过延迟时间之后，文件才会被永久删除</p>
+</li>
+<li>
+<p>hadoop fs –getmerge SRC [SRC …] LOCALDST [addnl]</p>
+<p>获取由SRC指定的所有文件，将它们合并为单个文件，并写入本地文件系统中的LOCALDST，选项addnl将在每个文件的末尾处加上一个换行符</p>
+</li>
+<li>
+<p>hadoop fs –touchz PATH</p>
+<p>创建长度为0的空文件</p>
+</li>
+<li>
+<p>hadoop fs –test –[ezd] PATH</p>
+<p>对PATH进行如下类型的检查：</p>
+<ul>
+<li>-e PATH是否存在，如果PATH存在，返回0，否则返回1</li>
+<li>-z 文件是否为空，如果长度为0，返回0，否则返回1</li>
+<li>-d 是否为目录，如果PATH为目录，返回0，否则返回1</li>
+</ul>
+</li>
+<li>
+<p>hadoop fs –text PATH</p>
+<p>显示文件的内容，当文件为文本文件时，等同于cat，文件为压缩格式（gzip以及hadoop的二进制序列文件格式）时，会先解压缩</p>
+</li>
+<li>
+<p>hadoop fs –help ls</p>
+<p>查看某个[ls]命令的帮助文档</p>
+</li>
+</ul>
+<h1 id="参考资料" tabindex="-1"><a class="header-anchor" href="#参考资料" aria-hidden="true">#</a> 参考资料</h1>
+<ul>
+<li><a href="https://blog.csdn.net/gz747622641/article/details/54133728" target="_blank" rel="noopener noreferrer">hadoop hdfs常用命令<ExternalLinkIcon/></a></li>
+</ul>
+<p>本文复制自此csdn博客。</p>
+</div></template>
+
+

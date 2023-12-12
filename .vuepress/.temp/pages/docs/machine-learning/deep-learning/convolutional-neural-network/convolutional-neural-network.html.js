@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-15e071aa\",\"path\":\"/docs/machine-learning/deep-learning/convolutional-neural-network/convolutional-neural-network.html\",\"title\":\"卷积神经网络\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/deep-learning/convolutional-neural-network/convolutional-neural-network.md\"}")

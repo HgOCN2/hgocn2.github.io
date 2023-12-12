@@ -1,0 +1,82 @@
+<template><div><h1 id="labelme打标工具" tabindex="-1"><a class="header-anchor" href="#labelme打标工具" aria-hidden="true">#</a> Labelme打标工具</h1>
+<ul>
+<li><RouterLink to="/docs/Engineering/computer-vision/image-mark-tool/image-mark-tool.html">返回上层目录</RouterLink></li>
+<li><a href="#Labelme%E4%BB%8B%E7%BB%8D">Labelme介绍</a></li>
+<li><a href="#Labelme%E5%AE%89%E8%A3%85">Labelme安装</a></li>
+<li><a href="#Labelme%E7%9A%84%E4%BD%BF%E7%94%A8">Labelme的使用</a>
+<ul>
+<li><a href="#%E5%90%AF%E5%8A%A8">启动</a></li>
+<li><a href="#%E6%A0%87%E6%B3%A8">标注</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="labelme介绍" tabindex="-1"><a class="header-anchor" href="#labelme介绍" aria-hidden="true">#</a> Labelme介绍</h1>
+<p><img src="@source/docs/Engineering/computer-vision/image-mark-tool/labelme/pic/labelme.png" alt="labelme"></p>
+<p>Labelme是开源的图像标注工具，常用做检测，分割和分类任务的图像标注。</p>
+<p>Labelme官方文档Github：<a href="https://github.com/wkentaro/labelme" target="_blank" rel="noopener noreferrer">wkentaro/<strong>labelme</strong><ExternalLinkIcon/></a></p>
+<ul>
+<li>
+<p>分类标注：<a href="https://github.com/wkentaro/labelme/tree/v3.11.2/examples/classification" target="_blank" rel="noopener noreferrer">Classification<ExternalLinkIcon/></a></p>
+</li>
+<li>
+<p>目标检测标注：<a href="https://github.com/wkentaro/labelme/tree/v3.11.2/examples/bbox_detection" target="_blank" rel="noopener noreferrer">Object Detection<ExternalLinkIcon/></a></p>
+</li>
+<li>
+<p>语义分割标注：<a href="https://github.com/wkentaro/labelme/tree/v3.11.2/examples/semantic_segmentation" target="_blank" rel="noopener noreferrer">Semantic Segmentation<ExternalLinkIcon/></a></p>
+</li>
+<li>
+<p>实例分割标注：<a href="https://github.com/wkentaro/labelme/tree/v3.11.2/examples/instance_segmentation" target="_blank" rel="noopener noreferrer">Instance Segmentation<ExternalLinkIcon/></a></p>
+</li>
+<li>
+<p>视频标注：<a href="https://github.com/wkentaro/labelme/tree/v3.11.2/examples/video_annotation" target="_blank" rel="noopener noreferrer">Video Annotation<ExternalLinkIcon/></a></p>
+</li>
+<li>
+<p>其他形式标注：<a href="https://github.com/wkentaro/labelme/tree/v3.11.2/examples/primitives" target="_blank" rel="noopener noreferrer">LabelMe Primitives<ExternalLinkIcon/></a></p>
+</li>
+</ul>
+<h1 id="labelme安装" tabindex="-1"><a class="header-anchor" href="#labelme安装" aria-hidden="true">#</a> Labelme安装</h1>
+<p>所有操作在已经安装Anaconda环境下运行</p>
+<p>1.安装pyqt5</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><pre v-pre class="language-bash"><code>pip <span class="token function">install</span> pyqt5 <span class="token parameter variable">-i</span> https://pypi.tuna.tsinghua.edu.cn/simple
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>2.安装labelme</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><pre v-pre class="language-bash"><code>pip <span class="token function">install</span> labelme <span class="token parameter variable">-i</span> https://pypi.tuna.tsinghua.edu.cn/simple
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>3.安装完成后命令行启动labelme</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><pre v-pre class="language-bash"><code>labelme
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>如果输入上述命令遇到如下问题，无法启动</p>
+<blockquote>
+<p>Fatal error in launcher: Unable to create process using '&quot;c:\users\yourname\anaconda3\envs\tf14\python.exe&quot;  &quot;C:\Users\yourname\Anaconda3\envs\tf1.14\Scripts\labelme.exe&quot; ': ???????????</p>
+</blockquote>
+<p>这说明你可能之前装好Labelme后又改过环境名字，解决办法有两个：</p>
+<p>要么删除Labelme重装，这最彻底</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><pre v-pre class="language-bash"><code>pip uninstall labelme
+pip <span class="token function">install</span> labelme <span class="token parameter variable">-i</span> https://pypi.tuna.tsinghua.edu.cn/simple
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>要么用<code v-pre>-m</code>命令直接打开Labelme的安装包</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><pre v-pre class="language-bash"><code>python <span class="token parameter variable">-m</span> labelme
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h1 id="labelme的使用" tabindex="-1"><a class="header-anchor" href="#labelme的使用" aria-hidden="true">#</a> Labelme的使用</h1>
+<h2 id="启动" tabindex="-1"><a class="header-anchor" href="#启动" aria-hidden="true">#</a> 启动</h2>
+<p>进入到安装Labelme的环境里</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><pre v-pre class="language-bash"><code>conda activate xxx<span class="token punctuation">(</span>include lableme<span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>启动Labelme</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><pre v-pre class="language-bash"><code>lableme
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>启动后的界面如下：</p>
+<p><img src="@source/docs/Engineering/computer-vision/image-mark-tool/labelme/pic/labelme-open.png" alt="labelme-open"></p>
+<h2 id="标注" tabindex="-1"><a class="header-anchor" href="#标注" aria-hidden="true">#</a> 标注</h2>
+<p>打开界面左侧的<code v-pre>Open Dir</code>，选择要标注的文件夹。随后界面如下图所示</p>
+<p><img src="@source/docs/Engineering/computer-vision/image-mark-tool/labelme/pic/labelme-open-dir.png" alt="labelme-open-dir"></p>
+<p>1）首先在file栏里勾选<code v-pre>save automatically</code>，这样可以使标记的图片和生成的标签文件自动保存，免去手动保存的麻烦。</p>
+<p>2）鼠标右击图片，会弹出很多标注类型，可以创建Plygons，Rectange，Circle，Line，Point，LineStrip等，如下图所示</p>
+<p><img src="@source/docs/Engineering/computer-vision/image-mark-tool/labelme/pic/labelme-set.png" alt="labelme-set"></p>
+<p>3）按下快捷键A会开始弹出下一张图，按下快捷键D会返回上一张图。</p>
+<p>4）当对所有图片打完标签之后，json标签文件和对应的图在同一目录下。一张图片对应一张同名的json格式的标签文件。</p>
+<p>5）至此，标记任务已经完成。若后期想查看或编辑图片上的标记框，直接在打开的Labelme里，选择<code v-pre>Open Dir</code>即可。</p>
+<h1 id="参考资料" tabindex="-1"><a class="header-anchor" href="#参考资料" aria-hidden="true">#</a> 参考资料</h1>
+<ul>
+<li><a href="https://blog.csdn.net/zong596568821xp/article/details/83375227" target="_blank" rel="noopener noreferrer">图片标注工具Labelme的安装及使用方法<ExternalLinkIcon/></a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/393166944" target="_blank" rel="noopener noreferrer">Labelme的安装和使用<ExternalLinkIcon/></a></li>
+</ul>
+<p>本文参考上述博客。</p>
+<p>===</p>
+<p><a href="https://blog.csdn.net/xjm850552586/article/details/112268837" target="_blank" rel="noopener noreferrer">图片标注工具Labelme-简明使用教程<ExternalLinkIcon/></a></p>
+</div></template>
+
+

@@ -1,0 +1,335 @@
+<template><div><h1 id="函数" tabindex="-1"><a class="header-anchor" href="#函数" aria-hidden="true">#</a> 函数</h1>
+<ul>
+<li><RouterLink to="/docs/machine-learning/coding/programing-language/python/grammar/python.html">返回上层目录</RouterLink></li>
+<li><a href="#%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89%E5%92%8C%E7%B1%BB%E5%9E%8B">函数定义和类型</a></li>
+<li><a href="#%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E3%80%81%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F">局部变量、全局变量</a></li>
+<li><a href="#%E5%87%BD%E6%95%B0%E7%BC%BA%E7%9C%81%E5%8F%82%E6%95%B0%E3%80%81%E4%B8%8D%E5%AE%9A%E9%95%BF%E5%8F%82%E6%95%B0%E3%80%81%E5%91%BD%E5%90%8D%E5%8F%82%E6%95%B0">函数缺省参数、不定长参数、命名参数</a></li>
+<li><a href="#%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0%E5%8F%8A%E5%BA%94%E7%94%A8">递归函数及应用</a></li>
+<li><a href="#%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0%E5%8F%8A%E5%BA%94%E7%94%A8">匿名函数及应用</a></li>
+</ul>
+<h1 id="函数定义和类型" tabindex="-1"><a class="header-anchor" href="#函数定义和类型" aria-hidden="true">#</a> 函数定义和类型</h1>
+<ul>
+<li>
+<p>对某一功能的封装</p>
+</li>
+<li>
+<p>函数定义</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code><span class="token keyword">def</span> 函数名称（参数）<span class="token punctuation">:</span>
+	函数体代码
+	<span class="token keyword">return</span> 返回值
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>别忘了定义函数名后面加冒号“:”</p>
+</li>
+<li>
+<p>函数调用：函数名(参数)</p>
+</li>
+<li>
+<p>函数参数</p>
+<p>形参：定义函数时设置的参数</p>
+<p>实参：调用函数时传入的参数</p>
+</li>
+</ul>
+<p>无参函数</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code><span class="token keyword">def</span> <span class="token function">print_user_info</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"name:zhangsan"</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"age:20"</span><span class="token punctuation">)</span>
+
+print_user_info<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>有参函数</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code><span class="token keyword">def</span> <span class="token function">print_user_info2</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> age<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"name:{}"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"age:{}"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+name <span class="token operator">=</span> <span class="token string">"zhangsan"</span>
+age <span class="token operator">=</span> <span class="token number">20</span>
+print_user_info2<span class="token punctuation">(</span>name<span class="token punctuation">,</span> age<span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>带有返回值的函数</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code><span class="token comment"># 返回单个值</span>
+<span class="token keyword">def</span> <span class="token function">x_y_sum</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>y<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    res <span class="token operator">=</span> x <span class="token operator">+</span> y
+    <span class="token keyword">return</span> res
+<span class="token comment"># 返回多个值</span>
+<span class="token keyword">def</span> <span class="token function">x_y_comp</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>y<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    rs1 <span class="token operator">=</span> x <span class="token operator">+</span> y
+    rs2 <span class="token operator">=</span> x <span class="token operator">-</span> y
+    rs3 <span class="token operator">=</span> x <span class="token operator">*</span> y
+    rs4 <span class="token operator">=</span> x <span class="token operator">/</span> y
+    <span class="token comment"># rs = (rs1, rs2, rs3, rs4)</span>
+    <span class="token comment"># return  rs</span>
+    <span class="token keyword">return</span> rs1<span class="token punctuation">,</span> rs2<span class="token punctuation">,</span> rs3<span class="token punctuation">,</span> rs4
+
+z <span class="token operator">=</span> x_y_sum<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">40</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>z<span class="token punctuation">)</span>
+z <span class="token operator">=</span> x_y_comp<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>z<span class="token punctuation">)</span><span class="token comment"># (6, 2, 8, 2.0)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>z<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment"># &lt;class 'tuple'></span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h1 id="局部变量、全局变量" tabindex="-1"><a class="header-anchor" href="#局部变量、全局变量" aria-hidden="true">#</a> 局部变量、全局变量</h1>
+<ul>
+<li>局部变量
+<ul>
+<li>函数内部定义的变量</li>
+<li>不同函数内的局部变量可以定义相同的名字，互不影响</li>
+<li>作用范围：函数体内有效，其他函数不能直接使用</li>
+</ul>
+</li>
+<li>全局变量
+<ul>
+<li>函数外部定义的变量</li>
+<li>作用范围：可以在不同函数中使用</li>
+<li>在函数内使用global关键字实现修改全局变量的值</li>
+<li>全局变量命名建议以g_开头，如：g_name</li>
+</ul>
+</li>
+</ul>
+<p>基本操作</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code><span class="token comment"># 全局变量</span>
+g_name <span class="token operator">=</span> <span class="token string">"zhangsan"</span>
+<span class="token keyword">def</span> <span class="token function">get_name1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>g_name<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">get_name2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>g_name<span class="token punctuation">)</span>
+
+get_name1<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"--------"</span><span class="token punctuation">)</span>
+get_name2<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>想通过在函数内直接修改全局变量的方式是错误的，相当于在函数体内定义了一个与全局变量同名的局部变量。</p>
+<p>全局变量不能在函数体内被直接通过赋值而修改。函数体内被修改的那个”全局变量“其实只是函数体内定义的一个局部变量，只是名称相同而已。所以，通过在函数体内直接对全局变量赋值是无法改变其值的。</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code>g_age <span class="token operator">=</span> <span class="token number">25</span>
+<span class="token keyword">def</span> <span class="token function">change_age</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    g_age <span class="token operator">=</span> <span class="token number">35</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"函数内："</span><span class="token punctuation">,</span>g_age<span class="token punctuation">)</span>
+
+change_age<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment"># 函数内： 35</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"--------"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>g_age<span class="token punctuation">)</span><span class="token comment"># 25</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>应该在函数体内用global声明全局变量，才能修改：</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code>g_age <span class="token operator">=</span> <span class="token number">25</span>
+<span class="token keyword">def</span> <span class="token function">change_age</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">global</span> g_age<span class="token comment"># 必须使用global关键字声明</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"修改之前："</span><span class="token punctuation">,</span>g_age<span class="token punctuation">)</span>
+    g_age <span class="token operator">=</span> <span class="token number">35</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"修改之后："</span><span class="token punctuation">,</span>g_age<span class="token punctuation">)</span>
+
+change_age<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment"># 修改之前： 25 修改之后： 35</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"--------"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>g_age<span class="token punctuation">)</span><span class="token comment"># 35</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>全局变量定义的位置应当放在调用它的函数之前，不然会出错。</p>
+<p>原因：python解释器从上到下逐行执行，那当执行此函数时，函数之后的变量是不存在的。</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code>g_num1 <span class="token operator">=</span> <span class="token number">100</span>
+<span class="token keyword">def</span> <span class="token function">print_global_num</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"g_num1:{}"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>g_num1<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"g_num2:{}"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>g_num2<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"g_num3:{}"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>g_num3<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+g_num2 <span class="token operator">=</span> <span class="token number">200</span>
+print_global_num<span class="token punctuation">(</span><span class="token punctuation">)</span>
+g_num3 <span class="token operator">=</span> <span class="token number">300</span><span class="token comment"># 在调用函数之后，没有被定义</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>正确的全局变量定义方法：</p>
+<p>在函数调用之前就把全局变量定义好</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code>g_num1 <span class="token operator">=</span> <span class="token number">100</span>
+g_num2 <span class="token operator">=</span> <span class="token number">200</span>
+g_num3 <span class="token operator">=</span> <span class="token number">300</span>
+
+<span class="token keyword">def</span> <span class="token function">print_global_num1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"g_num1:{}"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>g_num1<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">print_global_num2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"g_num2:{}"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>g_num2<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">print_global_num3</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"g_num3:{}"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>g_num3<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+print_global_num1<span class="token punctuation">(</span><span class="token punctuation">)</span>
+print_global_num2<span class="token punctuation">(</span><span class="token punctuation">)</span>
+print_global_num3<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>全局变量的类型为字典、列表时，在函数体内修改你值时，可不使用global关键字。</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code>g_num_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span>
+g_info_dict <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"name"</span><span class="token punctuation">:</span><span class="token string">"zhangsan"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token punctuation">:</span><span class="token number">20</span><span class="token punctuation">}</span>
+<span class="token keyword">def</span> <span class="token function">update_info</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    g_num_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token comment"># 并没有使用global关键字</span>
+    g_info_dict<span class="token punctuation">[</span><span class="token string">"gender"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"male"</span>
+<span class="token keyword">def</span> <span class="token function">get_info</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> num <span class="token keyword">in</span> g_num_list<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>num<span class="token punctuation">,</span>end<span class="token operator">=</span> <span class="token string">" "</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> key<span class="token punctuation">,</span>value <span class="token keyword">in</span> g_info_dict<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"{}:{}"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+update_info<span class="token punctuation">(</span><span class="token punctuation">)</span>
+get_info<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># 1 2 3 4</span>
+<span class="token comment"># name:zhangsan</span>
+<span class="token comment"># age:20</span>
+<span class="token comment"># gender:male</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h1 id="函数缺省参数、不定长参数、命名参数" tabindex="-1"><a class="header-anchor" href="#函数缺省参数、不定长参数、命名参数" aria-hidden="true">#</a> 函数缺省参数、不定长参数、命名参数</h1>
+<ul>
+<li>缺省(默认)参数
+<ul>
+<li>函数定义带有初始值的形参</li>
+<li>函数调用时，缺省参数可传，也可不传</li>
+<li>缺省参数一定要位于参数列表的最后</li>
+<li>缺省参数数量没有限制</li>
+</ul>
+</li>
+<li>命名参数
+<ul>
+<li>调用带有参数的函数时，通过指定参数名称传入参数的值</li>
+<li>可以不按函数定义的参数顺序传入</li>
+</ul>
+</li>
+<li>不定长参数
+<ul>
+<li>函数可以接受不定个数的参数传入</li>
+<li>def function([formal_args,]*args)函数调用时，传入的不定参数会被封装成元组</li>
+<li>def function([formal_args,]**args)函数调用时，如果传入key=value形式的不定长参数，会被封装成字典</li>
+</ul>
+</li>
+<li>拆包
+<ul>
+<li>对于定义了不定长参数的函数，在函数调用时需要把已定义好的元组或者列表传入到函数中，需要使用拆包方法</li>
+</ul>
+</li>
+</ul>
+<p>缺省参数</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code><span class="token keyword">def</span> <span class="token function">x_y_sum</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    rs <span class="token operator">=</span> x <span class="token operator">+</span> y
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"{}+{}={}"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>y<span class="token punctuation">,</span>rs<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+x_y_sum<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span><span class="token comment"># 10+30=40</span>
+x_y_sum<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token comment"># 10+20=30</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>命名参数</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code><span class="token keyword">def</span> <span class="token function">x_y_sum</span><span class="token punctuation">(</span>x<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span> y<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    rs <span class="token operator">=</span> x <span class="token operator">+</span> y
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"{}+{}={}"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> rs<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+num1 <span class="token operator">=</span> <span class="token number">15</span>
+num2 <span class="token operator">=</span> <span class="token number">12</span>
+x_y_sum<span class="token punctuation">(</span>y<span class="token operator">=</span>num1<span class="token punctuation">,</span> x<span class="token operator">=</span>num2<span class="token punctuation">)</span>
+<span class="token comment"># 12+15=27</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>不定长参数</p>
+<p>1、元组：*args</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code><span class="token comment"># 计算任意数字的和</span>
+<span class="token keyword">def</span> <span class="token function">any_num_sum</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"args:{}"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>args<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    rs <span class="token operator">=</span> x <span class="token operator">+</span> y
+    <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>args<span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">:</span>
+        <span class="token keyword">for</span> arg <span class="token keyword">in</span> args<span class="token punctuation">:</span>
+            rs <span class="token operator">+=</span> arg
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"计算结果：{}"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>rs<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># any_num_sum(20)</span>
+<span class="token comment"># any_num_sum(20,30)</span>
+any_num_sum<span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">30</span><span class="token punctuation">,</span><span class="token number">40</span><span class="token punctuation">,</span><span class="token number">50</span><span class="token punctuation">)</span>
+<span class="token comment"># args:(40, 50) 元组</span>
+<span class="token comment"># 计算结果：140</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>2、字典：**args</p>
+<p>接受key:value对，然后封装到字典里</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code><span class="token comment"># 缴五险一金</span>
+<span class="token keyword">def</span> <span class="token function">social_comp</span><span class="token punctuation">(</span>basic_money<span class="token punctuation">,</span> <span class="token operator">**</span>proportion<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"缴费基数：{}"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>basic_money<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"缴费比例：{}"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>proportion<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+social_comp<span class="token punctuation">(</span><span class="token number">8000</span><span class="token punctuation">,</span> e<span class="token operator">=</span><span class="token number">0.1</span><span class="token punctuation">,</span> a<span class="token operator">=</span><span class="token number">0.12</span><span class="token punctuation">)</span>
+<span class="token comment"># 缴费基数：8000</span>
+<span class="token comment"># 缴费比例：{'e': 0.1, 'a': 0.12}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>不定长参数综合使用+拆包</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code><span class="token comment"># 工资计算器</span>
+<span class="token keyword">def</span> <span class="token function">salary_comp</span><span class="token punctuation">(</span>basic_money<span class="token punctuation">,</span> <span class="token operator">*</span>other_money<span class="token punctuation">,</span> <span class="token operator">**</span>proportion<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"基本工资：{}"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>basic_money<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"其他福利：{}"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>other_money<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"计费比例：{}"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>proportion<span class="token punctuation">)</span><span class="token punctuation">)</span>
+other_money <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">,</span><span class="token number">200</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">)</span>
+proportion_dict <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"e"</span><span class="token punctuation">:</span><span class="token number">0.2</span><span class="token punctuation">,</span> <span class="token string">"m"</span><span class="token punctuation">:</span><span class="token number">0.1</span><span class="token punctuation">,</span> <span class="token string">"a"</span><span class="token punctuation">:</span><span class="token number">0.12</span><span class="token punctuation">}</span>
+
+<span class="token comment"># 注意要用*和**来拆包，不然就会把最后两个都当作元组进行封装了</span>
+salary_comp<span class="token punctuation">(</span><span class="token number">8000</span><span class="token punctuation">,</span> <span class="token operator">*</span>other_money<span class="token punctuation">,</span> <span class="token operator">**</span>proportion_dict<span class="token punctuation">)</span>
+<span class="token comment"># 基本工资：8000</span>
+<span class="token comment"># 其他福利：(500, 200, 100, 1000)</span>
+<span class="token comment"># 计费比例：{'e': 0.2, 'm': 0.1, 'a': 0.12}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h1 id="递归函数及应用" tabindex="-1"><a class="header-anchor" href="#递归函数及应用" aria-hidden="true">#</a> 递归函数及应用</h1>
+<ul>
+<li>函数调用自身</li>
+<li>注意：递归过程中要有用于结束递归的判断</li>
+</ul>
+<p>递归函数</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code><span class="token comment"># 阶乘</span>
+<span class="token triple-quoted-string string">'''
+1! = 1
+1! = 2*1!
+3! = 3*2!
+'''</span>
+<span class="token comment"># for循环计算阶乘</span>
+<span class="token keyword">def</span> <span class="token function">recursive_for</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    rs <span class="token operator">=</span> num
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span>num<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        rs <span class="token operator">*=</span> i
+    <span class="token keyword">return</span> rs
+<span class="token comment"># 递归计算阶乘</span>
+<span class="token keyword">def</span> <span class="token function">recursive</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> num <span class="token operator">></span> <span class="token number">1</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> num <span class="token operator">*</span> recursive<span class="token punctuation">(</span>num<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> num
+
+num <span class="token operator">=</span> recursive_for<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span>
+num <span class="token operator">=</span> recursive<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h1 id="匿名函数及应用" tabindex="-1"><a class="header-anchor" href="#匿名函数及应用" aria-hidden="true">#</a> 匿名函数及应用</h1>
+<p>匿名函数：定义的函数没有名称</p>
+<ul>
+<li>用lambda关键字创建匿名函数</li>
+<li>定义：lambda[参数列表]:表达式</li>
+<li>匿名函数可以作为参数被传入其他函数</li>
+</ul>
+<p>匿名函数</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code><span class="token comment"># 匿名函数</span>
+<span class="token builtin">sum</span> <span class="token operator">=</span> <span class="token keyword">lambda</span>  x<span class="token punctuation">,</span>y<span class="token punctuation">:</span> x<span class="token operator">+</span>y
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment"># 30</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span><span class="token builtin">sum</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment"># &lt;class 'function'></span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>应用场景：</p>
+<ul>
+<li>
+<p>作为函数的参数</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code><span class="token keyword">def</span> <span class="token function">x_y_comp</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>y<span class="token punctuation">,</span>func<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    rs <span class="token operator">=</span> func<span class="token punctuation">(</span>x<span class="token punctuation">,</span>y<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"计算结果：{}"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>rs<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+x_y_comp<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token keyword">lambda</span> x<span class="token punctuation">,</span>y<span class="token punctuation">:</span>x<span class="token operator">+</span>y<span class="token punctuation">)</span><span class="token comment"># 计算结果：8</span>
+x_y_comp<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token keyword">lambda</span> x<span class="token punctuation">,</span>y<span class="token punctuation">:</span>x<span class="token operator">*</span>y<span class="token punctuation">)</span><span class="token comment"># 计算结果：15</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
+<li>
+<p>作为内置函数的参数</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code>user_info <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token string">"name"</span><span class="token punctuation">:</span><span class="token string">"zhangsan"</span><span class="token punctuation">,</span><span class="token string">"age"</span><span class="token punctuation">:</span><span class="token number">20</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token string">"name"</span><span class="token punctuation">:</span><span class="token string">"lisi"</span><span class="token punctuation">,</span><span class="token string">"age"</span><span class="token punctuation">:</span><span class="token number">15</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token string">"name"</span><span class="token punctuation">:</span><span class="token string">"wangwu"</span><span class="token punctuation">,</span><span class="token string">"age"</span><span class="token punctuation">:</span><span class="token number">30</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>user_info<span class="token punctuation">)</span>
+<span class="token comment"># 按照年龄的降序排列，默认是升序</span>
+user_info<span class="token punctuation">.</span>sort<span class="token punctuation">(</span>key<span class="token operator">=</span><span class="token keyword">lambda</span> info<span class="token punctuation">:</span>info<span class="token punctuation">[</span><span class="token string">"age"</span><span class="token punctuation">]</span><span class="token punctuation">,</span> reverse<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>user_info<span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
+</ul>
+<h1 id="python内置函数" tabindex="-1"><a class="header-anchor" href="#python内置函数" aria-hidden="true">#</a> python内置函数</h1>
+<h2 id="enumerate" tabindex="-1"><a class="header-anchor" href="#enumerate" aria-hidden="true">#</a> enumerate()</h2>
+<p>enumerate() 函数用于将一个<strong>可遍历的数据对象</strong>(如<strong>列表</strong>、<strong>元组</strong>或<strong>字符串</strong>)组合为一个索引序列，同时列出数据和数据下标，一般用在 for 循环当中。</p>
+<p>以下是 enumerate() 方法的语法:</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code><span class="token builtin">enumerate</span><span class="token punctuation">(</span>sequence<span class="token punctuation">,</span> <span class="token punctuation">[</span>start<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>参数：</p>
+<ul>
+<li>sequence -- 一个序列、迭代器或其他支持迭代对象。</li>
+<li>start -- 下标起始位置。</li>
+</ul>
+<p>返回值：</p>
+<p>返回 enumerate(枚举) 对象。</p>
+<p>实例：</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code>seasons <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Spring'</span><span class="token punctuation">,</span> <span class="token string">'Summer'</span><span class="token punctuation">,</span> <span class="token string">'Fall'</span><span class="token punctuation">,</span> <span class="token string">'Winter'</span><span class="token punctuation">]</span>
+<span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">enumerate</span><span class="token punctuation">(</span>seasons<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment"># [(0, 'Spring'), (1, 'Summer'), (2, 'Fall'), (3, 'Winter')]</span>
+<span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">enumerate</span><span class="token punctuation">(</span>seasons<span class="token punctuation">,</span> start<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>       <span class="token comment"># 下标从 1 开始</span>
+<span class="token comment"># [(1, 'Spring'), (2, 'Summer'), (3, 'Fall'), (4, 'Winter')]</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>for循环使用 enumerate：</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code>seq <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'one'</span><span class="token punctuation">,</span> <span class="token string">'two'</span><span class="token punctuation">,</span> <span class="token string">'three'</span><span class="token punctuation">]</span>
+<span class="token keyword">for</span> i<span class="token punctuation">,</span> element <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>seq<span class="token punctuation">)</span><span class="token punctuation">:</span>
+	<span class="token keyword">print</span> i<span class="token punctuation">,</span> element
+
+<span class="token comment">#0 one</span>
+<span class="token comment">#1 two</span>
+<span class="token comment">#2 three</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div></template>
+
+

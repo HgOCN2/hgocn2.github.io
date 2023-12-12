@@ -1,0 +1,489 @@
+<template><div><h1 id="mcts蒙特卡罗树搜索" tabindex="-1"><a class="header-anchor" href="#mcts蒙特卡罗树搜索" aria-hidden="true">#</a> MCTS蒙特卡罗树搜索</h1>
+<ul>
+<li><RouterLink to="/docs/Engineering/reinforcement-learning/reinforcement-learning.html">返回上层目录</RouterLink></li>
+<li><a href="#MCTS%E7%AE%80%E4%BB%8B">MCTS简介</a></li>
+<li><a href="#MCTS%E6%B5%81%E7%A8%8B">MCTS流程</a>
+<ul>
+<li><a href="#MCTS%E6%80%BB%E6%B5%81%E7%A8%8B">MCTS总流程</a></li>
+<li><a href="#Selection%E9%80%89%E6%8B%A9%E5%92%8CExpansion%E6%89%A9%E5%B1%95">Selection选择和Expansion扩展</a></li>
+<li><a href="#Simulation%E6%A8%A1%E6%8B%9F">Simulation模拟</a></li>
+<li><a href="#Backpropagation%E5%8F%8D%E5%90%91%E4%BC%A0%E6%92%AD">Backpropagation反向传播</a></li>
+</ul>
+</li>
+<li><a href="#MCTS%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90">MCTS代码解析</a>
+<ul>
+<li><a href="#%E4%BA%BA%E6%9C%BA%E8%BD%AE%E6%B5%81%E5%AF%B9%E6%88%98%E4%BB%A3%E7%A0%81">人机轮流对战代码</a></li>
+<li><a href="#MCTS%E6%80%BB%E6%B5%81%E7%A8%8B%E4%BB%A3%E7%A0%81">MCTS总流程代码</a></li>
+<li><a href="#Selection%E9%80%89%E6%8B%A9%E4%BB%A3%E7%A0%81">Selection选择代码</a></li>
+<li><a href="#Expansion%E6%89%A9%E5%B1%95%E4%BB%A3%E7%A0%81">Expansion扩展代码</a></li>
+<li><a href="#Simulation%E6%A8%A1%E6%8B%9F%E4%BB%A3%E7%A0%81">Simulation模拟代码</a></li>
+<li><a href="#Backpropagation%E5%8F%8D%E5%90%91%E4%BC%A0%E6%92%AD%E4%BB%A3%E7%A0%81">Backpropagation反向传播代码</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99">参考资料</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E9%99%84%E5%BD%95">代码附录</a>
+<ul>
+<li><a href="#%E4%BA%BA%E6%9C%BA%E5%AF%B9%E6%88%98%E4%B8%BB%E7%A8%8B%E5%BA%8F">人机对战主程序</a></li>
+<li><a href="#MCTS%E7%A8%8B%E5%BA%8F">MCTS程序</a></li>
+</ul>
+</li>
+</ul>
+<p><img src="@source/docs/Engineering/reinforcement-learning/monte-carlo-tree-search/pic/mcts-paper.jpg" alt="mcts-paper"></p>
+<p>pdf: <a href="http://repository.essex.ac.uk/4117/1/MCTS-Survey.pdf" target="_blank" rel="noopener noreferrer"><em>A Survey of Monte Carlo Tree Search Methods</em><ExternalLinkIcon/></a></p>
+<h1 id="mcts简介" tabindex="-1"><a class="header-anchor" href="#mcts简介" aria-hidden="true">#</a> MCTS简介</h1>
+<p><strong>MCTS也就是蒙特卡罗树搜索（Monte Carlo Tree Search），是一类树搜索算法的统称</strong>，可以较为有效地解决一些探索空间巨大的问题，例如一般的围棋算法都是基于MCTS实现的。</p>
+<p><img src="@source/docs/Engineering/reinforcement-learning/monte-carlo-tree-search/pic/mcts-go-demo.gif" alt="mcts-go-demo"></p>
+<p>搜索路径如下：</p>
+<p><img src="@source/docs/Engineering/reinforcement-learning/monte-carlo-tree-search/pic/mcts-go-demo-2.jpg" alt="mcts-go-demo-2"></p>
+<p>其实上面的树状图叫游戏树。游戏树是一种常见的数据结构，其中每一个节点代表游戏的一个确定状态，从一个节点到该节点的一个子节点（如果存在）是一个移动。节点的子节点数目称为分支因子。游戏树的根节点代表游戏的初始状态。游戏树的终端节点是没有子节点的节点，至此游戏结束，无法再进行移动。终端节点的状态也就是游戏的结果（输/赢/平局）。</p>
+<p>下面以井字棋游戏为例，形象地来看下什么是游戏树。</p>
+<p><img src="@source/docs/Engineering/reinforcement-learning/monte-carlo-tree-search/pic/game-tree.png" alt="game-tree"></p>
+<p>每个父节点的子节点数量对应着本次可以执行的Action的数量。</p>
+<h1 id="mcts流程" tabindex="-1"><a class="header-anchor" href="#mcts流程" aria-hidden="true">#</a> MCTS流程</h1>
+<p>MCTS运行所在的框架/环境是一个游戏，它本身是一个非常抽象和宽泛的概念，因此这里我们只关注一种游戏类型：<strong>双人有限零和顺序游戏</strong>。这个名词一开始听起来会有些复杂，但是实际上非常简单，现在来让我们将它分解一下：</p>
+<blockquote>
+<p>游戏：意味着我们在一种需要交互的情境中，交互通常会涉及一个或多个角色</p>
+<p>有限：表明在任意时间点，角色之间存在的交互方式都是有限的</p>
+<p>双人：游戏中只有两个角色</p>
+<p>顺序：玩家依次交替进行他们的动作</p>
+<p>零和：参与游戏的两方有完全相反的目标，换句话说就是，游戏的任意结束状态双方的收益之和等于零</p>
+<p>我们可以很轻松的验证，围棋、国际象棋和井字棋都是双人有限零和顺序游戏：有两位玩家参与，玩家能进行的动作总是有限的，双方的游戏目标是完全相反的（所有游戏的结果之和等于0）</p>
+</blockquote>
+<h2 id="mcts总流程" tabindex="-1"><a class="header-anchor" href="#mcts总流程" aria-hidden="true">#</a> MCTS总流程</h2>
+<p>以人和AI下棋对战为例，当每次轮到AI下棋时，在规定的时间内（或规定的模拟次数内），AI从当前节点（状态）反复进行如下步骤的循环，来得到最佳的下棋策略。</p>
+<p>形象一点解释，AI在每次轮到它下棋时，都会从当前状态开始在规定时间或次数内，不断在脑子中模拟下一盘又一盘的棋，经过模拟很多盘下完的棋，就知道了每个状态的胜率，然后选择胜率最高的那个走法（状态或节点）。每一次模拟将棋下到终点后，都会更新走过的节点胜率。</p>
+<p><img src="@source/docs/Engineering/reinforcement-learning/monte-carlo-tree-search/pic/one-iteration-of-general-mcts-approach.jpg" alt="one-iteration-of-general-mcts-approach"></p>
+<p>总算法流程如下：</p>
+<p><img src="@source/docs/Engineering/reinforcement-learning/monte-carlo-tree-search/pic/general-mcts-approach.jpg" alt="general-mcts-approach"></p>
+<p>注意，<code v-pre>TreePolicy()</code>这一步包含了<code v-pre>Selection</code>和<code v-pre>Expansion</code>。</p>
+<p>下面依次来解释上述四个步骤。</p>
+<h2 id="selection选择和expansion扩展" tabindex="-1"><a class="header-anchor" href="#selection选择和expansion扩展" aria-hidden="true">#</a> Selection选择和Expansion扩展</h2>
+<p><code v-pre>Selection</code>和<code v-pre>Expansion</code>被包含在了<code v-pre>TreePolicy()</code>中，<code v-pre>Selection</code>如红框所示。这两个过程衔接比较紧密，不方便分开说，就一块介绍了。</p>
+<p><img src="@source/docs/Engineering/reinforcement-learning/monte-carlo-tree-search/pic/selection-and-expand.jpg" alt="selection-and-expand"></p>
+<p><strong>Selection</strong>：</p>
+<p><img src="@source/docs/Engineering/reinforcement-learning/monte-carlo-tree-search/pic/selection.jpg" alt="selection"></p>
+<p><code v-pre>Selection</code>就是：如果该节点的所有可能的子节点都被探索完了，则选择得分（UCB）最高的子节点，并如此循环，直到某个节点存在从未被探索的子节点（可能不止一个），选择这个节点，停止<code v-pre>Selection</code>。<code v-pre>Selection</code>具体流程如下图所示：</p>
+<p><img src="@source/docs/Engineering/reinforcement-learning/monte-carlo-tree-search/pic/selection-2.jpg" alt="selection-2"></p>
+<p>这个公式就不解释了，看不懂的话先看多臂赌博机和UCB算法。</p>
+<p><strong>Expansion</strong>：</p>
+<p><img src="@source/docs/Engineering/reinforcement-learning/monte-carlo-tree-search/pic/expansion.jpg" alt="expansion"></p>
+<p><code v-pre>Expansion</code>就是：从<code v-pre>Selection</code>所选节点的从未被探索的子节点中随机选一个，同时把随机选的这个子节点加入到所选节点中，作为已被探索过的节点（注意，新加入的这个子节点的奖励和遍历次数都为0）。<code v-pre>Expansion</code>具体流程如下图所示：</p>
+<p><img src="@source/docs/Engineering/reinforcement-learning/monte-carlo-tree-search/pic/expansion-2.jpg" alt="expansion-2"></p>
+<h2 id="simulation模拟" tabindex="-1"><a class="header-anchor" href="#simulation模拟" aria-hidden="true">#</a> Simulation模拟</h2>
+<p><img src="@source/docs/Engineering/reinforcement-learning/monte-carlo-tree-search/pic/simulation.jpg" alt="simulation"></p>
+<p>从前面<code v-pre>Expansion</code>选出来的那个未被经历过的子节点开始，进行随机对战模拟，一直到游戏结束，然后计算奖励，赢了为正，输了为负。这个奖励值就作为该节点本次的奖励，留着用于反向传播。</p>
+<p><img src="@source/docs/Engineering/reinforcement-learning/monte-carlo-tree-search/pic/simulation-2.jpg" alt="simulation-2"></p>
+<h2 id="backpropagation反向传播" tabindex="-1"><a class="header-anchor" href="#backpropagation反向传播" aria-hidden="true">#</a> Backpropagation反向传播</h2>
+<p><img src="@source/docs/Engineering/reinforcement-learning/monte-carlo-tree-search/pic/backpropagation.jpg" alt="backpropagation"></p>
+<p>从前面<code v-pre>Expansion</code>选出来的那个未被经历过的子节点开始，一直上溯父节点，并对每次经历的节点更新其总访问次数和总奖励值。</p>
+<p><img src="@source/docs/Engineering/reinforcement-learning/monte-carlo-tree-search/pic/backpropagation-2.jpg" alt="backpropagation-2"></p>
+<h1 id="mcts代码解析" tabindex="-1"><a class="header-anchor" href="#mcts代码解析" aria-hidden="true">#</a> MCTS代码解析</h1>
+<p>完整代码见本文最后的<code v-pre>代码附录</code>部分，这里选出关键代码进行讲解。</p>
+<p>下图是运行完整代码的游戏截图（AI落子形状为1，人落子形状为-1）：</p>
+<p><img src="@source/docs/Engineering/reinforcement-learning/monte-carlo-tree-search/pic/ai-vs-human.jpg" alt="ai-vs-human"></p>
+<h2 id="人机轮流对战代码" tabindex="-1"><a class="header-anchor" href="#人机轮流对战代码" aria-hidden="true">#</a> 人机轮流对战代码</h2>
+<p>下面的代码是人机轮流对战总流程，很显然，人是通过脑子计算好然后手动输入落子位置，机器是通过<code v-pre>tree.search()</code>函数来计算好然后得到落子位置。所以<code v-pre>tree.search()</code>就是我们要研究的对象，看看AI是怎么计算落子位置的。</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code>s <span class="token operator">=</span> TicTacToeState<span class="token punctuation">(</span><span class="token punctuation">)</span>
+tree <span class="token operator">=</span> MCTS<span class="token punctuation">(</span>time_limit<span class="token operator">=</span><span class="token number">1000</span><span class="token punctuation">)</span>
+<span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+    <span class="token comment"># 机器下棋</span>
+    action <span class="token operator">=</span> tree<span class="token punctuation">.</span>search<span class="token punctuation">(</span>initial_state<span class="token operator">=</span>s<span class="token punctuation">)</span>
+    s <span class="token operator">=</span> s<span class="token punctuation">.</span>take_action<span class="token punctuation">(</span>action<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> s<span class="token punctuation">.</span>is_terminal<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"ai win"</span><span class="token punctuation">)</span>
+        <span class="token keyword">break</span>
+    
+    <span class="token comment"># 人下棋 输入“0 0”代表左上角位置</span>
+    x<span class="token punctuation">,</span> y <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    action <span class="token operator">=</span> Action<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> x<span class="token punctuation">,</span> y<span class="token punctuation">)</span>
+    s <span class="token operator">=</span> s<span class="token punctuation">.</span>take_action<span class="token punctuation">(</span>action<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> s<span class="token punctuation">.</span>is_terminal<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"human win"</span><span class="token punctuation">)</span>
+        <span class="token keyword">break</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="mcts总流程代码" tabindex="-1"><a class="header-anchor" href="#mcts总流程代码" aria-hidden="true">#</a> MCTS总流程代码</h2>
+<p>AI每次调用<code v-pre>search()</code>方法下棋，我们看到里面在时间期限内不断执行<code v-pre>self.execute_round()</code>，这个<code v-pre>self.execute_round()</code>就具体实行了一遍“选择-&gt;扩展-&gt;模拟-&gt;反向传播”。</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code><span class="token comment"># AI每次调用该方法下棋</span>
+<span class="token keyword">def</span> <span class="token function">search</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> initial_state<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    self<span class="token punctuation">.</span>root <span class="token operator">=</span> TreeNode<span class="token punctuation">(</span>initial_state<span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span>
+
+    time_limit <span class="token operator">=</span> time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>time_limit <span class="token operator">/</span> <span class="token number">1000</span>
+    <span class="token keyword">while</span> time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> time_limit<span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>execute_round<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    best_child <span class="token operator">=</span> self<span class="token punctuation">.</span>get_best_child<span class="token punctuation">(</span>self<span class="token punctuation">.</span>root<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+    
+    action <span class="token operator">=</span> self<span class="token punctuation">.</span>get_action<span class="token punctuation">(</span>self<span class="token punctuation">.</span>root<span class="token punctuation">,</span> best_child<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> action
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>下面我们看<code v-pre>execute_round()</code>方法究竟是怎么回事。先回想下前面说的“选择-&gt;扩展-&gt;模拟-&gt;反向传播”步骤，如下图所示。</p>
+<p><img src="@source/docs/Engineering/reinforcement-learning/monte-carlo-tree-search/pic/one-iteration-of-general-mcts-approach.jpg" alt="one-iteration-of-general-mcts-approach"></p>
+<p>然后看代码：</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code><span class="token comment"># MCTS的核心：选择、扩展、模拟、反向传播</span>
+<span class="token keyword">def</span> <span class="token function">execute_round</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    node <span class="token operator">=</span> self<span class="token punctuation">.</span>select_node<span class="token punctuation">(</span>self<span class="token punctuation">.</span>root<span class="token punctuation">)</span>  <span class="token comment"># 选择、扩展</span>
+    reward <span class="token operator">=</span> self<span class="token punctuation">.</span>rollout<span class="token punctuation">(</span>node<span class="token punctuation">.</span>state<span class="token punctuation">)</span>  <span class="token comment"># 模拟</span>
+    self<span class="token punctuation">.</span>backpropogate<span class="token punctuation">(</span>node<span class="token punctuation">,</span> reward<span class="token punctuation">)</span>  <span class="token comment"># 反向传播</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这里代码注释的很清晰，就不多说什么了。接下来看其中的每一项即可。</p>
+<h2 id="selection选择代码" tabindex="-1"><a class="header-anchor" href="#selection选择代码" aria-hidden="true">#</a> Selection选择代码</h2>
+<p><img src="@source/docs/Engineering/reinforcement-learning/monte-carlo-tree-search/pic/selection.jpg" alt="selection"></p>
+<p><img src="@source/docs/Engineering/reinforcement-learning/monte-carlo-tree-search/pic/selection-and-expand.jpg" alt="selection-and-expand"></p>
+<p>下面的代码这么理解：</p>
+<p>反复进行迭代选择：</p>
+<p>（1）若该节点可能的子节点若全部扩展完毕，则使用<code v-pre>get_best_child</code>方法获得UCT值最大的节点</p>
+<p>（2）若存在未扩展的子节点, 则使用<code v-pre>expand</code>方法扩展子节点</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code><span class="token keyword">def</span> <span class="token function">select_node</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> node<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">while</span> <span class="token keyword">not</span> node<span class="token punctuation">.</span>is_terminal<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> node<span class="token punctuation">.</span>is_fully_expanded<span class="token punctuation">:</span>  <span class="token comment"># expand中若子节点都被探索过，则标记为True</span>
+            node <span class="token operator">=</span> self<span class="token punctuation">.</span>get_best_child<span class="token punctuation">(</span>node<span class="token punctuation">,</span> self<span class="token punctuation">.</span>exploration_constant<span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> self<span class="token punctuation">.</span>expand<span class="token punctuation">(</span>node<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> node
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>代码对着上图对照看很容易理解，这里就不多说了。其中的<code v-pre>self.expand(node)</code>就是扩展方法了。</p>
+<p>其中的<code v-pre>self.get_best_child()</code>就是计算所有子节点的UCB值，从中选取最大的那个，以解决“探索和利用难题”。</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code><span class="token keyword">def</span> <span class="token function">get_best_child</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> node<span class="token punctuation">,</span> exploration_value<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    best_value <span class="token operator">=</span> <span class="token builtin">float</span><span class="token punctuation">(</span><span class="token string">"-inf"</span><span class="token punctuation">)</span>
+    best_nodes <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> child <span class="token keyword">in</span> node<span class="token punctuation">.</span>children<span class="token punctuation">.</span>values<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># node.children = {action: node}</span>
+        <span class="token comment"># get_current_player作用：如果是AI，则正正为正，如果是人，则负负为正</span>
+        node_value <span class="token operator">=</span> node<span class="token punctuation">.</span>state<span class="token punctuation">.</span>get_current_player<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> child<span class="token punctuation">.</span>total_reward <span class="token operator">/</span> child<span class="token punctuation">.</span>num_visits <span class="token operator">+</span> exploration_value <span class="token operator">*</span> math<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span><span class="token number">2</span> <span class="token operator">*</span> math<span class="token punctuation">.</span>log<span class="token punctuation">(</span>node<span class="token punctuation">.</span>num_visits<span class="token punctuation">)</span> <span class="token operator">/</span> child<span class="token punctuation">.</span>num_visits<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> node_value <span class="token operator">></span> best_value<span class="token punctuation">:</span>
+            best_value <span class="token operator">=</span> node_value
+            best_nodes <span class="token operator">=</span> <span class="token punctuation">[</span>child<span class="token punctuation">]</span>
+        <span class="token keyword">elif</span> node_value <span class="token operator">==</span> best_value<span class="token punctuation">:</span>
+            best_nodes<span class="token punctuation">.</span>append<span class="token punctuation">(</span>child<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> random<span class="token punctuation">.</span>choice<span class="token punctuation">(</span>best_nodes<span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="expansion扩展代码" tabindex="-1"><a class="header-anchor" href="#expansion扩展代码" aria-hidden="true">#</a> Expansion扩展代码</h2>
+<p><img src="@source/docs/Engineering/reinforcement-learning/monte-carlo-tree-search/pic/expansion.jpg" alt="expansion"></p>
+<p><img src="@source/docs/Engineering/reinforcement-learning/monte-carlo-tree-search/pic/expansion-2.jpg" alt="expansion-2"></p>
+<p>获取当前状态下所有可能动作，返回一个没有经历的状态节点，并将该节点加入子节点。</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code><span class="token keyword">def</span> <span class="token function">expand</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> node<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    actions <span class="token operator">=</span> node<span class="token punctuation">.</span>state<span class="token punctuation">.</span>get_possible_actions<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> action <span class="token keyword">in</span> actions<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> action <span class="token keyword">not</span> <span class="token keyword">in</span> node<span class="token punctuation">.</span>children<span class="token punctuation">:</span>
+            new_node <span class="token operator">=</span> TreeNode<span class="token punctuation">(</span>node<span class="token punctuation">.</span>state<span class="token punctuation">.</span>take_action<span class="token punctuation">(</span>action<span class="token punctuation">)</span><span class="token punctuation">,</span> node<span class="token punctuation">)</span>
+            node<span class="token punctuation">.</span>children<span class="token punctuation">[</span>action<span class="token punctuation">]</span> <span class="token operator">=</span> new_node
+            <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>actions<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token builtin">len</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>children<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                node<span class="token punctuation">.</span>is_fully_expanded <span class="token operator">=</span> <span class="token boolean">True</span>
+            <span class="token keyword">return</span> new_node  <span class="token comment"># 每次只返回一个</span>
+    <span class="token keyword">raise</span> Exception<span class="token punctuation">(</span><span class="token string">"Should never reach here"</span><span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="simulation模拟代码" tabindex="-1"><a class="header-anchor" href="#simulation模拟代码" aria-hidden="true">#</a> Simulation模拟代码</h2>
+<p><img src="@source/docs/Engineering/reinforcement-learning/monte-carlo-tree-search/pic/simulation.jpg" alt="simulation"></p>
+<p><img src="@source/docs/Engineering/reinforcement-learning/monte-carlo-tree-search/pic/simulation-2.jpg" alt="simulation-2"></p>
+<p>还记得前面的MCTS总流程代码吗？AI每次落子前一遍遍执行下面的流程：</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code><span class="token comment"># MCTS的核心：选择、扩展、模拟、反向传播</span>
+<span class="token keyword">def</span> <span class="token function">execute_round</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    node <span class="token operator">=</span> self<span class="token punctuation">.</span>select_node<span class="token punctuation">(</span>self<span class="token punctuation">.</span>root<span class="token punctuation">)</span>  <span class="token comment"># 选择、扩展</span>
+    reward <span class="token operator">=</span> self<span class="token punctuation">.</span>rollout<span class="token punctuation">(</span>node<span class="token punctuation">.</span>state<span class="token punctuation">)</span>  <span class="token comment"># 模拟</span>
+    self<span class="token punctuation">.</span>backpropogate<span class="token punctuation">(</span>node<span class="token punctuation">,</span> reward<span class="token punctuation">)</span>  <span class="token comment"># 反向传播</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>里面的<code v-pre>self.rollout(node.state) </code>就是<code v-pre>Simulation</code>部分，输入扩展的子节点，然后进行随机对战模拟，一直到游戏结束，然后计算奖励，赢了为正，输了为负。这个奖励值就作为该节点本次的奖励，留着用于反向传播。</p>
+<p>那具体时间怎么做的呢？来看具体代码：</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code><span class="token keyword">def</span> <span class="token function">random_policy</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">while</span> <span class="token keyword">not</span> state<span class="token punctuation">.</span>is_terminal<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        action <span class="token operator">=</span> random<span class="token punctuation">.</span>choice<span class="token punctuation">(</span>state<span class="token punctuation">.</span>get_possible_actions<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        state <span class="token operator">=</span> state<span class="token punctuation">.</span>take_action<span class="token punctuation">(</span>action<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> state<span class="token punctuation">.</span>get_reward<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>rollout使用此随机选择方式进行模拟，显然就是随机模拟。一次按照人的角色，一次按照AI的角色，就这么自我对战到游戏结束，然后得到奖励值。</p>
+<h2 id="backpropagation反向传播代码" tabindex="-1"><a class="header-anchor" href="#backpropagation反向传播代码" aria-hidden="true">#</a> Backpropagation反向传播代码</h2>
+<p><img src="@source/docs/Engineering/reinforcement-learning/monte-carlo-tree-search/pic/backpropagation.jpg" alt="backpropagation"></p>
+<p><img src="@source/docs/Engineering/reinforcement-learning/monte-carlo-tree-search/pic/backpropagation-2.jpg" alt="backpropagation-2"></p>
+<p>从前面<code v-pre>Expansion</code>选出来的那个未被经历过的子节点开始，一直上溯父节点，并对每次经历的节点更新其总访问次数和总奖励值。</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code><span class="token keyword">def</span> <span class="token function">backpropogate</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> node<span class="token punctuation">,</span> reward<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">while</span> node <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        node<span class="token punctuation">.</span>num_visits <span class="token operator">+=</span> <span class="token number">1</span>
+        node<span class="token punctuation">.</span>total_reward <span class="token operator">+=</span> reward
+        node <span class="token operator">=</span> node<span class="token punctuation">.</span>parent
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>代码很简单，就不解释了。</p>
+<h1 id="mcts和mc方法的区别" tabindex="-1"><a class="header-anchor" href="#mcts和mc方法的区别" aria-hidden="true">#</a> MCTS和MC方法的区别</h1>
+<p>许多人会混淆蒙特卡洛树搜索和蒙特卡洛方法。这两者有本质区别：蒙特卡洛方法有偏差（Bias），而MCTS没有偏差（Bias）。</p>
+<p>在传统的博弈游戏树搜索中，即著名的<strong>极小极大（Minimax）搜索</strong>。看下图，假设现在轮到黑棋，黑棋有$b_1$和$b_2$两手可选，白棋对于$b_1$有$w_1$和$w_2$两手可选，白棋对于$b_2$有$w_3, w_4, w_5$三手可选：</p>
+<p><img src="@source/docs/Engineering/reinforcement-learning/monte-carlo-tree-search/pic/min-max-search.png" alt="min-max-search"></p>
+<p>然后假设走完$w_1$/$w_2$/$w_3$/$w_4$/$w_5$后，经过局面评估，黑棋的未来胜率分别是 50% / 48% / 62% / 45% / 58%（等一下，这些胜率是怎么评估出来的？我们后文会说这个问题）。</p>
+<p>请问，黑棋此时最佳的着法是$b_1$还是$b_2$？如果是用蒙特卡洛方法，趋近的会是其下所有胜率的平均值。例如经过蒙特卡洛模拟，会发现$b_1$后续的胜率是49% = (50+48)/2，而$b_2$后续的胜率是55% = (62+45+58)/3。</p>
+<p>于是蒙特卡洛方法说应该走$b_2$，因为55%比49%的胜率高。但这是错误的。因为如果白棋够聪明，会在黑棋走$b_1$的时候回应以$w_2$（尽量降低黑棋的胜率），在黑棋走$b_2$的时候回应以$w_4$（尽量降低黑棋的胜率）。</p>
+<p>所以走$b_1$后黑棋的真实胜率是48%，走$b_2$后黑棋的真实胜率是45%。黑棋的正解是$b_1$。这就是Minimax搜索的核心思想：**在搜索树中，每次轮到黑棋走时，走对黑棋最有利的；轮到白棋走时，走对黑棋最不利的。**由于围棋是零和游戏，这就可以达到最优解。这是一个由底往上的过程：先把搜索树画到我们可以承受的深度，然后逐层往上取最大值或最小值回溯，就可以看到双方的正解（如果胜率评估是准确的）。而实际编程的时候，是往下不断生长节点，然后动态更新每个父节点的胜率值。</p>
+<p>下图是一个更多层的例子：</p>
+<p><img src="@source/docs/Engineering/reinforcement-learning/monte-carlo-tree-search/pic/min-max-search-2.png" alt="min-max-search-2"></p>
+<p>值得注意的是，在实际对局中，胜率评估会有不准确的地方，这就会导致“地平线效应”，即由于电脑思考的深度不够，且胜率评估不够准确，因此没有看见正解。</p>
+<p><strong>蒙特卡洛树搜索和蒙特卡洛方法的区别在于：</strong></p>
+<ol>
+<li>**如果用蒙特卡洛方法做上一百万次模拟，$b_1$和$b_2$的胜率仍然会固定在49%和55%，不会进步，永远错误。**所以它的结果存在偏差（Bias），当然，也有方差（Variance）。</li>
+<li>**而蒙特卡洛树搜索在一段时间模拟后，$b_1$和$b_2$的胜率就会向48%和45%收敛，从而给出正确的答案。**所以它的结果不存在偏差（Bias），只存在方差（Variance）。但是，对于复杂的局面，它仍然有可能长期陷入陷阱，直到很久之后才开始收敛到正确答案。</li>
+</ol>
+<p>蒙特卡洛树搜索的意义在于部分解决了上述两个问题：</p>
+<ol>
+<li><strong>它可以给出一个局面评估，虽然不准，但比没有强</strong>。这就部分解决了第二个问题。</li>
+<li><strong>根据它的设计，搜索树会较好地自动集中到“更值得搜索的变化”（注意，也不一定准）</strong>。如果发现一个不错的着法，蒙特卡洛树搜索会较快地把它看到很深，可以说它结合了广度优先搜索和深度优先搜索，类似于启发式搜索。这就部分解决了第一个问题。</li>
+</ol>
+<p>最后，随着搜索树的自动生长，蒙特卡洛树搜索可以保证在足够长的时间后收敛到完美解（但可能需要极长的时间）。</p>
+<h1 id="参考资料" tabindex="-1"><a class="header-anchor" href="#参考资料" aria-hidden="true">#</a> 参考资料</h1>
+<ul>
+<li><a href="https://www.cnblogs.com/yifdu25/p/8303462.html" target="_blank" rel="noopener noreferrer">蒙特卡罗树搜索（MCTS）【转】<ExternalLinkIcon/></a></li>
+<li><a href="https://blog.csdn.net/caozixuan98724/article/details/103213795?utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.baidujs&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.baidujs" target="_blank" rel="noopener noreferrer">面向初学者的蒙特卡洛树搜索MCTS详解及其实现<ExternalLinkIcon/></a></li>
+</ul>
+<p>蒙特卡罗树搜索的理解参考此博客。</p>
+<ul>
+<li><a href="https://blog.csdn.net/caozixuan98724/article/details/103213795?utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.baidujs&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.baidujs" target="_blank" rel="noopener noreferrer">面向初学者的蒙特卡洛树搜索MCTS详解及其实现<ExternalLinkIcon/></a></li>
+<li>本文代码复制自此github：<a href="https://github.com/pbsinclair42/MCTS" target="_blank" rel="noopener noreferrer">https://github.com/pbsinclair42/MCTS<ExternalLinkIcon/></a></li>
+</ul>
+<p>蒙特卡罗树搜索代码参考此博客。</p>
+<p>===</p>
+<ul>
+<li><a href="https://www.jianshu.com/p/cd3805a56585" target="_blank" rel="noopener noreferrer">Python 五子棋<ExternalLinkIcon/></a></li>
+</ul>
+<p>后续若要实现五子棋可参考此博客。</p>
+<ul>
+<li><a href="https://www.jianshu.com/p/ec0e7b84c7c8" target="_blank" rel="noopener noreferrer">【详细原理】蒙特卡洛树搜索入门教程！<ExternalLinkIcon/></a></li>
+</ul>
+<p>本文是对<a href="https://links.jianshu.com/go?to=https%3A%2F%2Fint8.io%2Fmonte-carlo-tree-search-beginners-guide%2F%3Fspm%3Da2c4e.11153940.blogcont574071.7.4bf12dd4vQTxDC" target="_blank" rel="noopener noreferrer">Monte Carlo Tree Search – beginners guide<ExternalLinkIcon/></a>这篇文章的文章大体翻译，以及对其代码的解释。分为两篇【<strong>详细原理</strong>】和【<strong>代码实战</strong>】。</p>
+<h1 id="代码附录" tabindex="-1"><a class="header-anchor" href="#代码附录" aria-hidden="true">#</a> 代码附录</h1>
+<p>代码总共分为两个：</p>
+<p>第一个是人机对战主程序（三子棋）<code v-pre>tic-tac-toe.py</code>，会调用<code v-pre>mcts.py</code>。</p>
+<p>第二个是模特卡罗树搜索程序<code v-pre>mcts.py</code>，它和具体游戏不绑定。</p>
+<h2 id="人机对战主程序" tabindex="-1"><a class="header-anchor" href="#人机对战主程序" aria-hidden="true">#</a> 人机对战主程序</h2>
+<p><code v-pre>tic-tac-toe.py</code>：人机对战主程序</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code><span class="token keyword">from</span> __future__ <span class="token keyword">import</span> division
+
+<span class="token keyword">from</span> copy <span class="token keyword">import</span> deepcopy
+<span class="token keyword">from</span> mcts <span class="token keyword">import</span> MCTS
+<span class="token keyword">from</span> functools <span class="token keyword">import</span> <span class="token builtin">reduce</span>
+<span class="token keyword">import</span> operator
+
+
+<span class="token keyword">class</span> <span class="token class-name">TicTacToeState</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>target_num <span class="token operator">=</span> <span class="token number">3</span>  <span class="token comment"># 最终目标</span>
+        self<span class="token punctuation">.</span>board_width <span class="token operator">=</span> <span class="token number">3</span>
+        self<span class="token punctuation">.</span>board <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> self<span class="token punctuation">.</span>board_width <span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>board_width<span class="token punctuation">)</span><span class="token punctuation">]</span>
+        self<span class="token punctuation">.</span>current_player <span class="token operator">=</span> <span class="token number">1</span>  <span class="token comment"># 1: AI, -1: human</span>
+
+    <span class="token keyword">def</span> <span class="token function">get_current_player</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>current_player
+
+    <span class="token keyword">def</span> <span class="token function">get_possible_actions</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        possible_actions <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>board<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>board<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token keyword">if</span> self<span class="token punctuation">.</span>board<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+                    possible_actions<span class="token punctuation">.</span>append<span class="token punctuation">(</span>Action<span class="token punctuation">(</span>player<span class="token operator">=</span>self<span class="token punctuation">.</span>current_player<span class="token punctuation">,</span> x<span class="token operator">=</span>i<span class="token punctuation">,</span> y<span class="token operator">=</span>j<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> possible_actions
+
+    <span class="token keyword">def</span> <span class="token function">take_action</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> action<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        new_state <span class="token operator">=</span> deepcopy<span class="token punctuation">(</span>self<span class="token punctuation">)</span>
+        new_state<span class="token punctuation">.</span>board<span class="token punctuation">[</span>action<span class="token punctuation">.</span>x<span class="token punctuation">]</span><span class="token punctuation">[</span>action<span class="token punctuation">.</span>y<span class="token punctuation">]</span> <span class="token operator">=</span> action<span class="token punctuation">.</span>player
+        new_state<span class="token punctuation">.</span>current_player <span class="token operator">=</span> self<span class="token punctuation">.</span>current_player <span class="token operator">*</span> <span class="token operator">-</span><span class="token number">1</span>
+        <span class="token keyword">return</span> new_state
+
+    <span class="token keyword">def</span> <span class="token function">is_terminal</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">for</span> row <span class="token keyword">in</span> self<span class="token punctuation">.</span>board<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> <span class="token builtin">abs</span><span class="token punctuation">(</span><span class="token builtin">sum</span><span class="token punctuation">(</span>row<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> self<span class="token punctuation">.</span>target_num<span class="token punctuation">:</span>
+                <span class="token keyword">return</span> <span class="token boolean">True</span>
+        <span class="token keyword">for</span> column <span class="token keyword">in</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">,</span> <span class="token builtin">zip</span><span class="token punctuation">(</span><span class="token operator">*</span>self<span class="token punctuation">.</span>board<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> <span class="token builtin">abs</span><span class="token punctuation">(</span><span class="token builtin">sum</span><span class="token punctuation">(</span>column<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> self<span class="token punctuation">.</span>target_num<span class="token punctuation">:</span>
+                <span class="token keyword">return</span> <span class="token boolean">True</span>
+        <span class="token keyword">for</span> diagonal <span class="token keyword">in</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>self<span class="token punctuation">.</span>board<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>board<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                         <span class="token punctuation">[</span>self<span class="token punctuation">.</span>board<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>board<span class="token punctuation">)</span> <span class="token operator">-</span> i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>board<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> <span class="token builtin">abs</span><span class="token punctuation">(</span><span class="token builtin">sum</span><span class="token punctuation">(</span>diagonal<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> self<span class="token punctuation">.</span>target_num<span class="token punctuation">:</span>
+                <span class="token keyword">return</span> <span class="token boolean">True</span>
+        <span class="token keyword">return</span> <span class="token builtin">reduce</span><span class="token punctuation">(</span>operator<span class="token punctuation">.</span>mul<span class="token punctuation">,</span> <span class="token builtin">sum</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>board<span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 返回奖励为正负1</span>
+    <span class="token keyword">def</span> <span class="token function">get_reward</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">for</span> row <span class="token keyword">in</span> self<span class="token punctuation">.</span>board<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> <span class="token builtin">abs</span><span class="token punctuation">(</span><span class="token builtin">sum</span><span class="token punctuation">(</span>row<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> self<span class="token punctuation">.</span>target_num<span class="token punctuation">:</span>
+                <span class="token keyword">return</span> <span class="token builtin">sum</span><span class="token punctuation">(</span>row<span class="token punctuation">)</span> <span class="token operator">/</span> self<span class="token punctuation">.</span>target_num
+        <span class="token keyword">for</span> column <span class="token keyword">in</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">,</span> <span class="token builtin">zip</span><span class="token punctuation">(</span><span class="token operator">*</span>self<span class="token punctuation">.</span>board<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> <span class="token builtin">abs</span><span class="token punctuation">(</span><span class="token builtin">sum</span><span class="token punctuation">(</span>column<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> self<span class="token punctuation">.</span>target_num<span class="token punctuation">:</span>
+                <span class="token keyword">return</span> <span class="token builtin">sum</span><span class="token punctuation">(</span>column<span class="token punctuation">)</span> <span class="token operator">/</span> self<span class="token punctuation">.</span>target_num
+        <span class="token keyword">for</span> diagonal <span class="token keyword">in</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>self<span class="token punctuation">.</span>board<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>board<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                         <span class="token punctuation">[</span>self<span class="token punctuation">.</span>board<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>board<span class="token punctuation">)</span> <span class="token operator">-</span> i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>board<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> <span class="token builtin">abs</span><span class="token punctuation">(</span><span class="token builtin">sum</span><span class="token punctuation">(</span>diagonal<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> self<span class="token punctuation">.</span>target_num<span class="token punctuation">:</span>
+                <span class="token keyword">return</span> <span class="token builtin">sum</span><span class="token punctuation">(</span>diagonal<span class="token punctuation">)</span> <span class="token operator">/</span> self<span class="token punctuation">.</span>target_num
+        <span class="token keyword">return</span> <span class="token boolean">False</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">Action</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> player<span class="token punctuation">,</span> x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>player <span class="token operator">=</span> player
+        self<span class="token punctuation">.</span>x <span class="token operator">=</span> x
+        self<span class="token punctuation">.</span>y <span class="token operator">=</span> y
+
+    <span class="token keyword">def</span> <span class="token function">__str__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token builtin">str</span><span class="token punctuation">(</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>x<span class="token punctuation">,</span> self<span class="token punctuation">.</span>y<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">__repr__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token builtin">str</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">__eq__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> other<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>__class__ <span class="token operator">==</span> other<span class="token punctuation">.</span>__class__ <span class="token keyword">and</span> self<span class="token punctuation">.</span>x <span class="token operator">==</span> other<span class="token punctuation">.</span>x <span class="token keyword">and</span> self<span class="token punctuation">.</span>y <span class="token operator">==</span> other<span class="token punctuation">.</span>y <span class="token keyword">and</span> self<span class="token punctuation">.</span>player <span class="token operator">==</span> other<span class="token punctuation">.</span>player
+
+    <span class="token keyword">def</span> <span class="token function">__hash__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token builtin">hash</span><span class="token punctuation">(</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>x<span class="token punctuation">,</span> self<span class="token punctuation">.</span>y<span class="token punctuation">,</span> self<span class="token punctuation">.</span>player<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    <span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+    s <span class="token operator">=</span> TicTacToeState<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    tree <span class="token operator">=</span> MCTS<span class="token punctuation">(</span>time_limit<span class="token operator">=</span><span class="token number">1000</span><span class="token punctuation">)</span>
+    <span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+        <span class="token comment"># 机器下棋</span>
+        action <span class="token operator">=</span> tree<span class="token punctuation">.</span>search<span class="token punctuation">(</span>initial_state<span class="token operator">=</span>s<span class="token punctuation">)</span>
+        s <span class="token operator">=</span> s<span class="token punctuation">.</span>take_action<span class="token punctuation">(</span>action<span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"ai:"</span><span class="token punctuation">,</span> action<span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>array<span class="token punctuation">(</span>s<span class="token punctuation">.</span>board<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> s<span class="token punctuation">.</span>is_terminal<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"ai win"</span><span class="token punctuation">)</span>
+            <span class="token keyword">break</span>
+        <span class="token comment"># 人下棋 输入“0 0”代表左上角位置</span>
+        x<span class="token punctuation">,</span> y <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        action <span class="token operator">=</span> Action<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> x<span class="token punctuation">,</span> y<span class="token punctuation">)</span>
+        s <span class="token operator">=</span> s<span class="token punctuation">.</span>take_action<span class="token punctuation">(</span>action<span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"人:"</span><span class="token punctuation">,</span> action<span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>array<span class="token punctuation">(</span>s<span class="token punctuation">.</span>board<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span>is_terminal<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> s<span class="token punctuation">.</span>is_terminal<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"human win"</span><span class="token punctuation">)</span>
+            <span class="token keyword">break</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="mcts程序" tabindex="-1"><a class="header-anchor" href="#mcts程序" aria-hidden="true">#</a> MCTS程序</h2>
+<p><code v-pre>mcts.py</code>：模特卡罗树搜索程序</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre v-pre class="language-python"><code><span class="token keyword">from</span> __future__ <span class="token keyword">import</span> division
+
+<span class="token keyword">import</span> time
+<span class="token keyword">import</span> math
+<span class="token keyword">import</span> random
+
+
+<span class="token comment"># rollout使用此随机选择方式</span>
+<span class="token keyword">def</span> <span class="token function">random_policy</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">while</span> <span class="token keyword">not</span> state<span class="token punctuation">.</span>is_terminal<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">try</span><span class="token punctuation">:</span>
+            action <span class="token operator">=</span> random<span class="token punctuation">.</span>choice<span class="token punctuation">(</span>state<span class="token punctuation">.</span>get_possible_actions<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">except</span> IndexError<span class="token punctuation">:</span>
+            <span class="token keyword">raise</span> Exception<span class="token punctuation">(</span><span class="token string">"Non-terminal state has no possible actions: "</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        state <span class="token operator">=</span> state<span class="token punctuation">.</span>take_action<span class="token punctuation">(</span>action<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> state<span class="token punctuation">.</span>get_reward<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+<span class="token comment"># TreeNode类,用于构建树形结构,存储当前节点的状态</span>
+<span class="token keyword">class</span> <span class="token class-name">TreeNode</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> state<span class="token punctuation">,</span> parent<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>state <span class="token operator">=</span> state  <span class="token comment"># state需要我们自己去定义这个类</span>
+        self<span class="token punctuation">.</span>is_terminal <span class="token operator">=</span> state<span class="token punctuation">.</span>is_terminal<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># is_terminal是代表当前的状态是否是终结态，在state类中实现</span>
+        self<span class="token punctuation">.</span>is_fully_expanded <span class="token operator">=</span> self<span class="token punctuation">.</span>is_terminal  <span class="token comment"># is_fully_expanded是指节点是否完全扩展</span>
+        self<span class="token punctuation">.</span>parent <span class="token operator">=</span> parent  <span class="token comment"># parent就是指当前节点的父节点</span>
+        self<span class="token punctuation">.</span>num_visits <span class="token operator">=</span> <span class="token number">0</span>  <span class="token comment"># num_visits代表节点被访问的次数。</span>
+        self<span class="token punctuation">.</span>total_reward <span class="token operator">=</span> <span class="token number">0</span>  <span class="token comment"># total_reward是获取的奖励，如果定义1为胜利，0为失败，则3/4之类就为total_reward / num_visits</span>
+        self<span class="token punctuation">.</span>children <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>  <span class="token comment"># children是当前节点的子节点的集合</span>
+
+    <span class="token keyword">def</span> <span class="token function">__str__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        s <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        s<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">"total_reward: %s"</span> <span class="token operator">%</span> self<span class="token punctuation">.</span>total_reward<span class="token punctuation">)</span>
+        s<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">"num_visits: %d"</span> <span class="token operator">%</span> self<span class="token punctuation">.</span>num_visits<span class="token punctuation">)</span>
+        s<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">"is_terminal: %s"</span> <span class="token operator">%</span> self<span class="token punctuation">.</span>is_terminal<span class="token punctuation">)</span>
+        s<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">"possibleActions: %s"</span> <span class="token operator">%</span> self<span class="token punctuation">.</span>children<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> <span class="token string">"%s: {%s}"</span> <span class="token operator">%</span> <span class="token punctuation">(</span>self<span class="token punctuation">.</span>__class__<span class="token punctuation">.</span>__name__<span class="token punctuation">,</span> <span class="token string">', '</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">MCTS</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> time_limit<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> iteration_limit<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> exploration_constant<span class="token operator">=</span><span class="token number">1</span><span class="token operator">/</span>math<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> rollout_policy<span class="token operator">=</span>random_policy<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> time_limit <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> iteration_limit <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+                <span class="token keyword">raise</span> ValueError<span class="token punctuation">(</span><span class="token string">"Cannot have both a time limit and an iteration limit"</span><span class="token punctuation">)</span>
+            <span class="token comment"># time taken for each MCTS search in milliseconds</span>
+            self<span class="token punctuation">.</span>time_limit <span class="token operator">=</span> time_limit
+            self<span class="token punctuation">.</span>limit_type <span class="token operator">=</span> <span class="token string">'time'</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> iteration_limit <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+                <span class="token keyword">raise</span> ValueError<span class="token punctuation">(</span><span class="token string">"Must have either a time limit or an iteration limit"</span><span class="token punctuation">)</span>
+            <span class="token comment"># number of iterations of the search</span>
+            <span class="token keyword">if</span> iteration_limit <span class="token operator">&lt;</span> <span class="token number">1</span><span class="token punctuation">:</span>
+                <span class="token keyword">raise</span> ValueError<span class="token punctuation">(</span><span class="token string">"Iteration limit must be greater than one"</span><span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>search_limit <span class="token operator">=</span> iteration_limit
+            self<span class="token punctuation">.</span>limit_type <span class="token operator">=</span> <span class="token string">'iterations'</span>
+
+        self<span class="token punctuation">.</span>exploration_constant <span class="token operator">=</span> exploration_constant
+        self<span class="token punctuation">.</span>rollout <span class="token operator">=</span> rollout_policy
+        self<span class="token punctuation">.</span>root <span class="token operator">=</span> <span class="token builtin">type</span><span class="token punctuation">(</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># AI每次调用该方法下棋</span>
+    <span class="token keyword">def</span> <span class="token function">search</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> initial_state<span class="token punctuation">,</span> need_details<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>root <span class="token operator">=</span> TreeNode<span class="token punctuation">(</span>initial_state<span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span>
+
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>limit_type <span class="token operator">==</span> <span class="token string">'time'</span><span class="token punctuation">:</span>
+            time_limit <span class="token operator">=</span> time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>time_limit <span class="token operator">/</span> <span class="token number">1000</span>
+            <span class="token keyword">while</span> time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> time_limit<span class="token punctuation">:</span>
+                self<span class="token punctuation">.</span>execute_round<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>search_limit<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                self<span class="token punctuation">.</span>execute_round<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+        best_child <span class="token operator">=</span> self<span class="token punctuation">.</span>get_best_child<span class="token punctuation">(</span>self<span class="token punctuation">.</span>root<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+        <span class="token comment"># action = (action for action, node in self.root.children.items() if node is best_child).__next__()</span>
+        action <span class="token operator">=</span> self<span class="token punctuation">.</span>get_action<span class="token punctuation">(</span>self<span class="token punctuation">.</span>root<span class="token punctuation">,</span> best_child<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> need_details<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token string">"action"</span><span class="token punctuation">:</span> action<span class="token punctuation">,</span> <span class="token string">"expectedReward"</span><span class="token punctuation">:</span> best_child<span class="token punctuation">.</span>total_reward <span class="token operator">/</span> best_child<span class="token punctuation">.</span>num_visits<span class="token punctuation">}</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> action
+
+    <span class="token comment"># MCTS的核心：选择、扩展、模拟、反向传播</span>
+    <span class="token keyword">def</span> <span class="token function">execute_round</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""
+            execute a selection-expansion-simulation-backpropagation round
+        """</span>
+        node <span class="token operator">=</span> self<span class="token punctuation">.</span>select_node<span class="token punctuation">(</span>self<span class="token punctuation">.</span>root<span class="token punctuation">)</span>  <span class="token comment"># 选择、扩展</span>
+        reward <span class="token operator">=</span> self<span class="token punctuation">.</span>rollout<span class="token punctuation">(</span>node<span class="token punctuation">.</span>state<span class="token punctuation">)</span>  <span class="token comment"># 模拟</span>
+        self<span class="token punctuation">.</span>backpropogate<span class="token punctuation">(</span>node<span class="token punctuation">,</span> reward<span class="token punctuation">)</span>  <span class="token comment"># 反向传播</span>
+
+    <span class="token comment"># ========== 选择 ==========</span>
+    <span class="token comment"># 1. 该节点可能的子节点若全部扩展完毕, 则使用get_best_child方法获得UCT值最大的节点</span>
+    <span class="token comment"># 2. 若存在未扩展的子节点, 则使用expand方法扩展子节点</span>
+    <span class="token keyword">def</span> <span class="token function">select_node</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> node<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">while</span> <span class="token keyword">not</span> node<span class="token punctuation">.</span>is_terminal<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> node<span class="token punctuation">.</span>is_fully_expanded<span class="token punctuation">:</span>  <span class="token comment"># expand中若子节点都被探索过，则标记为True</span>
+                node <span class="token operator">=</span> self<span class="token punctuation">.</span>get_best_child<span class="token punctuation">(</span>node<span class="token punctuation">,</span> self<span class="token punctuation">.</span>exploration_constant<span class="token punctuation">)</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                <span class="token keyword">return</span> self<span class="token punctuation">.</span>expand<span class="token punctuation">(</span>node<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> node
+
+    <span class="token comment"># ========== 扩展 ==========</span>
+    <span class="token comment"># 获取当前状态下所有可能动作，返回一个没有经历的状态节点，并将该节点加入子节点</span>
+    <span class="token keyword">def</span> <span class="token function">expand</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> node<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        actions <span class="token operator">=</span> node<span class="token punctuation">.</span>state<span class="token punctuation">.</span>get_possible_actions<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> action <span class="token keyword">in</span> actions<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> action <span class="token keyword">not</span> <span class="token keyword">in</span> node<span class="token punctuation">.</span>children<span class="token punctuation">:</span>
+                new_node <span class="token operator">=</span> TreeNode<span class="token punctuation">(</span>node<span class="token punctuation">.</span>state<span class="token punctuation">.</span>take_action<span class="token punctuation">(</span>action<span class="token punctuation">)</span><span class="token punctuation">,</span> node<span class="token punctuation">)</span>
+                node<span class="token punctuation">.</span>children<span class="token punctuation">[</span>action<span class="token punctuation">]</span> <span class="token operator">=</span> new_node
+                <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>actions<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token builtin">len</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>children<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                    node<span class="token punctuation">.</span>is_fully_expanded <span class="token operator">=</span> <span class="token boolean">True</span>
+                <span class="token keyword">return</span> new_node  <span class="token comment"># 每次只返回一个</span>
+
+        <span class="token keyword">raise</span> Exception<span class="token punctuation">(</span><span class="token string">"Should never reach here"</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># ========== 反向传播 ==========</span>
+    <span class="token keyword">def</span> <span class="token function">backpropogate</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> node<span class="token punctuation">,</span> reward<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">while</span> node <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            node<span class="token punctuation">.</span>num_visits <span class="token operator">+=</span> <span class="token number">1</span>
+            node<span class="token punctuation">.</span>total_reward <span class="token operator">+=</span> reward
+            node <span class="token operator">=</span> node<span class="token punctuation">.</span>parent
+
+    <span class="token comment"># ========== 选择 ==========</span>
+    <span class="token comment"># 计算所有子节点的UCB值，从中选取最大的那个，以解决“探索和利用难题”</span>
+    <span class="token keyword">def</span> <span class="token function">get_best_child</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> node<span class="token punctuation">,</span> exploration_value<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        best_value <span class="token operator">=</span> <span class="token builtin">float</span><span class="token punctuation">(</span><span class="token string">"-inf"</span><span class="token punctuation">)</span>
+        best_nodes <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        <span class="token keyword">for</span> child <span class="token keyword">in</span> node<span class="token punctuation">.</span>children<span class="token punctuation">.</span>values<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># node.children = {action: node}</span>
+            <span class="token comment"># get_current_player作用：如果是AI，则正正为正，如果是人，则负负为正</span>
+            node_value <span class="token operator">=</span> node<span class="token punctuation">.</span>state<span class="token punctuation">.</span>get_current_player<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> child<span class="token punctuation">.</span>total_reward <span class="token operator">/</span> child<span class="token punctuation">.</span>num_visits <span class="token operator">+</span> exploration_value <span class="token operator">*</span> math<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span><span class="token number">2</span> <span class="token operator">*</span> math<span class="token punctuation">.</span>log<span class="token punctuation">(</span>node<span class="token punctuation">.</span>num_visits<span class="token punctuation">)</span> <span class="token operator">/</span> child<span class="token punctuation">.</span>num_visits<span class="token punctuation">)</span>
+            <span class="token keyword">if</span> node_value <span class="token operator">></span> best_value<span class="token punctuation">:</span>
+                best_value <span class="token operator">=</span> node_value
+                best_nodes <span class="token operator">=</span> <span class="token punctuation">[</span>child<span class="token punctuation">]</span>
+            <span class="token keyword">elif</span> node_value <span class="token operator">==</span> best_value<span class="token punctuation">:</span>
+                best_nodes<span class="token punctuation">.</span>append<span class="token punctuation">(</span>child<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> random<span class="token punctuation">.</span>choice<span class="token punctuation">(</span>best_nodes<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">get_action</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> root<span class="token punctuation">,</span> best_child<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">for</span> action<span class="token punctuation">,</span> node <span class="token keyword">in</span> root<span class="token punctuation">.</span>children<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> node <span class="token keyword">is</span> best_child<span class="token punctuation">:</span>
+                <span class="token keyword">return</span> action
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div></template>
+
+

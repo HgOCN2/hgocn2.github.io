@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-b410be9a\",\"path\":\"/docs/machine-learning/coding/cs-courses/compiler-principles/qmake/qmake.html\",\"title\":\"QMake生成Makefile\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/coding/cs-courses/compiler-principles/qmake/qmake.md\"}")

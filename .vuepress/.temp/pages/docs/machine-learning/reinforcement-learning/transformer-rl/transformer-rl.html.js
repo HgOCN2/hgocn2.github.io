@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-e4526c62\",\"path\":\"/docs/machine-learning/reinforcement-learning/transformer-rl/transformer-rl.html\",\"title\":\"Transformer+RL\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/reinforcement-learning/transformer-rl/transformer-rl.md\"}")

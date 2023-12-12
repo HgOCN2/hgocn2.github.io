@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-2e956208\",\"path\":\"/docs/machine-learning/recommender-systems/advanced-knowledge/machine-learning/ffm/FFM.html\",\"title\":\"FFM\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/recommender-systems/advanced-knowledge/machine-learning/ffm/FFM.md\"}")

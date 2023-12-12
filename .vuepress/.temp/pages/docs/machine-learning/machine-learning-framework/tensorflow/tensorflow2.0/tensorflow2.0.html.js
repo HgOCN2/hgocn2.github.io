@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-5e3f8cac\",\"path\":\"/docs/machine-learning/machine-learning-framework/tensorflow/tensorflow2.0/tensorflow2.0.html\",\"title\":\"TensorFlow2.0\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/machine-learning-framework/tensorflow/tensorflow2.0/tensorflow2.0.md\"}")

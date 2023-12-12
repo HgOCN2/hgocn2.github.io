@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-6df551f5\",\"path\":\"/docs/machine-learning/model-deployment/parallel-computing/opencl/opencl.html\",\"title\":\"OpenCL\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/model-deployment/parallel-computing/opencl/opencl.md\"}")

@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-788cb018\",\"path\":\"/docs/machine-learning/machine-learning-framework/tensorflow/tensorflow2.0/keras/keras.html\",\"title\":\"keras\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/machine-learning-framework/tensorflow/tensorflow2.0/keras/keras.md\"}")

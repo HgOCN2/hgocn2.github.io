@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-60df1381\",\"path\":\"/docs/machine-learning/model-deployment/matrix-acceleration-algorithm/im2col/im2col.html\",\"title\":\"im2col: 将卷积转为矩阵乘法来加速计算\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/model-deployment/matrix-acceleration-algorithm/im2col/im2col.md\"}")

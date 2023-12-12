@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-53fa132f\",\"path\":\"/docs/machine-learning/mathematics/math-courses/functional-analysis/functional-analysis.html\",\"title\":\"\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/mathematics/math-courses/functional-analysis/functional-analysis.md\"}")

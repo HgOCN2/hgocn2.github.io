@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-e553b0a0\",\"path\":\"/docs/machine-learning/mathematics/linear-algebra/eigenvalue/eigenvalue.html\",\"title\":\"特征值\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/mathematics/linear-algebra/eigenvalue/eigenvalue.md\"}")

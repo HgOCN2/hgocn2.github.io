@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-147a0093\",\"path\":\"/docs/machine-learning/autopilot/electromechanical-systems/sensors/magnetometer/magnetometer.html\",\"title\":\"磁力计\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/autopilot/electromechanical-systems/sensors/magnetometer/magnetometer.md\"}")

@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-044e1e38\",\"path\":\"/docs/machine-learning/reinforcement-learning/multi-agent-reinforcement-learning/paper/paper.html\",\"title\":\"多智能体强化学习论文\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/reinforcement-learning/multi-agent-reinforcement-learning/paper/paper.md\"}")

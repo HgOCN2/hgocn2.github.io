@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-debd5bd6\",\"path\":\"/docs/machine-learning/model-deployment/parallel-computing/openblas/openblas.html\",\"title\":\"OpenBlas\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/model-deployment/parallel-computing/openblas/openblas.md\"}")

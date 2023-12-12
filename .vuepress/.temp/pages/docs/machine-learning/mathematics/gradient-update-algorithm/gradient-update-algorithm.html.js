@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-59328641\",\"path\":\"/docs/machine-learning/mathematics/gradient-update-algorithm/gradient-update-algorithm.html\",\"title\":\"梯度更新算法\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/mathematics/gradient-update-algorithm/gradient-update-algorithm.md\"}")

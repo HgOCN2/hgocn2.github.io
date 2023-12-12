@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-6c1b340d\",\"path\":\"/docs/machine-learning/coding/cs-courses/computer-organization/embedded-system/embedded-system.html\",\"title\":\"嵌入式系统\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/coding/cs-courses/computer-organization/embedded-system/embedded-system.md\"}")

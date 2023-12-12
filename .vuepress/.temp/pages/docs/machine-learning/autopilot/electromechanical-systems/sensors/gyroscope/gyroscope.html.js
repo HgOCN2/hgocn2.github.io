@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-e3677af2\",\"path\":\"/docs/machine-learning/autopilot/electromechanical-systems/sensors/gyroscope/gyroscope.html\",\"title\":\"陀螺仪\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/autopilot/electromechanical-systems/sensors/gyroscope/gyroscope.md\"}")

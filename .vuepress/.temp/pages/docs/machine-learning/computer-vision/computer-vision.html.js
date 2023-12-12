@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-5e1316f8\",\"path\":\"/docs/machine-learning/computer-vision/computer-vision.html\",\"title\":\"前言\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/computer-vision/computer-vision.md\"}")

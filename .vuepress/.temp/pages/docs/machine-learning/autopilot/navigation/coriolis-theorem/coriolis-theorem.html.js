@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-0f82b0ef\",\"path\":\"/docs/machine-learning/autopilot/navigation/coriolis-theorem/coriolis-theorem.html\",\"title\":\"哥氏定理/科里奥利定理\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/autopilot/navigation/coriolis-theorem/coriolis-theorem.md\"}")

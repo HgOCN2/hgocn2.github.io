@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-fc985fbe\",\"path\":\"/docs/machine-learning/multimodal-large-model/foundation-models/foundation-models.html\",\"title\":\"Foundation Models基础模型\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/multimodal-large-model/foundation-models/foundation-models.md\"}")

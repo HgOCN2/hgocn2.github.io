@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-79e16baf\",\"path\":\"/docs/machine-learning/reinforcement-learning/imatation-learning/imatation-learning.html\",\"title\":\"模仿学习\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/reinforcement-learning/imatation-learning/imatation-learning.md\"}")

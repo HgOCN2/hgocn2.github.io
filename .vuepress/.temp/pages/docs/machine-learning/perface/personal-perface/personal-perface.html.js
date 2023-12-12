@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-2d8b9562\",\"path\":\"/docs/machine-learning/perface/personal-perface/personal-perface.html\",\"title\":\"个人前言\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/perface/personal-perface/personal-perface.md\"}")

@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-15a93f46\",\"path\":\"/docs/machine-learning/mathematics/math-courses/math-principle/math-principle.html\",\"title\":\"数学的原理\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/mathematics/math-courses/math-principle/math-principle.md\"}")

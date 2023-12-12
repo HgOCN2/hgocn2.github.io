@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-6cb6e456\",\"path\":\"/docs/machine-learning/recommender-systems/advanced-knowledge/graph-embedding/graph-embedding.html\",\"title\":\"图表征\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/recommender-systems/advanced-knowledge/graph-embedding/graph-embedding.md\"}")

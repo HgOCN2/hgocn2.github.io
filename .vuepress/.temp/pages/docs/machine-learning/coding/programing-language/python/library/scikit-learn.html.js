@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-6d0bcdfb\",\"path\":\"/docs/machine-learning/coding/programing-language/python/library/scikit-learn.html\",\"title\":\"scikit-learn\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/coding/programing-language/python/library/scikit-learn.md\"}")

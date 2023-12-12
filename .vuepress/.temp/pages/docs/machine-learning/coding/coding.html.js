@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-3cbbe28c\",\"path\":\"/docs/machine-learning/coding/coding.html\",\"title\":\"编程基础\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/coding/coding.md\"}")

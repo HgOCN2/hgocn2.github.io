@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-eb73264c\",\"path\":\"/docs/machine-learning/mathematics/gradient-update-algorithm/offline-learning/offline-learning.html\",\"title\":\"梯度下降算法\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/mathematics/gradient-update-algorithm/offline-learning/offline-learning.md\"}")

@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-5402b830\",\"path\":\"/docs/machine-learning/natural-language-processing/natural-language-processing.html\",\"title\":\"自然语言处理\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/natural-language-processing/natural-language-processing.md\"}")

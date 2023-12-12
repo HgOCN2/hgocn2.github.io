@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-0a0da4da\",\"path\":\"/docs/machine-learning/mathematics/information-theory/information-theory.html\",\"title\":\"信息论\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/mathematics/information-theory/information-theory.md\"}")

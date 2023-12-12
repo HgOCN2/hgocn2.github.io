@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-3853bf8b\",\"path\":\"/docs/machine-learning/computer-vision/yolo/darknet/darknet.html\",\"title\":\"DarkNet深度学习框架\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/computer-vision/yolo/darknet/darknet.md\"}")

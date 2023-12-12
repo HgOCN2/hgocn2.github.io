@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-a19ec066\",\"path\":\"/docs/machine-learning/mathematics/statistics/probability-distribution/probability-distribution.html\",\"title\":\"概率分布\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/mathematics/statistics/probability-distribution/probability-distribution.md\"}")

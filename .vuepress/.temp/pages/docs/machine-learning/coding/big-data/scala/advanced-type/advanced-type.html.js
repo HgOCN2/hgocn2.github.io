@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-fecebfac\",\"path\":\"/docs/machine-learning/coding/big-data/scala/advanced-type/advanced-type.html\",\"title\":\"高级类型\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/coding/big-data/scala/advanced-type/advanced-type.md\"}")

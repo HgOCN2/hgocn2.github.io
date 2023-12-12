@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-688a2835\",\"path\":\"/docs/machine-learning/mathematics/statistics/bayesian-analysis/conjugate-prior/conjugate-prior.html\",\"title\":\"共轭先验\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/mathematics/statistics/bayesian-analysis/conjugate-prior/conjugate-prior.md\"}")

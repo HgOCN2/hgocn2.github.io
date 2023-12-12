@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-2c149f83\",\"path\":\"/docs/machine-learning/coding/programing-language/c__/algorithm-lib/algorithm-lib.html\",\"title\":\"algorithm算法库\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/coding/programing-language/c++/algorithm-lib/algorithm-lib.md\"}")

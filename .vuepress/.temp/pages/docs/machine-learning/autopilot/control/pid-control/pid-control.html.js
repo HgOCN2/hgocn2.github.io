@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-6aebd89a\",\"path\":\"/docs/machine-learning/autopilot/control/pid-control/pid-control.html\",\"title\":\"PID控制\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/autopilot/control/pid-control/pid-control.md\"}")

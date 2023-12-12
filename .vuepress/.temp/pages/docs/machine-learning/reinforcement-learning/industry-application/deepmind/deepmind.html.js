@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-8e56b9da\",\"path\":\"/docs/machine-learning/reinforcement-learning/industry-application/deepmind/deepmind.html\",\"title\":\"DeepMind\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/reinforcement-learning/industry-application/deepmind/deepmind.md\"}")
