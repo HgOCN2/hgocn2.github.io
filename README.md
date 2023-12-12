@@ -37,6 +37,8 @@ $$
 
 ## 快速开始
 
+Update test 1
+
 **npx**
 
 ```bash
