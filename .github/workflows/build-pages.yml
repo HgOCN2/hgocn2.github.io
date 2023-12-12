@@ -24,7 +24,7 @@ jobs:
           node-version: 21
           
       - name: Run install
-        uses: borales/actions-yarn@v4
+        uses: borales/actions-yarn@v3
         with:
           cmd: install # will run `yarn install` command
 
@@ -43,4 +43,4 @@ jobs:
           build_dir: md/.vuepress/dist
         env:
           # @see https://docs.github.com/cn/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
-          GITHUB_TOKEN: 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
+          GITHUB_TOKEN: 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
