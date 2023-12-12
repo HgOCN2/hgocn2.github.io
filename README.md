@@ -37,7 +37,7 @@ $$
 
 ## 快速开始
 
-Update test 3
+Update test 4
 
 **npx**
 
