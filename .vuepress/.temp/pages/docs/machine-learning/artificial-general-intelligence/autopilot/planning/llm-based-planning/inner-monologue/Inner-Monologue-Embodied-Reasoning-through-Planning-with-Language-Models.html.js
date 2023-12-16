@@ -1,1 +1,14 @@
-export const data = JSON.parse("{\"key\":\"v-357c8900\",\"path\":\"/docs/machine-learning/artificial-general-intelligence/autopilot/planning/llm-based-planning/inner-monologue/Inner-Monologue-Embodied-Reasoning-through-Planning-with-Language-Models.html\",\"title\":\"Inner Monologue: Embodied Reasoning through Planning with Language Models\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/artificial-general-intelligence/autopilot/planning/llm-based-planning/inner-monologue/Inner-Monologue-Embodied-Reasoning-through-Planning-with-Language-Models.md\"}")
+export const data = JSON.parse("{\"key\":\"v-357c8900\",\"path\":\"/docs/machine-learning/artificial-general-intelligence/autopilot/planning/llm-based-planning/inner-monologue/Inner-Monologue-Embodied-Reasoning-through-Planning-with-Language-Models.html\",\"title\":\"Inner Monologue: Embodied Reasoning through Planning with Language Models\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{\"createdTime\":1702351416000,\"updatedTime\":1702351416000,\"contributors\":[{\"name\":\"hsqure\",\"email\":\"hgocn2@gmail.com\",\"commits\":1}]},\"filePathRelative\":\"docs/machine-learning/artificial-general-intelligence/autopilot/planning/llm-based-planning/inner-monologue/Inner-Monologue-Embodied-Reasoning-through-Planning-with-Language-Models.md\"}")
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}

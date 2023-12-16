@@ -26,6 +26,7 @@ export default defineUserConfig({
       },
     },
     style: "@vuepress-reco/style-default", 
+    // primaryColor: '#3aa675',
     logo: "/logo.png",
     author: "Hua Hua",
     authorAvatar: "/head.png",
@@ -36,28 +37,21 @@ export default defineUserConfig({
     autoSetSeries: true,
     // series 为原 sidebar
     // 手动设置边栏
-    // series: {
-    //   "/docs/machine-learning": [
-    //     {
-    //       text: "机器学习 Machine Learning",
-    //       children: ["artificial-general-intelligence", "industry-application"],
-    //     },
-    //     {
-    //       text: "视觉传达 Visual Communication Design",
-    //       children: ["auto-machine-learning", "auto-machine-learning-introduction", "hyperparameter-optimization", "neural-architecture-search"],
-    //     },
-    //   ],
-    //   "/docs/visual-communication": [
-    //     {
-    //       text: "机器学习 Machine Learning",
-    //       children: ["artificial-general-intelligence", "industry-application"],
-    //     },
-    //     {
-    //       text: "视觉传达 Visual Communication Design",
-    //       children: ["auto-machine-learning", "auto-machine-learning-introduction", "hyperparameter-optimization", "neural-architecture-search"],
-    //     },
-    //   ],
-    // },
+    series: {
+      "/blogs/photograph/Tokyo2023/": [
+        {
+          text: "东京2023",
+          children: [
+            { text: "卷一：东京市区篇", link: "/blogs/photograph/Tokyo2023/K1" },
+            { text: "卷二：湘南篇", link: "/blogs/photograph/Tokyo2023/K2" },
+          ],
+        },
+        // {
+        //   text: "视觉传达 Visual Communication Design",
+        //   children: ["auto-machine-learning", "auto-machine-learning-introduction", "hyperparameter-optimization", "neural-architecture-search"],
+        // },
+      ],
+    },
     
     navbar: [
       { text: "主页", link: "/" },
@@ -68,7 +62,15 @@ export default defineUserConfig({
           { text: "NICE!精选", link: "/blogs/comic/others/" },
         ],
       },
-      { text: "摄影集", link: "/blogs/photograph/" },
+      { 
+        text: "摄影集", link: "/blogs/photograph/",
+        children: [
+          { 
+            text: "东京2023", link: "/blogs/photograph/Tokyo2023",
+          },
+          { text: "上海2022", link: "/blogs/photograph/" },
+        ],
+      },
       { text: "日常叨叨", link: "/blogs/article/" },
       {
         text: "来学习！",

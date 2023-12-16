@@ -30,14 +30,14 @@ export const searchIndex = [
   {
     "title": "",
     "headers": [],
-    "path": "/categories/sheyingji/1/",
+    "path": "/categories/manhua/1/",
     "pathLocale": "/",
     "extraFields": []
   },
   {
     "title": "",
     "headers": [],
-    "path": "/categories/manhua/1/",
+    "path": "/categories/sheyingji/1/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -51,14 +51,14 @@ export const searchIndex = [
   {
     "title": "",
     "headers": [],
-    "path": "/tags/TOKYO2023/1/",
+    "path": "/tags/manhua/1/",
     "pathLocale": "/",
     "extraFields": []
   },
   {
     "title": "",
     "headers": [],
-    "path": "/tags/manhua/1/",
+    "path": "/tags/TOKYO2023/1/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -71,22 +71,7 @@ export const searchIndex = [
   },
   {
     "title": "",
-    "headers": [
-      {
-        "level": 2,
-        "title": "多分类",
-        "slug": "多分类",
-        "link": "#多分类",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "快速开始",
-        "slug": "快速开始",
-        "link": "#快速开始",
-        "children": []
-      }
-    ],
+    "headers": [],
     "path": "/",
     "pathLocale": "/",
     "extraFields": []
@@ -107,24 +92,16 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "摄影集",
-    "headers": [
-      {
-        "level": 2,
-        "title": "东京",
-        "slug": "东京",
-        "link": "#东京",
-        "children": []
-      }
-    ],
-    "path": "/blogs/photograph/",
+    "title": "目录",
+    "headers": [],
+    "path": "/docs/machine-learning/",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "目录",
+    "title": "",
     "headers": [],
-    "path": "/docs/machine-learning/",
+    "path": "/blogs/photograph/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -194,16 +171,16 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "机器学习框架",
+    "title": "机器学习",
     "headers": [],
-    "path": "/docs/machine-learning/machine-learning-framework/machine-learning-framework.html",
+    "path": "/docs/machine-learning/machine-learning/machine-learning.html",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "机器学习",
+    "title": "机器学习框架",
     "headers": [],
-    "path": "/docs/machine-learning/machine-learning/machine-learning.html",
+    "path": "/docs/machine-learning/machine-learning-framework/machine-learning-framework.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -283,6 +260,13 @@ export const searchIndex = [
       }
     ],
     "path": "/docs/machine-learning/other/guide.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "前言",
+    "headers": [],
+    "path": "/docs/machine-learning/perface/perface.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -436,13 +420,6 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "前言",
-    "headers": [],
-    "path": "/docs/machine-learning/perface/perface.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "推荐系统",
     "headers": [],
     "path": "/docs/machine-learning/recommender-systems/recommender-systems.html",
@@ -468,6 +445,13 @@ export const searchIndex = [
       }
     ],
     "path": "/docs/machine-learning/reinforcement-learning/reinforcement-learning.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [],
+    "path": "/blogs/photograph/Tokyo2023/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -639,297 +623,6 @@ export const searchIndex = [
     "title": "深度学习知识点",
     "headers": [],
     "path": "/docs/machine-learning/deep-learning/tips/tips.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Anaconda",
-    "headers": [
-      {
-        "level": 2,
-        "title": "新建环境",
-        "slug": "新建环境",
-        "link": "#新建环境",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "删除环境",
-        "slug": "删除环境",
-        "link": "#删除环境",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "环境重命名",
-        "slug": "环境重命名",
-        "link": "#环境重命名",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "安装tensorflow2.5-gpu",
-        "slug": "安装tensorflow2-5-gpu",
-        "link": "#安装tensorflow2-5-gpu",
-        "children": [
-          {
-            "level": 3,
-            "title": "安装tensorflow-gpu",
-            "slug": "安装tensorflow-gpu",
-            "link": "#安装tensorflow-gpu",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "根据tf-gpu版本找对应cuda和cudnn版本",
-            "slug": "根据tf-gpu版本找对应cuda和cudnn版本",
-            "link": "#根据tf-gpu版本找对应cuda和cudnn版本",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "安装cuda",
-            "slug": "安装cuda",
-            "link": "#安装cuda",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "安装cudnn",
-            "slug": "安装cudnn",
-            "link": "#安装cudnn",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "查看安装的tensorflow能否使用gpu",
-            "slug": "查看安装的tensorflow能否使用gpu",
-            "link": "#查看安装的tensorflow能否使用gpu",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "安装tensorflow2.1-gpu",
-        "slug": "安装tensorflow2-1-gpu",
-        "link": "#安装tensorflow2-1-gpu",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "测试是否支持GPU",
-        "slug": "测试是否支持gpu",
-        "link": "#测试是否支持gpu",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "安装CUDA",
-        "slug": "安装cuda-1",
-        "link": "#安装cuda-1",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "安装cuDNN",
-        "slug": "安装cudnn-1",
-        "link": "#安装cudnn-1",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "安装TensorRT",
-        "slug": "安装tensorrt",
-        "link": "#安装tensorrt",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "CUDA和cuDNN关系及查询命令",
-        "slug": "cuda和cudnn关系及查询命令",
-        "link": "#cuda和cudnn关系及查询命令",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "安装指定源和版本",
-        "slug": "安装指定源和版本",
-        "link": "#安装指定源和版本",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "anaconda各种源",
-        "slug": "anaconda各种源",
-        "link": "#anaconda各种源",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "ananconda不同机器离线移植",
-        "slug": "ananconda不同机器离线移植",
-        "link": "#ananconda不同机器离线移植",
-        "children": [
-          {
-            "level": 3,
-            "title": "Anaconda打包压缩与文件替换",
-            "slug": "anaconda打包压缩与文件替换",
-            "link": "#anaconda打包压缩与文件替换",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "添加环境变量",
-            "slug": "添加环境变量",
-            "link": "#添加环境变量",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "手动复制其他用户的anaconda",
-        "slug": "手动复制其他用户的anaconda",
-        "link": "#手动复制其他用户的anaconda",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "删除anaconda里的pkgs文件下的包",
-        "slug": "删除anaconda里的pkgs文件下的包",
-        "link": "#删除anaconda里的pkgs文件下的包",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "ubuntu中手动安装nvidia显卡驱动",
-        "slug": "ubuntu中手动安装nvidia显卡驱动",
-        "link": "#ubuntu中手动安装nvidia显卡驱动",
-        "children": [
-          {
-            "level": 3,
-            "title": "在官网下载Nvidia驱动",
-            "slug": "在官网下载nvidia驱动",
-            "link": "#在官网下载nvidia驱动",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "删除旧NVIDIA驱动",
-            "slug": "删除旧nvidia驱动",
-            "link": "#删除旧nvidia驱动",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "屏蔽开源驱动nouveau",
-            "slug": "屏蔽开源驱动nouveau",
-            "link": "#屏蔽开源驱动nouveau",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "重启电脑，按Ctrl+Alt+F1进入命令行界面",
-            "slug": "重启电脑-按ctrl-alt-f1进入命令行界面",
-            "link": "#重启电脑-按ctrl-alt-f1进入命令行界面",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "执行安装驱动",
-            "slug": "执行安装驱动",
-            "link": "#执行安装驱动",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "重启X-window服务",
-            "slug": "重启x-window服务",
-            "link": "#重启x-window服务",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "重启电脑进入BIOS关闭secure-boot",
-            "slug": "重启电脑进入bios关闭secure-boot",
-            "link": "#重启电脑进入bios关闭secure-boot",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "查看是否挂载成功 nvidia-smi",
-            "slug": "查看是否挂载成功-nvidia-smi",
-            "link": "#查看是否挂载成功-nvidia-smi",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "显卡挂载成功但黑屏无法进入图形化界面",
-            "slug": "显卡挂载成功但黑屏无法进入图形化界面",
-            "link": "#显卡挂载成功但黑屏无法进入图形化界面",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Nvidia30系列不再支持CUDA10.x",
-        "slug": "nvidia30系列不再支持cuda10-x",
-        "link": "#nvidia30系列不再支持cuda10-x",
-        "children": []
-      }
-    ],
-    "path": "/docs/machine-learning/machine-learning-framework/anaconda/anaconda.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "模型训练云服务器平台",
-    "headers": [],
-    "path": "/docs/machine-learning/machine-learning-framework/cloud-server-platform/cloud-server-platform.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "AI大模型训练框架",
-    "headers": [],
-    "path": "/docs/machine-learning/machine-learning-framework/large-model-trainning-method/large-model-trainning-method.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "PyTorch",
-    "headers": [],
-    "path": "/docs/machine-learning/machine-learning-framework/pytorch/pytorch.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Ray分布式计算框架",
-    "headers": [],
-    "path": "/docs/machine-learning/machine-learning-framework/ray/ray.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "RLlib",
-    "headers": [],
-    "path": "/docs/machine-learning/machine-learning-framework/rllib/rllib.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "超算集群",
-    "headers": [],
-    "path": "/docs/machine-learning/machine-learning-framework/supercomputing-cluster/supercomputing-cluster.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "TensorFlow",
-    "headers": [],
-    "path": "/docs/machine-learning/machine-learning-framework/tensorflow/tensorflow.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -1680,6 +1373,297 @@ export const searchIndex = [
     "title": "主题模型",
     "headers": [],
     "path": "/docs/machine-learning/machine-learning/topic-model/topic-model.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Anaconda",
+    "headers": [
+      {
+        "level": 2,
+        "title": "新建环境",
+        "slug": "新建环境",
+        "link": "#新建环境",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "删除环境",
+        "slug": "删除环境",
+        "link": "#删除环境",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "环境重命名",
+        "slug": "环境重命名",
+        "link": "#环境重命名",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "安装tensorflow2.5-gpu",
+        "slug": "安装tensorflow2-5-gpu",
+        "link": "#安装tensorflow2-5-gpu",
+        "children": [
+          {
+            "level": 3,
+            "title": "安装tensorflow-gpu",
+            "slug": "安装tensorflow-gpu",
+            "link": "#安装tensorflow-gpu",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "根据tf-gpu版本找对应cuda和cudnn版本",
+            "slug": "根据tf-gpu版本找对应cuda和cudnn版本",
+            "link": "#根据tf-gpu版本找对应cuda和cudnn版本",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "安装cuda",
+            "slug": "安装cuda",
+            "link": "#安装cuda",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "安装cudnn",
+            "slug": "安装cudnn",
+            "link": "#安装cudnn",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "查看安装的tensorflow能否使用gpu",
+            "slug": "查看安装的tensorflow能否使用gpu",
+            "link": "#查看安装的tensorflow能否使用gpu",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "安装tensorflow2.1-gpu",
+        "slug": "安装tensorflow2-1-gpu",
+        "link": "#安装tensorflow2-1-gpu",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "测试是否支持GPU",
+        "slug": "测试是否支持gpu",
+        "link": "#测试是否支持gpu",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "安装CUDA",
+        "slug": "安装cuda-1",
+        "link": "#安装cuda-1",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "安装cuDNN",
+        "slug": "安装cudnn-1",
+        "link": "#安装cudnn-1",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "安装TensorRT",
+        "slug": "安装tensorrt",
+        "link": "#安装tensorrt",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "CUDA和cuDNN关系及查询命令",
+        "slug": "cuda和cudnn关系及查询命令",
+        "link": "#cuda和cudnn关系及查询命令",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "安装指定源和版本",
+        "slug": "安装指定源和版本",
+        "link": "#安装指定源和版本",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "anaconda各种源",
+        "slug": "anaconda各种源",
+        "link": "#anaconda各种源",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "ananconda不同机器离线移植",
+        "slug": "ananconda不同机器离线移植",
+        "link": "#ananconda不同机器离线移植",
+        "children": [
+          {
+            "level": 3,
+            "title": "Anaconda打包压缩与文件替换",
+            "slug": "anaconda打包压缩与文件替换",
+            "link": "#anaconda打包压缩与文件替换",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "添加环境变量",
+            "slug": "添加环境变量",
+            "link": "#添加环境变量",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "手动复制其他用户的anaconda",
+        "slug": "手动复制其他用户的anaconda",
+        "link": "#手动复制其他用户的anaconda",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "删除anaconda里的pkgs文件下的包",
+        "slug": "删除anaconda里的pkgs文件下的包",
+        "link": "#删除anaconda里的pkgs文件下的包",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "ubuntu中手动安装nvidia显卡驱动",
+        "slug": "ubuntu中手动安装nvidia显卡驱动",
+        "link": "#ubuntu中手动安装nvidia显卡驱动",
+        "children": [
+          {
+            "level": 3,
+            "title": "在官网下载Nvidia驱动",
+            "slug": "在官网下载nvidia驱动",
+            "link": "#在官网下载nvidia驱动",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "删除旧NVIDIA驱动",
+            "slug": "删除旧nvidia驱动",
+            "link": "#删除旧nvidia驱动",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "屏蔽开源驱动nouveau",
+            "slug": "屏蔽开源驱动nouveau",
+            "link": "#屏蔽开源驱动nouveau",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "重启电脑，按Ctrl+Alt+F1进入命令行界面",
+            "slug": "重启电脑-按ctrl-alt-f1进入命令行界面",
+            "link": "#重启电脑-按ctrl-alt-f1进入命令行界面",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "执行安装驱动",
+            "slug": "执行安装驱动",
+            "link": "#执行安装驱动",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "重启X-window服务",
+            "slug": "重启x-window服务",
+            "link": "#重启x-window服务",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "重启电脑进入BIOS关闭secure-boot",
+            "slug": "重启电脑进入bios关闭secure-boot",
+            "link": "#重启电脑进入bios关闭secure-boot",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "查看是否挂载成功 nvidia-smi",
+            "slug": "查看是否挂载成功-nvidia-smi",
+            "link": "#查看是否挂载成功-nvidia-smi",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "显卡挂载成功但黑屏无法进入图形化界面",
+            "slug": "显卡挂载成功但黑屏无法进入图形化界面",
+            "link": "#显卡挂载成功但黑屏无法进入图形化界面",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Nvidia30系列不再支持CUDA10.x",
+        "slug": "nvidia30系列不再支持cuda10-x",
+        "link": "#nvidia30系列不再支持cuda10-x",
+        "children": []
+      }
+    ],
+    "path": "/docs/machine-learning/machine-learning-framework/anaconda/anaconda.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "模型训练云服务器平台",
+    "headers": [],
+    "path": "/docs/machine-learning/machine-learning-framework/cloud-server-platform/cloud-server-platform.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "AI大模型训练框架",
+    "headers": [],
+    "path": "/docs/machine-learning/machine-learning-framework/large-model-trainning-method/large-model-trainning-method.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "PyTorch",
+    "headers": [],
+    "path": "/docs/machine-learning/machine-learning-framework/pytorch/pytorch.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Ray分布式计算框架",
+    "headers": [],
+    "path": "/docs/machine-learning/machine-learning-framework/ray/ray.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "RLlib",
+    "headers": [],
+    "path": "/docs/machine-learning/machine-learning-framework/rllib/rllib.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "超算集群",
+    "headers": [],
+    "path": "/docs/machine-learning/machine-learning-framework/supercomputing-cluster/supercomputing-cluster.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "TensorFlow",
+    "headers": [],
+    "path": "/docs/machine-learning/machine-learning-framework/tensorflow/tensorflow.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2511,6 +2495,36 @@ export const searchIndex = [
     "title": "Transformer+RL",
     "headers": [],
     "path": "/docs/machine-learning/reinforcement-learning/transformer-rl/transformer-rl.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "摄影集第一卷",
+    "headers": [
+      {
+        "level": 2,
+        "title": "东京 第一卷",
+        "slug": "东京-第一卷",
+        "link": "#东京-第一卷",
+        "children": []
+      }
+    ],
+    "path": "/blogs/photograph/Tokyo2023/K1/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "摄影集第二卷",
+    "headers": [
+      {
+        "level": 2,
+        "title": "东京 第二卷",
+        "slug": "东京-第二卷",
+        "link": "#东京-第二卷",
+        "children": []
+      }
+    ],
+    "path": "/blogs/photograph/Tokyo2023/K2/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -3820,553 +3834,6 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "Pytorch基础",
-    "headers": [
-      {
-        "level": 2,
-        "title": "tensor.expand()",
-        "slug": "tensor-expand",
-        "link": "#tensor-expand",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "nn.Threshold(threshold, value)",
-        "slug": "nn-threshold-threshold-value",
-        "link": "#nn-threshold-threshold-value",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "tensor.item()和tensor.tolist()",
-        "slug": "tensor-item-和tensor-tolist",
-        "link": "#tensor-item-和tensor-tolist",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "torch.no_grad()",
-        "slug": "torch-no-grad",
-        "link": "#torch-no-grad",
-        "children": []
-      }
-    ],
-    "path": "/docs/machine-learning/machine-learning-framework/pytorch/basis/basis.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "微软: 用于训练ChatGPT的超算",
-    "headers": [],
-    "path": "/docs/machine-learning/machine-learning-framework/supercomputing-cluster/microsoft-supercomputing-cluster-for-chatgpt/microsoft-supercomputing-cluster-for-chatgpt.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Tensorflow分布式架构",
-    "headers": [
-      {
-        "level": 2,
-        "title": "同步更新方式的网络瓶颈定量分析",
-        "slug": "同步更新方式的网络瓶颈定量分析",
-        "link": "#同步更新方式的网络瓶颈定量分析",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Ring-All-reduce框架下同步更新算法",
-        "slug": "ring-all-reduce框架下同步更新算法",
-        "link": "#ring-all-reduce框架下同步更新算法",
-        "children": [
-          {
-            "level": 3,
-            "title": "scatter-reduce",
-            "slug": "scatter-reduce",
-            "link": "#scatter-reduce",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Allgather",
-            "slug": "allgather",
-            "link": "#allgather",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/docs/machine-learning/machine-learning-framework/tensorflow/tensorflow-distributed-architecture/tensorflow-distributed-architecture.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "TensorFlow1.0",
-    "headers": [
-      {
-        "level": 2,
-        "title": "tf.layers.conv1d",
-        "slug": "tf-layers-conv1d",
-        "link": "#tf-layers-conv1d",
-        "children": []
-      }
-    ],
-    "path": "/docs/machine-learning/machine-learning-framework/tensorflow/tensorflow1.0/tensorflow1.0.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "TensorFlow2.0",
-    "headers": [],
-    "path": "/docs/machine-learning/machine-learning-framework/tensorflow/tensorflow2.0/tensorflow2.0.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "TensorFlow Serving",
-    "headers": [
-      {
-        "level": 2,
-        "title": "安装Docker",
-        "slug": "安装docker",
-        "link": "#安装docker",
-        "children": [
-          {
-            "level": 3,
-            "title": "win10安装",
-            "slug": "win10安装",
-            "link": "#win10安装",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "linux安装",
-            "slug": "linux安装",
-            "link": "#linux安装",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "拉取TF.Serving镜像",
-        "slug": "拉取tf-serving镜像",
-        "link": "#拉取tf-serving镜像",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "运行容器",
-        "slug": "运行容器",
-        "link": "#运行容器",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "通过API查看模型状态，元数据",
-        "slug": "通过api查看模型状态-元数据",
-        "link": "#通过api查看模型状态-元数据",
-        "children": [
-          {
-            "level": 3,
-            "title": "通过model-status-API查看模型状态",
-            "slug": "通过model-status-api查看模型状态",
-            "link": "#通过model-status-api查看模型状态",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "通过model-metadata-API查看模型的元数据",
-            "slug": "通过model-metadata-api查看模型的元数据",
-            "link": "#通过model-metadata-api查看模型的元数据",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "gRPC与RESTful请求的区别",
-        "slug": "grpc与restful请求的区别",
-        "link": "#grpc与restful请求的区别",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "使用RESTful-API请求预测",
-        "slug": "使用restful-api请求预测",
-        "link": "#使用restful-api请求预测",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "使用gRPC请求预测",
-        "slug": "使用grpc请求预测",
-        "link": "#使用grpc请求预测",
-        "children": [
-          {
-            "level": 3,
-            "title": "输入数据为文本或数字类型",
-            "slug": "输入数据为文本或数字类型",
-            "link": "#输入数据为文本或数字类型",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "输入数据为图像类型",
-            "slug": "输入数据为图像类型",
-            "link": "#输入数据为图像类型",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "ckpt格式转为pd格式用于TFserving",
-        "slug": "ckpt格式转为pd格式用于tfserving",
-        "link": "#ckpt格式转为pd格式用于tfserving",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "为什么需要Flask服务器",
-        "slug": "为什么需要flask服务器",
-        "link": "#为什么需要flask服务器",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Flask的HelloWorld代码",
-        "slug": "flask的helloworld代码",
-        "link": "#flask的helloworld代码",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Flask的缺陷",
-        "slug": "flask的缺陷",
-        "link": "#flask的缺陷",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "gevent+Flask同步变异步",
-        "slug": "gevent-flask同步变异步",
-        "link": "#gevent-flask同步变异步",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "理解Nginx+Gunicorn+Flask",
-        "slug": "理解nginx-gunicorn-flask",
-        "link": "#理解nginx-gunicorn-flask",
-        "children": [
-          {
-            "level": 3,
-            "title": "为什么要用Nginx+Gunicorn+Flask+supervisor方式部署",
-            "slug": "为什么要用nginx-gunicorn-flask-supervisor方式部署",
-            "link": "#为什么要用nginx-gunicorn-flask-supervisor方式部署",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Nginx、gunicore和Flask之间的关系",
-            "slug": "nginx、gunicore和flask之间的关系",
-            "link": "#nginx、gunicore和flask之间的关系",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "为什么Flask和Nginx之间要用uwsgi服务器",
-            "slug": "为什么flask和nginx之间要用uwsgi服务器",
-            "link": "#为什么flask和nginx之间要用uwsgi服务器",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "为什么需要Nginx",
-            "slug": "为什么需要nginx",
-            "link": "#为什么需要nginx",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "部署流程",
-        "slug": "部署流程",
-        "link": "#部署流程",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Flask",
-        "slug": "flask",
-        "link": "#flask",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Gunicorn",
-        "slug": "gunicorn",
-        "link": "#gunicorn",
-        "children": [
-          {
-            "level": 3,
-            "title": "什么是Gunicorn",
-            "slug": "什么是gunicorn",
-            "link": "#什么是gunicorn",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Gunicorn配置",
-            "slug": "gunicorn配置",
-            "link": "#gunicorn配置",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "运行Gunicorn",
-            "slug": "运行gunicorn",
-            "link": "#运行gunicorn",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Nginx",
-        "slug": "nginx",
-        "link": "#nginx",
-        "children": [
-          {
-            "level": 3,
-            "title": "Nginx介绍",
-            "slug": "nginx介绍",
-            "link": "#nginx介绍",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "修改配置",
-            "slug": "修改配置",
-            "link": "#修改配置",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Nginx的应用",
-            "slug": "nginx的应用",
-            "link": "#nginx的应用",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "安装、配置并运行Nginx",
-            "slug": "安装、配置并运行nginx",
-            "link": "#安装、配置并运行nginx",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "supervisord",
-        "slug": "supervisord",
-        "link": "#supervisord",
-        "children": [
-          {
-            "level": 3,
-            "title": "新增Nginx进程配置文件",
-            "slug": "新增nginx进程配置文件",
-            "link": "#新增nginx进程配置文件",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "supervisorctl操作命令",
-            "slug": "supervisorctl操作命令",
-            "link": "#supervisorctl操作命令",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "新增Gunicorn进程配置文件",
-            "slug": "新增gunicorn进程配置文件",
-            "link": "#新增gunicorn进程配置文件",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "简单例子部署完成总结",
-        "slug": "简单例子部署完成总结",
-        "link": "#简单例子部署完成总结",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "部署模型",
-        "slug": "部署模型",
-        "link": "#部署模型",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "部署Docker",
-        "slug": "部署docker",
-        "link": "#部署docker",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "部署Flask",
-        "slug": "部署flask",
-        "link": "#部署flask",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "部署Gunicorn",
-        "slug": "部署gunicorn",
-        "link": "#部署gunicorn",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "部署Nginx",
-        "slug": "部署nginx",
-        "link": "#部署nginx",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "部署supervisor",
-        "slug": "部署supervisor",
-        "link": "#部署supervisor",
-        "children": [
-          {
-            "level": 3,
-            "title": "新增Docker进程配置文件",
-            "slug": "新增docker进程配置文件",
-            "link": "#新增docker进程配置文件",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "新增Gunicorn进程配置文件",
-            "slug": "新增gunicorn进程配置文件-1",
-            "link": "#新增gunicorn进程配置文件-1",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "新增Nginx进程配置文件",
-            "slug": "新增nginx进程配置文件-1",
-            "link": "#新增nginx进程配置文件-1",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "部署完成总结",
-        "slug": "部署完成总结",
-        "link": "#部署完成总结",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "基于python的客户端请求",
-        "slug": "基于python的客户端请求",
-        "link": "#基于python的客户端请求",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "用ab压测",
-        "slug": "用ab压测",
-        "link": "#用ab压测",
-        "children": [
-          {
-            "level": 3,
-            "title": "ab原理",
-            "slug": "ab原理",
-            "link": "#ab原理",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "服务器qps预估",
-            "slug": "服务器qps预估",
-            "link": "#服务器qps预估",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "对模型进行测试",
-            "slug": "对模型进行测试",
-            "link": "#对模型进行测试",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "多模型在线部署",
-        "slug": "多模型在线部署",
-        "link": "#多模型在线部署",
-        "children": [
-          {
-            "level": 3,
-            "title": "多模型部署",
-            "slug": "多模型部署",
-            "link": "#多模型部署",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "模型版本控制",
-            "slug": "模型版本控制",
-            "link": "#模型版本控制",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "热更新",
-            "slug": "热更新",
-            "link": "#热更新",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "其他有用参数",
-            "slug": "其他有用参数",
-            "link": "#其他有用参数",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "多模型在线部署实例",
-            "slug": "多模型在线部署实例",
-            "link": "#多模型在线部署实例",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/docs/machine-learning/machine-learning-framework/tensorflow/tf_serving/tf_serving.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "工具",
-    "headers": [],
-    "path": "/docs/machine-learning/machine-learning-framework/tensorflow/tools/tools.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "DBSCAN聚类",
     "headers": [],
     "path": "/docs/machine-learning/machine-learning/clustering/dbscan-clustering/dbscan-clustering.html",
@@ -5632,6 +5099,553 @@ export const searchIndex = [
     "title": "LDA隐狄利克雷分布",
     "headers": [],
     "path": "/docs/machine-learning/machine-learning/topic-model/latent-dirichlet-allocation/latent-dirichlet-allocation.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Pytorch基础",
+    "headers": [
+      {
+        "level": 2,
+        "title": "tensor.expand()",
+        "slug": "tensor-expand",
+        "link": "#tensor-expand",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "nn.Threshold(threshold, value)",
+        "slug": "nn-threshold-threshold-value",
+        "link": "#nn-threshold-threshold-value",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "tensor.item()和tensor.tolist()",
+        "slug": "tensor-item-和tensor-tolist",
+        "link": "#tensor-item-和tensor-tolist",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "torch.no_grad()",
+        "slug": "torch-no-grad",
+        "link": "#torch-no-grad",
+        "children": []
+      }
+    ],
+    "path": "/docs/machine-learning/machine-learning-framework/pytorch/basis/basis.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "微软: 用于训练ChatGPT的超算",
+    "headers": [],
+    "path": "/docs/machine-learning/machine-learning-framework/supercomputing-cluster/microsoft-supercomputing-cluster-for-chatgpt/microsoft-supercomputing-cluster-for-chatgpt.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Tensorflow分布式架构",
+    "headers": [
+      {
+        "level": 2,
+        "title": "同步更新方式的网络瓶颈定量分析",
+        "slug": "同步更新方式的网络瓶颈定量分析",
+        "link": "#同步更新方式的网络瓶颈定量分析",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Ring-All-reduce框架下同步更新算法",
+        "slug": "ring-all-reduce框架下同步更新算法",
+        "link": "#ring-all-reduce框架下同步更新算法",
+        "children": [
+          {
+            "level": 3,
+            "title": "scatter-reduce",
+            "slug": "scatter-reduce",
+            "link": "#scatter-reduce",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Allgather",
+            "slug": "allgather",
+            "link": "#allgather",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/docs/machine-learning/machine-learning-framework/tensorflow/tensorflow-distributed-architecture/tensorflow-distributed-architecture.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "TensorFlow1.0",
+    "headers": [
+      {
+        "level": 2,
+        "title": "tf.layers.conv1d",
+        "slug": "tf-layers-conv1d",
+        "link": "#tf-layers-conv1d",
+        "children": []
+      }
+    ],
+    "path": "/docs/machine-learning/machine-learning-framework/tensorflow/tensorflow1.0/tensorflow1.0.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "TensorFlow2.0",
+    "headers": [],
+    "path": "/docs/machine-learning/machine-learning-framework/tensorflow/tensorflow2.0/tensorflow2.0.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "TensorFlow Serving",
+    "headers": [
+      {
+        "level": 2,
+        "title": "安装Docker",
+        "slug": "安装docker",
+        "link": "#安装docker",
+        "children": [
+          {
+            "level": 3,
+            "title": "win10安装",
+            "slug": "win10安装",
+            "link": "#win10安装",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "linux安装",
+            "slug": "linux安装",
+            "link": "#linux安装",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "拉取TF.Serving镜像",
+        "slug": "拉取tf-serving镜像",
+        "link": "#拉取tf-serving镜像",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "运行容器",
+        "slug": "运行容器",
+        "link": "#运行容器",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "通过API查看模型状态，元数据",
+        "slug": "通过api查看模型状态-元数据",
+        "link": "#通过api查看模型状态-元数据",
+        "children": [
+          {
+            "level": 3,
+            "title": "通过model-status-API查看模型状态",
+            "slug": "通过model-status-api查看模型状态",
+            "link": "#通过model-status-api查看模型状态",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "通过model-metadata-API查看模型的元数据",
+            "slug": "通过model-metadata-api查看模型的元数据",
+            "link": "#通过model-metadata-api查看模型的元数据",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "gRPC与RESTful请求的区别",
+        "slug": "grpc与restful请求的区别",
+        "link": "#grpc与restful请求的区别",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "使用RESTful-API请求预测",
+        "slug": "使用restful-api请求预测",
+        "link": "#使用restful-api请求预测",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "使用gRPC请求预测",
+        "slug": "使用grpc请求预测",
+        "link": "#使用grpc请求预测",
+        "children": [
+          {
+            "level": 3,
+            "title": "输入数据为文本或数字类型",
+            "slug": "输入数据为文本或数字类型",
+            "link": "#输入数据为文本或数字类型",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "输入数据为图像类型",
+            "slug": "输入数据为图像类型",
+            "link": "#输入数据为图像类型",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "ckpt格式转为pd格式用于TFserving",
+        "slug": "ckpt格式转为pd格式用于tfserving",
+        "link": "#ckpt格式转为pd格式用于tfserving",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "为什么需要Flask服务器",
+        "slug": "为什么需要flask服务器",
+        "link": "#为什么需要flask服务器",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Flask的HelloWorld代码",
+        "slug": "flask的helloworld代码",
+        "link": "#flask的helloworld代码",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Flask的缺陷",
+        "slug": "flask的缺陷",
+        "link": "#flask的缺陷",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "gevent+Flask同步变异步",
+        "slug": "gevent-flask同步变异步",
+        "link": "#gevent-flask同步变异步",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "理解Nginx+Gunicorn+Flask",
+        "slug": "理解nginx-gunicorn-flask",
+        "link": "#理解nginx-gunicorn-flask",
+        "children": [
+          {
+            "level": 3,
+            "title": "为什么要用Nginx+Gunicorn+Flask+supervisor方式部署",
+            "slug": "为什么要用nginx-gunicorn-flask-supervisor方式部署",
+            "link": "#为什么要用nginx-gunicorn-flask-supervisor方式部署",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Nginx、gunicore和Flask之间的关系",
+            "slug": "nginx、gunicore和flask之间的关系",
+            "link": "#nginx、gunicore和flask之间的关系",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "为什么Flask和Nginx之间要用uwsgi服务器",
+            "slug": "为什么flask和nginx之间要用uwsgi服务器",
+            "link": "#为什么flask和nginx之间要用uwsgi服务器",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "为什么需要Nginx",
+            "slug": "为什么需要nginx",
+            "link": "#为什么需要nginx",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "部署流程",
+        "slug": "部署流程",
+        "link": "#部署流程",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Flask",
+        "slug": "flask",
+        "link": "#flask",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Gunicorn",
+        "slug": "gunicorn",
+        "link": "#gunicorn",
+        "children": [
+          {
+            "level": 3,
+            "title": "什么是Gunicorn",
+            "slug": "什么是gunicorn",
+            "link": "#什么是gunicorn",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Gunicorn配置",
+            "slug": "gunicorn配置",
+            "link": "#gunicorn配置",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "运行Gunicorn",
+            "slug": "运行gunicorn",
+            "link": "#运行gunicorn",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Nginx",
+        "slug": "nginx",
+        "link": "#nginx",
+        "children": [
+          {
+            "level": 3,
+            "title": "Nginx介绍",
+            "slug": "nginx介绍",
+            "link": "#nginx介绍",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "修改配置",
+            "slug": "修改配置",
+            "link": "#修改配置",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Nginx的应用",
+            "slug": "nginx的应用",
+            "link": "#nginx的应用",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "安装、配置并运行Nginx",
+            "slug": "安装、配置并运行nginx",
+            "link": "#安装、配置并运行nginx",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "supervisord",
+        "slug": "supervisord",
+        "link": "#supervisord",
+        "children": [
+          {
+            "level": 3,
+            "title": "新增Nginx进程配置文件",
+            "slug": "新增nginx进程配置文件",
+            "link": "#新增nginx进程配置文件",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "supervisorctl操作命令",
+            "slug": "supervisorctl操作命令",
+            "link": "#supervisorctl操作命令",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "新增Gunicorn进程配置文件",
+            "slug": "新增gunicorn进程配置文件",
+            "link": "#新增gunicorn进程配置文件",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "简单例子部署完成总结",
+        "slug": "简单例子部署完成总结",
+        "link": "#简单例子部署完成总结",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "部署模型",
+        "slug": "部署模型",
+        "link": "#部署模型",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "部署Docker",
+        "slug": "部署docker",
+        "link": "#部署docker",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "部署Flask",
+        "slug": "部署flask",
+        "link": "#部署flask",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "部署Gunicorn",
+        "slug": "部署gunicorn",
+        "link": "#部署gunicorn",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "部署Nginx",
+        "slug": "部署nginx",
+        "link": "#部署nginx",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "部署supervisor",
+        "slug": "部署supervisor",
+        "link": "#部署supervisor",
+        "children": [
+          {
+            "level": 3,
+            "title": "新增Docker进程配置文件",
+            "slug": "新增docker进程配置文件",
+            "link": "#新增docker进程配置文件",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "新增Gunicorn进程配置文件",
+            "slug": "新增gunicorn进程配置文件-1",
+            "link": "#新增gunicorn进程配置文件-1",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "新增Nginx进程配置文件",
+            "slug": "新增nginx进程配置文件-1",
+            "link": "#新增nginx进程配置文件-1",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "部署完成总结",
+        "slug": "部署完成总结",
+        "link": "#部署完成总结",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "基于python的客户端请求",
+        "slug": "基于python的客户端请求",
+        "link": "#基于python的客户端请求",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "用ab压测",
+        "slug": "用ab压测",
+        "link": "#用ab压测",
+        "children": [
+          {
+            "level": 3,
+            "title": "ab原理",
+            "slug": "ab原理",
+            "link": "#ab原理",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "服务器qps预估",
+            "slug": "服务器qps预估",
+            "link": "#服务器qps预估",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "对模型进行测试",
+            "slug": "对模型进行测试",
+            "link": "#对模型进行测试",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "多模型在线部署",
+        "slug": "多模型在线部署",
+        "link": "#多模型在线部署",
+        "children": [
+          {
+            "level": 3,
+            "title": "多模型部署",
+            "slug": "多模型部署",
+            "link": "#多模型部署",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "模型版本控制",
+            "slug": "模型版本控制",
+            "link": "#模型版本控制",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "热更新",
+            "slug": "热更新",
+            "link": "#热更新",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "其他有用参数",
+            "slug": "其他有用参数",
+            "link": "#其他有用参数",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "多模型在线部署实例",
+            "slug": "多模型在线部署实例",
+            "link": "#多模型在线部署实例",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/docs/machine-learning/machine-learning-framework/tensorflow/tf_serving/tf_serving.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "工具",
+    "headers": [],
+    "path": "/docs/machine-learning/machine-learning-framework/tensorflow/tools/tools.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -7032,7 +7046,7 @@ export const searchIndex = [
   {
     "title": "YouTube深度学习推荐系统",
     "headers": [],
-    "path": "/docs/machine-learning/recommender-systems/industry-application/youtube/Youtubetichushuangtajiegouliushimoxingjinxingdaguimotuijian.html",
+    "path": "/docs/machine-learning/recommender-systems/industry-application/youtube/Youtube%E6%8F%90%E5%87%BA%E5%8F%8C%E5%A1%94%E7%BB%93%E6%9E%84%E6%B5%81%E5%BC%8F%E6%A8%A1%E5%9E%8B%E8%BF%9B%E8%A1%8C%E5%A4%A7%E8%A7%84%E6%A8%A1%E6%8E%A8%E8%8D%90.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -9787,7 +9801,7 @@ export const searchIndex = [
   {
     "title": "PathNet",
     "headers": [],
-    "path": "/docs/machine-learning/artificial-general-intelligence/industry-application/deepmind/pathnet/PathNet：Evolution-Channels-Gradient-Descent-in-Super-Neural-Networks.html",
+    "path": "/docs/machine-learning/artificial-general-intelligence/industry-application/deepmind/pathnet/PathNet%EF%BC%9AEvolution-Channels-Gradient-Descent-in-Super-Neural-Networks.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -10712,16 +10726,16 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "cython",
+    "title": "python应用",
     "headers": [],
-    "path": "/docs/machine-learning/coding/programing-language/python/cython/cython.html",
+    "path": "/docs/machine-learning/coding/programing-language/python/application/application.html",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "python应用",
+    "title": "cython",
     "headers": [],
-    "path": "/docs/machine-learning/coding/programing-language/python/application/application.html",
+    "path": "/docs/machine-learning/coding/programing-language/python/cython/cython.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -11737,6 +11751,42 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "随机森林",
+    "headers": [],
+    "path": "/docs/machine-learning/machine-learning/ensemble-learning/bagging/random-forest/random-forest.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "AdaBoost",
+    "headers": [
+      {
+        "level": 2,
+        "title": "前向分布算法",
+        "slug": "前向分布算法",
+        "link": "#前向分布算法",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "前向分步算法与AdaBoost",
+        "slug": "前向分步算法与adaboost",
+        "link": "#前向分步算法与adaboost",
+        "children": []
+      }
+    ],
+    "path": "/docs/machine-learning/machine-learning/ensemble-learning/boosting/adaboost/adaboost.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Gradient Boosting",
+    "headers": [],
+    "path": "/docs/machine-learning/machine-learning/ensemble-learning/boosting/gradient-boosting/gradient-boosting.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "TensorFlow基础概念解析",
     "headers": [],
     "path": "/docs/machine-learning/machine-learning-framework/tensorflow/tensorflow1.0/basic-concept-analysis/basic-concept-analysis.html",
@@ -11927,42 +11977,6 @@ export const searchIndex = [
     "title": "Tensorflow中使用GPU",
     "headers": [],
     "path": "/docs/machine-learning/machine-learning-framework/tensorflow/tools/gpu/gpu.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "随机森林",
-    "headers": [],
-    "path": "/docs/machine-learning/machine-learning/ensemble-learning/bagging/random-forest/random-forest.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "AdaBoost",
-    "headers": [
-      {
-        "level": 2,
-        "title": "前向分布算法",
-        "slug": "前向分布算法",
-        "link": "#前向分布算法",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "前向分步算法与AdaBoost",
-        "slug": "前向分步算法与adaboost",
-        "link": "#前向分步算法与adaboost",
-        "children": []
-      }
-    ],
-    "path": "/docs/machine-learning/machine-learning/ensemble-learning/boosting/adaboost/adaboost.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Gradient Boosting",
-    "headers": [],
-    "path": "/docs/machine-learning/machine-learning/ensemble-learning/boosting/gradient-boosting/gradient-boosting.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -13496,7 +13510,7 @@ export const searchIndex = [
   {
     "title": "Augmenting GAIL with BC for sample efficient imitation learning",
     "headers": [],
-    "path": "/docs/machine-learning/reinforcement-learning/imatation-learning/paper/BC_GAIL/Augmenting-GAIL-with-BC-for-sample-effici - fuben.html",
+    "path": "/docs/machine-learning/reinforcement-learning/imatation-learning/paper/BC_GAIL/Augmenting-GAIL-with-BC-for-sample-effici%20-%20%E5%89%AF%E6%9C%AC.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -14756,50 +14770,6 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "指标keras.metrics",
-    "headers": [
-      {
-        "level": 2,
-        "title": "tf.keras.metrics.Accuracy",
-        "slug": "tf-keras-metrics-accuracy",
-        "link": "#tf-keras-metrics-accuracy",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "tf.keras.metrics.Mean",
-        "slug": "tf-keras-metrics-mean",
-        "link": "#tf-keras-metrics-mean",
-        "children": []
-      }
-    ],
-    "path": "/docs/machine-learning/machine-learning-framework/tensorflow/tensorflow2.0/keras/keras-metrics/keras-metrics.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "优化器keras.optimizer",
-    "headers": [
-      {
-        "level": 3,
-        "title": "拓展LearningRateSchedule",
-        "slug": "拓展learningrateschedule",
-        "link": "#拓展learningrateschedule",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "自定义callback",
-        "slug": "自定义callback",
-        "link": "#自定义callback",
-        "children": []
-      }
-    ],
-    "path": "/docs/machine-learning/machine-learning-framework/tensorflow/tensorflow2.0/keras/keras-optimizer/keras-optimizer.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "GBDT",
     "headers": [
       {
@@ -14897,6 +14867,50 @@ export const searchIndex = [
     "title": "XGBoost",
     "headers": [],
     "path": "/docs/machine-learning/machine-learning/ensemble-learning/boosting/gradient-boosting/xgboost/xgboost.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "指标keras.metrics",
+    "headers": [
+      {
+        "level": 2,
+        "title": "tf.keras.metrics.Accuracy",
+        "slug": "tf-keras-metrics-accuracy",
+        "link": "#tf-keras-metrics-accuracy",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "tf.keras.metrics.Mean",
+        "slug": "tf-keras-metrics-mean",
+        "link": "#tf-keras-metrics-mean",
+        "children": []
+      }
+    ],
+    "path": "/docs/machine-learning/machine-learning-framework/tensorflow/tensorflow2.0/keras/keras-metrics/keras-metrics.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "优化器keras.optimizer",
+    "headers": [
+      {
+        "level": 3,
+        "title": "拓展LearningRateSchedule",
+        "slug": "拓展learningrateschedule",
+        "link": "#拓展learningrateschedule",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "自定义callback",
+        "slug": "自定义callback",
+        "link": "#自定义callback",
+        "children": []
+      }
+    ],
+    "path": "/docs/machine-learning/machine-learning-framework/tensorflow/tensorflow2.0/keras/keras-optimizer/keras-optimizer.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -15700,3 +15714,16 @@ export const searchIndex = [
     "extraFields": []
   }
 ]
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updateSearchIndex) {
+    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ searchIndex }) => {
+    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
+  })
+}
