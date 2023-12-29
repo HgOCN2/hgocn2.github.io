@@ -1,4 +1,7 @@
-<template><div><h2 id="东京-第二卷" tabindex="-1"><a class="header-anchor" href="#东京-第二卷" aria-hidden="true">#</a> 东京 第二卷</h2>
+<template><div><blockquote>
+<p>从东京南下来到了湘南海边，这里的和横滨一样被各种不一的蓝拥抱着，但是比横滨这样的大城市更多了一些生活气息。</p>
+</blockquote>
+<h2 id="江之岛" tabindex="-1"><a class="header-anchor" href="#江之岛" aria-hidden="true">#</a> 江之岛</h2>
 <p><img src="https://cdn.jsdelivr.net/gh/HgOCN2/picx-images-hosting@master/K2/000070.446ll264eq00.webp" alt=""></p>
 <p><img src="https://cdn.jsdelivr.net/gh/HgOCN2/picx-images-hosting@master/K2/000069.2g8uxryfjejo.webp" alt=""></p>
 <p><img src="https://cdn.jsdelivr.net/gh/HgOCN2/picx-images-hosting@master/K2/000067.4wpa7qw0sec0.webp" alt=""></p>

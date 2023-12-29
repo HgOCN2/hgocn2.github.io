@@ -22,7 +22,7 @@ bannerBrand:
 # isShowTitleInHome: true
 features:
   - { title: 第一卷：东京市区篇, details: '主要记录了一些在东京市区内的影像。 ', link: '/blogs/photograph/Tokyo2023/K1' }
-  - { title: 第二卷：湘南篇, details: '南下来到了片瀬江ノ島，在这里被来自大海的深蓝拥抱了。', link: '/blogs/photograph/Tokyo2023/K2'  }  
+  - { title: 第二卷：湘南篇, details: '南下来到了江之岛，在这里被来自大海的深蓝拥抱了。', link: '/blogs/photograph/Tokyo2023/K2'  }  
 actionText: About
 actionLink: /views/other/about
 ---

@@ -7,6 +7,11 @@ categories:
  - 摄影集
 ---
 
+> 第一卷是东京市区篇，主要记录了一些在东京市区内的影像，和生长在东京市内复杂的交通系统上的电车一起呼吸晚秋的凉风。
+
+
+
+
 ## 川崎市
 ### 川崎区 - 砂子
 ![飞鸟集](https://cdn.jsdelivr.net/gh/HgOCN2/picx-images-hosting@master/20231214/000052.5hr29as4y2s0.webp)
@@ -18,6 +23,9 @@ categories:
 ![某个月台 其一](https://cdn.jsdelivr.net/gh/HgOCN2/picx-images-hosting@master/20231214/000047.58unsh5d6zc0.webp)
 
 ![某个月台 其二](https://cdn.jsdelivr.net/gh/HgOCN2/picx-images-hosting@master/20231214/000048.5ypmyvii6x00.webp)
+
+
+
 
 ### 中原区 - 上小田中
 
@@ -31,6 +39,9 @@ categories:
 
 ![晨光打在铁板上](https://cdn.jsdelivr.net/gh/HgOCN2/picx-images-hosting@master/20231214/000053.18gg83a7ikao.webp)
 
+
+
+
 ### 高津区 - 末长
 
 ![新手上路的公交巴士](https://cdn.jsdelivr.net/gh/HgOCN2/picx-images-hosting@master/20231214/000059.2km0aapl0v20.webp)
@@ -43,20 +54,14 @@ categories:
 
 ![某个月台 其四](https://cdn.jsdelivr.net/gh/HgOCN2/picx-images-hosting@master/20231214/000060.3oyqun0f3zo0.webp)
 
+
+
+
+
+
+
 ## 東京
 ### 渋谷区
-
-
-
-
-
-
-
-
-
-
-
-
 
 ![缝隙里的楼](https://cdn.jsdelivr.net/gh/HgOCN2/picx-images-hosting@master/20231214/000063.2xm7cr5e72k0.webp)
 
@@ -81,3 +86,11 @@ categories:
 ![东大板报](https://cdn.jsdelivr.net/gh/HgOCN2/picx-images-hosting@master/20231214/000071.58vjoykwwps0.webp)
 
 ![这张在上海](https://cdn.jsdelivr.net/gh/HgOCN2/picx-images-hosting@master/20231214/000041.zw27lwwao9s.webp)
+
+## Part 2
+
+![35860018](https://cdn.jsdelivr.net/gh/HgOCN2/picx-images-hosting@master/M1/35860018.1hogyu1r9i3k.avif)
+
+![35860014](https://cdn.jsdelivr.net/gh/HgOCN2/picx-images-hosting@master/M1/35860014.3qpnx13qjqc0.avif)
+
+![35860001](https://cdn.jsdelivr.net/gh/HgOCN2/picx-images-hosting@master/M1/35860001.6h1chj7tsxc0.avif)

@@ -92,16 +92,16 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "目录",
+    "title": "",
     "headers": [],
-    "path": "/docs/machine-learning/",
+    "path": "/blogs/photograph/",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "",
+    "title": "目录",
     "headers": [],
-    "path": "/blogs/photograph/",
+    "path": "/docs/machine-learning/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -132,6 +132,13 @@ export const searchIndex = [
       }
     ],
     "path": "/blogs/comic/others/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [],
+    "path": "/blogs/photograph/Tokyo2023/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -449,9 +456,76 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "",
-    "headers": [],
-    "path": "/blogs/photograph/Tokyo2023/",
+    "title": "VOL.2 湘南篇",
+    "headers": [
+      {
+        "level": 2,
+        "title": "江之岛",
+        "slug": "江之岛",
+        "link": "#江之岛",
+        "children": []
+      }
+    ],
+    "path": "/blogs/photograph/Tokyo2023/K2/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "VOL.1 东京市区篇",
+    "headers": [
+      {
+        "level": 2,
+        "title": "川崎市",
+        "slug": "川崎市",
+        "link": "#川崎市",
+        "children": [
+          {
+            "level": 3,
+            "title": "川崎区 - 砂子",
+            "slug": "川崎区-砂子",
+            "link": "#川崎区-砂子",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "中原区 - 上小田中",
+            "slug": "中原区-上小田中",
+            "link": "#中原区-上小田中",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "高津区 - 末长",
+            "slug": "高津区-末长",
+            "link": "#高津区-末长",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "東京",
+        "slug": "東京",
+        "link": "#東京",
+        "children": [
+          {
+            "level": 3,
+            "title": "渋谷区",
+            "slug": "渋谷区",
+            "link": "#渋谷区",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Part 2",
+        "slug": "part-2",
+        "link": "#part-2",
+        "children": []
+      }
+    ],
+    "path": "/blogs/photograph/Tokyo2023/K1/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2495,36 +2569,6 @@ export const searchIndex = [
     "title": "Transformer+RL",
     "headers": [],
     "path": "/docs/machine-learning/reinforcement-learning/transformer-rl/transformer-rl.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "摄影集第一卷",
-    "headers": [
-      {
-        "level": 2,
-        "title": "东京 第一卷",
-        "slug": "东京-第一卷",
-        "link": "#东京-第一卷",
-        "children": []
-      }
-    ],
-    "path": "/blogs/photograph/Tokyo2023/K1/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "摄影集第二卷",
-    "headers": [
-      {
-        "level": 2,
-        "title": "东京 第二卷",
-        "slug": "东京-第二卷",
-        "link": "#东京-第二卷",
-        "children": []
-      }
-    ],
-    "path": "/blogs/photograph/Tokyo2023/K2/",
     "pathLocale": "/",
     "extraFields": []
   },

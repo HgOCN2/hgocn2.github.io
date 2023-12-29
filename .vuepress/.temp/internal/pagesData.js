@@ -23,14 +23,16 @@ export const pagesData = {
   "v-8daa1a0e": () => import(/* webpackChunkName: "v-8daa1a0e" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/index.html.js").then(({ data }) => data),
   // path: /blogs/article/
   "v-390d5c70": () => import(/* webpackChunkName: "v-390d5c70" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/blogs/article/index.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/
-  "v-88884ba0": () => import(/* webpackChunkName: "v-88884ba0" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/index.html.js").then(({ data }) => data),
   // path: /blogs/photograph/
   "v-6cc9077c": () => import(/* webpackChunkName: "v-6cc9077c" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/blogs/photograph/index.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/
+  "v-88884ba0": () => import(/* webpackChunkName: "v-88884ba0" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/index.html.js").then(({ data }) => data),
   // path: /blogs/comic/hsqure/
   "v-303ef5c2": () => import(/* webpackChunkName: "v-303ef5c2" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/blogs/comic/hsqure/index.html.js").then(({ data }) => data),
   // path: /blogs/comic/others/
   "v-b88d553e": () => import(/* webpackChunkName: "v-b88d553e" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/blogs/comic/others/index.html.js").then(({ data }) => data),
+  // path: /blogs/photograph/Tokyo2023/
+  "v-79ae11f4": () => import(/* webpackChunkName: "v-79ae11f4" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/blogs/photograph/Tokyo2023/index.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/artificial-general-intelligence/artificial-general-intelligence.html
   "v-abc79bec": () => import(/* webpackChunkName: "v-abc79bec" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/artificial-general-intelligence/artificial-general-intelligence.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/auto-machine-learning/auto-machine-learning.html
@@ -67,8 +69,10 @@ export const pagesData = {
   "v-38244cb8": () => import(/* webpackChunkName: "v-38244cb8" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/recommender-systems/recommender-systems.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/reinforcement-learning/reinforcement-learning.html
   "v-6c5ca2ba": () => import(/* webpackChunkName: "v-6c5ca2ba" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/reinforcement-learning/reinforcement-learning.html.js").then(({ data }) => data),
-  // path: /blogs/photograph/Tokyo2023/
-  "v-79ae11f4": () => import(/* webpackChunkName: "v-79ae11f4" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/blogs/photograph/Tokyo2023/index.html.js").then(({ data }) => data),
+  // path: /blogs/photograph/Tokyo2023/K2/
+  "v-07b8f9fc": () => import(/* webpackChunkName: "v-07b8f9fc" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/blogs/photograph/Tokyo2023/K2/index.html.js").then(({ data }) => data),
+  // path: /blogs/photograph/Tokyo2023/K1/
+  "v-07b8fa3a": () => import(/* webpackChunkName: "v-07b8fa3a" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/blogs/photograph/Tokyo2023/K1/index.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/artificial-general-intelligence/autopilot/autopilot.html
   "v-75393e7e": () => import(/* webpackChunkName: "v-75393e7e" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/artificial-general-intelligence/autopilot/autopilot.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/artificial-general-intelligence/industry-application/industry-application.html
@@ -255,10 +259,6 @@ export const pagesData = {
   "v-5aa1bf4a": () => import(/* webpackChunkName: "v-5aa1bf4a" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/reinforcement-learning/simulation-platform/simulation-platform.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/reinforcement-learning/transformer-rl/transformer-rl.html
   "v-e4526c62": () => import(/* webpackChunkName: "v-e4526c62" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/reinforcement-learning/transformer-rl/transformer-rl.html.js").then(({ data }) => data),
-  // path: /blogs/photograph/Tokyo2023/K1/
-  "v-07b8fa3a": () => import(/* webpackChunkName: "v-07b8fa3a" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/blogs/photograph/Tokyo2023/K1/index.html.js").then(({ data }) => data),
-  // path: /blogs/photograph/Tokyo2023/K2/
-  "v-07b8f9fc": () => import(/* webpackChunkName: "v-07b8f9fc" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/blogs/photograph/Tokyo2023/K2/index.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/artificial-general-intelligence/autopilot/control/control.html
   "v-4af130fc": () => import(/* webpackChunkName: "v-4af130fc" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/artificial-general-intelligence/autopilot/control/control.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/artificial-general-intelligence/autopilot/decision/decision.html
@@ -1119,96 +1119,6 @@ export const pagesData = {
   "v-147031f1": () => import(/* webpackChunkName: "v-147031f1" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/natural-language-processing/large-language-model/industry-application/openai/unsupervised-sentiment-neuron/unsupervised-sentiment-neuron/unsupervised-sentiment-neuron.html.js").then(({ data }) => data),
   // path: /404.html
   "v-3706649a": () => import(/* webpackChunkName: "v-3706649a" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/404.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217003253.html
-  "v-4acc18ff": () => import(/* webpackChunkName: "v-4acc18ff" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217003253.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217003318.html
-  "v-30c6d816": () => import(/* webpackChunkName: "v-30c6d816" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217003318.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217003333.html
-  "v-48e0cf5c": () => import(/* webpackChunkName: "v-48e0cf5c" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217003333.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/README_20231217003623.html
-  "v-aae27ce6": () => import(/* webpackChunkName: "v-aae27ce6" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/README_20231217003623.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K2/README_20231217003629.html
-  "v-46ac35d1": () => import(/* webpackChunkName: "v-46ac35d1" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K2/README_20231217003629.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K2/README_20231217003635.html
-  "v-74bf0e96": () => import(/* webpackChunkName: "v-74bf0e96" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K2/README_20231217003635.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217003638.html
-  "v-ede6ddd8": () => import(/* webpackChunkName: "v-ede6ddd8" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217003638.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217003728.html
-  "v-87f0fa9c": () => import(/* webpackChunkName: "v-87f0fa9c" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217003728.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217003746.html
-  "v-226a47f6": () => import(/* webpackChunkName: "v-226a47f6" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217003746.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217003758.html
-  "v-5aba3475": () => import(/* webpackChunkName: "v-5aba3475" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217003758.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217003824.html
-  "v-1d154d15": () => import(/* webpackChunkName: "v-1d154d15" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217003824.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217005546.html
-  "v-7b30cc3a": () => import(/* webpackChunkName: "v-7b30cc3a" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217005546.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217005817.html
-  "v-15d679b3": () => import(/* webpackChunkName: "v-15d679b3" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217005817.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217010037.html
-  "v-4f8ccf57": () => import(/* webpackChunkName: "v-4f8ccf57" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217010037.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217010157.html
-  "v-213a72b8": () => import(/* webpackChunkName: "v-213a72b8" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217010157.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217010603.html
-  "v-194dc852": () => import(/* webpackChunkName: "v-194dc852" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217010603.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217011055.html
-  "v-4a34039c": () => import(/* webpackChunkName: "v-4a34039c" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217011055.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217011107.html
-  "v-a6008d18": () => import(/* webpackChunkName: "v-a6008d18" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217011107.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217011114.html
-  "v-46712a50": () => import(/* webpackChunkName: "v-46712a50" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217011114.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217011117.html
-  "v-3c341696": () => import(/* webpackChunkName: "v-3c341696" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217011117.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217011144.html
-  "v-7b7a1c9b": () => import(/* webpackChunkName: "v-7b7a1c9b" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217011144.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217011148.html
-  "v-fb6501d2": () => import(/* webpackChunkName: "v-fb6501d2" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217011148.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217011347.html
-  "v-505b0036": () => import(/* webpackChunkName: "v-505b0036" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217011347.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217011356.html
-  "v-f8e73a50": () => import(/* webpackChunkName: "v-f8e73a50" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217011356.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217011434.html
-  "v-7e3767f7": () => import(/* webpackChunkName: "v-7e3767f7" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217011434.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217011805.html
-  "v-fe837b62": () => import(/* webpackChunkName: "v-fe837b62" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217011805.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217011830.html
-  "v-16e8b8f7": () => import(/* webpackChunkName: "v-16e8b8f7" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217011830.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217011908.html
-  "v-24840dea": () => import(/* webpackChunkName: "v-24840dea" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217011908.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217011912.html
-  "v-18672092": () => import(/* webpackChunkName: "v-18672092" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217011912.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217012306.html
-  "v-0f51a994": () => import(/* webpackChunkName: "v-0f51a994" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217012306.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217012311.html
-  "v-3bafa9ba": () => import(/* webpackChunkName: "v-3bafa9ba" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217012311.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217012315.html
-  "v-42830c36": () => import(/* webpackChunkName: "v-42830c36" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217012315.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217012456.html
-  "v-7fb1feb8": () => import(/* webpackChunkName: "v-7fb1feb8" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217012456.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217012620.html
-  "v-b2f6da0e": () => import(/* webpackChunkName: "v-b2f6da0e" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217012620.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217012704.html
-  "v-a926a85c": () => import(/* webpackChunkName: "v-a926a85c" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217012704.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217012724.html
-  "v-15392254": () => import(/* webpackChunkName: "v-15392254" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217012724.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217012743.html
-  "v-7d50c037": () => import(/* webpackChunkName: "v-7d50c037" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217012743.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217012822.html
-  "v-79b09df5": () => import(/* webpackChunkName: "v-79b09df5" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217012822.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217012929.html
-  "v-24f891a6": () => import(/* webpackChunkName: "v-24f891a6" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217012929.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217012954.html
-  "v-f8a3a456": () => import(/* webpackChunkName: "v-f8a3a456" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217012954.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217013100.html
-  "v-6cd2a9c6": () => import(/* webpackChunkName: "v-6cd2a9c6" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217013100.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217013124.html
-  "v-3a36841b": () => import(/* webpackChunkName: "v-3a36841b" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217013124.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217013154.html
-  "v-4e2d9444": () => import(/* webpackChunkName: "v-4e2d9444" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217013154.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217013705.html
-  "v-4165f372": () => import(/* webpackChunkName: "v-4165f372" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217013705.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217013714.html
-  "v-74975614": () => import(/* webpackChunkName: "v-74975614" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217013714.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231217013751.html
-  "v-4311b93b": () => import(/* webpackChunkName: "v-4311b93b" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231217013751.html.js").then(({ data }) => data),
+  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231229150815.html
+  "v-f55e51ea": () => import(/* webpackChunkName: "v-f55e51ea" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231229150815.html.js").then(({ data }) => data),
 }
