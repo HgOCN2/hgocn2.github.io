@@ -30,7 +30,7 @@ jobs:
           # npm i -D vuepress-plugin-md-enhance
 
       # 修改主题文件源码
-      - name: Install VuePress site
+      - name: Modify tvuepress-reco source code
         run: 
           cp .vuepress/styles/bannerBrand.css node_modules/vuepress-theme-reco/lib/client/styles/home/
 
