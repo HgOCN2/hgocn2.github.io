@@ -27,8 +27,12 @@ jobs:
       - name: Install VuePress site
         run: 
           npm install
-          cp .vuepress/styles/bannerBrand.css node_modules/vuepress-theme-reco/lib/client/styles/home/
           # npm i -D vuepress-plugin-md-enhance
+
+      # 修改主题文件源码
+      - name: Install VuePress site
+        run: 
+          cp .vuepress/styles/bannerBrand.css node_modules/vuepress-theme-reco/lib/client/styles/home/
 
       # 运行构建脚本
       - name: Build VuePress site
