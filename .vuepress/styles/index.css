@@ -1,4 +1,4 @@
-/* @import url('@vuepress-reco/tailwindcss-config/lib/client/styles/tailwindcss-base.css'); */
+@import url('@vuepress-reco/tailwindcss-config/lib/client/styles/tailwindcss-base.css');
 
 
 /* 直角主义 
@@ -40,6 +40,10 @@ p > img {
 }
 */
 
+
+
+
+
 /* .banner-brand__wrapper .banner-brand__content .title {
   margin-bottom: 1.5rem !important;
   background-image: linear-gradient(to right, var(--tw-gradient-stops)) !important;
@@ -60,3 +64,49 @@ p > img {
 /* .banner-brand__wrapper .banner-brand__content .title {
   @apply bg-gradient-to-r from-orange-500 to-purple-800;
 } */
+
+/* 
+.banner-brand__content {
+  @apply bg-gradient-to-r from-orange-500 to-purple-800;
+} */
+
+
+
+
+
+/* 
+.banner-brand__wrapper .banner-brand__content {
+  margin-bottom: 1.5rem !important;
+  background-image: linear-gradient(to right, var(--tw-gradient-stops)) !important;
+  --tw-gradient-from: #00ff37 !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+  --tw-gradient-to: #44b0ef !important;
+  text-align: left !important;
+  font-size: 3rem !important;
+  line-height: 1 !important;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+}
+
+
+.banner-brand__wrapper .banner-brand__content {
+  line-height: 1.25 !important;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} */
+
+
+
+
+
+
+
+.banner-brand__wrapper > .banner-brand__content > .title {
+  @apply bg-gradient-to-r from-reco-primary to-green-500 !important;
+} 
+
+
+

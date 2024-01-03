@@ -27,6 +27,7 @@ export default defineUserConfig({
     },
     // style: "@vuepress-reco/style-default", 
     primaryColor: '#ff8800',
+    // primaryColor: 'transparent',
     logo: "/logo.png",
     author: "Hua Hua",
     authorAvatar: "/head.png",
