@@ -66,18 +66,16 @@ var omit = (obj, ...keys) => {
 var removeEndingSlash = (str) => str[str.length - 1] === "/" ? str.slice(0, -1) : str;
 var removeLeadingSlash = (str) => str[0] === "/" ? str.slice(1) : str;
 var resolveLocalePath = (locales, routePath) => {
-  if (typeof locales != "undefined") {
-    const localePaths = Object.keys(locales).sort((a, b) => {
-      const levelDelta = b.split("/").length - a.split("/").length;
-      if (levelDelta !== 0) {
-        return levelDelta;
-      }
-      return b.length - a.length;
-    });
-    for (const localePath of localePaths) {
-      if (routePath.startsWith(localePath)) {
-        return localePath;
-      }
+  const localePaths = Object.keys(locales).sort((a, b) => {
+    const levelDelta = b.split("/").length - a.split("/").length;
+    if (levelDelta !== 0) {
+      return levelDelta;
+    }
+    return b.length - a.length;
+  });
+  for (const localePath of localePaths) {
+    if (routePath.startsWith(localePath)) {
+      return localePath;
     }
   }
   return "/";

@@ -37,18 +37,18 @@ export const pagesData = {
   "v-abc79bec": () => import(/* webpackChunkName: "v-abc79bec" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/artificial-general-intelligence/artificial-general-intelligence.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/auto-machine-learning/auto-machine-learning.html
   "v-e1b41c18": () => import(/* webpackChunkName: "v-e1b41c18" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/auto-machine-learning/auto-machine-learning.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/coding/coding.html
-  "v-3cbbe28c": () => import(/* webpackChunkName: "v-3cbbe28c" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/coding/coding.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/computer-vision/computer-vision.html
   "v-5e1316f8": () => import(/* webpackChunkName: "v-5e1316f8" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/computer-vision/computer-vision.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/coding/coding.html
+  "v-3cbbe28c": () => import(/* webpackChunkName: "v-3cbbe28c" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/coding/coding.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/deep-learning/deep-learning.html
   "v-596f38ba": () => import(/* webpackChunkName: "v-596f38ba" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/deep-learning/deep-learning.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/machine-learning/machine-learning.html
-  "v-429a85ba": () => import(/* webpackChunkName: "v-429a85ba" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning/machine-learning.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/machine-learning-framework/machine-learning-framework.html
   "v-88c89bcc": () => import(/* webpackChunkName: "v-88c89bcc" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning-framework/machine-learning-framework.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/mathematics/mathematics.html
   "v-69efe60c": () => import(/* webpackChunkName: "v-69efe60c" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/mathematics.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/machine-learning/machine-learning.html
+  "v-429a85ba": () => import(/* webpackChunkName: "v-429a85ba" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning/machine-learning.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/model-deployment/model-deployment.html
   "v-ff0001cc": () => import(/* webpackChunkName: "v-ff0001cc" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/model-deployment/model-deployment.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/multimodal-large-model/multimodal-large-model.html
@@ -57,22 +57,22 @@ export const pagesData = {
   "v-5402b830": () => import(/* webpackChunkName: "v-5402b830" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/natural-language-processing/natural-language-processing.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/other/guide.html
   "v-5b3d7428": () => import(/* webpackChunkName: "v-5b3d7428" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/other/guide.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/perface/perface.html
-  "v-26a93578": () => import(/* webpackChunkName: "v-26a93578" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/perface/perface.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/personal/list.html
   "v-61990c1c": () => import(/* webpackChunkName: "v-61990c1c" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/personal/list.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/personal/material.html
   "v-65554cb3": () => import(/* webpackChunkName: "v-65554cb3" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/personal/material.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/personal/tools.html
   "v-193fc2dd": () => import(/* webpackChunkName: "v-193fc2dd" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/personal/tools.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/perface/perface.html
+  "v-26a93578": () => import(/* webpackChunkName: "v-26a93578" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/perface/perface.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/recommender-systems/recommender-systems.html
   "v-38244cb8": () => import(/* webpackChunkName: "v-38244cb8" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/recommender-systems/recommender-systems.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/reinforcement-learning/reinforcement-learning.html
   "v-6c5ca2ba": () => import(/* webpackChunkName: "v-6c5ca2ba" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/reinforcement-learning/reinforcement-learning.html.js").then(({ data }) => data),
-  // path: /blogs/photograph/Tokyo2023/K2/
-  "v-07b8f9fc": () => import(/* webpackChunkName: "v-07b8f9fc" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/blogs/photograph/Tokyo2023/K2/index.html.js").then(({ data }) => data),
   // path: /blogs/photograph/Tokyo2023/K1/
   "v-07b8fa3a": () => import(/* webpackChunkName: "v-07b8fa3a" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/blogs/photograph/Tokyo2023/K1/index.html.js").then(({ data }) => data),
+  // path: /blogs/photograph/Tokyo2023/K2/
+  "v-07b8f9fc": () => import(/* webpackChunkName: "v-07b8f9fc" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/blogs/photograph/Tokyo2023/K2/index.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/artificial-general-intelligence/autopilot/autopilot.html
   "v-75393e7e": () => import(/* webpackChunkName: "v-75393e7e" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/artificial-general-intelligence/autopilot/autopilot.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/artificial-general-intelligence/industry-application/industry-application.html
@@ -83,16 +83,16 @@ export const pagesData = {
   "v-edf16eaa": () => import(/* webpackChunkName: "v-edf16eaa" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/auto-machine-learning/hyperparameter-optimization/hyperparameter-optimization.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/auto-machine-learning/neural-architecture-search/neural-architecture-search.html
   "v-51745d32": () => import(/* webpackChunkName: "v-51745d32" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/auto-machine-learning/neural-architecture-search/neural-architecture-search.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/computer-vision/image-mark-tool/image-mark-tool.html
+  "v-0e2e9e01": () => import(/* webpackChunkName: "v-0e2e9e01" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/computer-vision/image-mark-tool/image-mark-tool.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/computer-vision/yolo/yolo.html
+  "v-6d639022": () => import(/* webpackChunkName: "v-6d639022" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/computer-vision/yolo/yolo.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/coding/big-data/big-data.html
   "v-5459fb3f": () => import(/* webpackChunkName: "v-5459fb3f" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/coding/big-data/big-data.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/coding/cs-courses/cs-courses.html
   "v-4fba313f": () => import(/* webpackChunkName: "v-4fba313f" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/coding/cs-courses/cs-courses.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/coding/programing-language/programing-language.html
   "v-296f61cf": () => import(/* webpackChunkName: "v-296f61cf" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/coding/programing-language/programing-language.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/computer-vision/image-mark-tool/image-mark-tool.html
-  "v-0e2e9e01": () => import(/* webpackChunkName: "v-0e2e9e01" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/computer-vision/image-mark-tool/image-mark-tool.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/computer-vision/yolo/yolo.html
-  "v-6d639022": () => import(/* webpackChunkName: "v-6d639022" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/computer-vision/yolo/yolo.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/deep-learning/artificial-neural-network/artificial-neural-network.html
   "v-2cd08182": () => import(/* webpackChunkName: "v-2cd08182" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/deep-learning/artificial-neural-network/artificial-neural-network.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/deep-learning/beyesian-neural-network/beyesian-neural-network.html
@@ -113,6 +113,40 @@ export const pagesData = {
   "v-5203048a": () => import(/* webpackChunkName: "v-5203048a" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/deep-learning/recurrent-neural-network/recurrent-neural-network.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/deep-learning/tips/tips.html
   "v-aef1cc2c": () => import(/* webpackChunkName: "v-aef1cc2c" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/deep-learning/tips/tips.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/machine-learning-framework/anaconda/anaconda.html
+  "v-1bf02674": () => import(/* webpackChunkName: "v-1bf02674" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning-framework/anaconda/anaconda.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/machine-learning-framework/cloud-server-platform/cloud-server-platform.html
+  "v-b7bd8d70": () => import(/* webpackChunkName: "v-b7bd8d70" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning-framework/cloud-server-platform/cloud-server-platform.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/machine-learning-framework/large-model-trainning-method/large-model-trainning-method.html
+  "v-82d64d58": () => import(/* webpackChunkName: "v-82d64d58" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning-framework/large-model-trainning-method/large-model-trainning-method.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/machine-learning-framework/pytorch/pytorch.html
+  "v-4f5cb328": () => import(/* webpackChunkName: "v-4f5cb328" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning-framework/pytorch/pytorch.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/machine-learning-framework/ray/ray.html
+  "v-4bde7504": () => import(/* webpackChunkName: "v-4bde7504" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning-framework/ray/ray.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/machine-learning-framework/rllib/rllib.html
+  "v-e5454508": () => import(/* webpackChunkName: "v-e5454508" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning-framework/rllib/rllib.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/machine-learning-framework/supercomputing-cluster/supercomputing-cluster.html
+  "v-7715f658": () => import(/* webpackChunkName: "v-7715f658" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning-framework/supercomputing-cluster/supercomputing-cluster.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/machine-learning-framework/tensorflow/tensorflow.html
+  "v-70154bf4": () => import(/* webpackChunkName: "v-70154bf4" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning-framework/tensorflow/tensorflow.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/mathematics/calculus/calculus.html
+  "v-6cc12453": () => import(/* webpackChunkName: "v-6cc12453" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/calculus/calculus.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/mathematics/gradient-update-algorithm/gradient-update-algorithm.html
+  "v-59328641": () => import(/* webpackChunkName: "v-59328641" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/gradient-update-algorithm/gradient-update-algorithm.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/mathematics/information-theory/information-theory.html
+  "v-0a0da4da": () => import(/* webpackChunkName: "v-0a0da4da" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/information-theory/information-theory.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/mathematics/linear-algebra/linear-algebra.html
+  "v-1a89dd5a": () => import(/* webpackChunkName: "v-1a89dd5a" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/linear-algebra/linear-algebra.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/mathematics/math-courses/math-courses.html
+  "v-737e5f33": () => import(/* webpackChunkName: "v-737e5f33" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/math-courses/math-courses.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/mathematics/mathematics-map/mathematics-map.html
+  "v-78b128c7": () => import(/* webpackChunkName: "v-78b128c7" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/mathematics-map/mathematics-map.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/mathematics/mathematics-ml-needs/mathematics-ml-needs.html
+  "v-4fa4bb53": () => import(/* webpackChunkName: "v-4fa4bb53" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/mathematics-ml-needs/mathematics-ml-needs.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/mathematics/numerical-calculation-and-optimization/numerical-calculation-and-optimization.html
+  "v-4306d7d3": () => import(/* webpackChunkName: "v-4306d7d3" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/numerical-calculation-and-optimization/numerical-calculation-and-optimization.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/mathematics/statistics/statistics.html
+  "v-8ce5da9a": () => import(/* webpackChunkName: "v-8ce5da9a" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/statistics/statistics.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/machine-learning/clustering/clustering.html
   "v-4869d0a5": () => import(/* webpackChunkName: "v-4869d0a5" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning/clustering/clustering.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/machine-learning/conditional-random-field/conditional-random-field.html
@@ -151,40 +185,6 @@ export const pagesData = {
   "v-1598ede5": () => import(/* webpackChunkName: "v-1598ede5" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning/tips/tips.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/machine-learning/topic-model/topic-model.html
   "v-35e79f4d": () => import(/* webpackChunkName: "v-35e79f4d" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning/topic-model/topic-model.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/machine-learning-framework/anaconda/anaconda.html
-  "v-1bf02674": () => import(/* webpackChunkName: "v-1bf02674" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning-framework/anaconda/anaconda.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/machine-learning-framework/cloud-server-platform/cloud-server-platform.html
-  "v-b7bd8d70": () => import(/* webpackChunkName: "v-b7bd8d70" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning-framework/cloud-server-platform/cloud-server-platform.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/machine-learning-framework/large-model-trainning-method/large-model-trainning-method.html
-  "v-82d64d58": () => import(/* webpackChunkName: "v-82d64d58" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning-framework/large-model-trainning-method/large-model-trainning-method.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/machine-learning-framework/pytorch/pytorch.html
-  "v-4f5cb328": () => import(/* webpackChunkName: "v-4f5cb328" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning-framework/pytorch/pytorch.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/machine-learning-framework/ray/ray.html
-  "v-4bde7504": () => import(/* webpackChunkName: "v-4bde7504" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning-framework/ray/ray.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/machine-learning-framework/rllib/rllib.html
-  "v-e5454508": () => import(/* webpackChunkName: "v-e5454508" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning-framework/rllib/rllib.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/machine-learning-framework/supercomputing-cluster/supercomputing-cluster.html
-  "v-7715f658": () => import(/* webpackChunkName: "v-7715f658" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning-framework/supercomputing-cluster/supercomputing-cluster.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/machine-learning-framework/tensorflow/tensorflow.html
-  "v-70154bf4": () => import(/* webpackChunkName: "v-70154bf4" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning-framework/tensorflow/tensorflow.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/mathematics/calculus/calculus.html
-  "v-6cc12453": () => import(/* webpackChunkName: "v-6cc12453" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/calculus/calculus.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/mathematics/gradient-update-algorithm/gradient-update-algorithm.html
-  "v-59328641": () => import(/* webpackChunkName: "v-59328641" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/gradient-update-algorithm/gradient-update-algorithm.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/mathematics/information-theory/information-theory.html
-  "v-0a0da4da": () => import(/* webpackChunkName: "v-0a0da4da" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/information-theory/information-theory.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/mathematics/linear-algebra/linear-algebra.html
-  "v-1a89dd5a": () => import(/* webpackChunkName: "v-1a89dd5a" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/linear-algebra/linear-algebra.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/mathematics/math-courses/math-courses.html
-  "v-737e5f33": () => import(/* webpackChunkName: "v-737e5f33" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/math-courses/math-courses.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/mathematics/mathematics-map/mathematics-map.html
-  "v-78b128c7": () => import(/* webpackChunkName: "v-78b128c7" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/mathematics-map/mathematics-map.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/mathematics/mathematics-ml-needs/mathematics-ml-needs.html
-  "v-4fa4bb53": () => import(/* webpackChunkName: "v-4fa4bb53" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/mathematics-ml-needs/mathematics-ml-needs.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/mathematics/numerical-calculation-and-optimization/numerical-calculation-and-optimization.html
-  "v-4306d7d3": () => import(/* webpackChunkName: "v-4306d7d3" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/numerical-calculation-and-optimization/numerical-calculation-and-optimization.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/mathematics/statistics/statistics.html
-  "v-8ce5da9a": () => import(/* webpackChunkName: "v-8ce5da9a" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/statistics/statistics.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/model-deployment/ai-compiler/ai-compiler.html
   "v-4df238f6": () => import(/* webpackChunkName: "v-4df238f6" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/model-deployment/ai-compiler/ai-compiler.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/model-deployment/matrix-acceleration-algorithm/matrix-acceleration-algorithm.html
@@ -281,6 +281,16 @@ export const pagesData = {
   "v-3d61fb70": () => import(/* webpackChunkName: "v-3d61fb70" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/artificial-general-intelligence/industry-application/openai/openai.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/auto-machine-learning/neural-architecture-search/weight-agnostic-nn/Weight-Agnostic-Neural-Networks.html
   "v-48fa4bf7": () => import(/* webpackChunkName: "v-48fa4bf7" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/auto-machine-learning/neural-architecture-search/weight-agnostic-nn/Weight-Agnostic-Neural-Networks.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/computer-vision/image-mark-tool/labelme/labelme.html
+  "v-785ee67e": () => import(/* webpackChunkName: "v-785ee67e" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/computer-vision/image-mark-tool/labelme/labelme.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/computer-vision/image-mark-tool/yolo-mark/yolo-mark.html
+  "v-ed4b0f58": () => import(/* webpackChunkName: "v-ed4b0f58" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/computer-vision/image-mark-tool/yolo-mark/yolo-mark.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/computer-vision/yolo/darknet/darknet.html
+  "v-3853bf8b": () => import(/* webpackChunkName: "v-3853bf8b" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/computer-vision/yolo/darknet/darknet.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/computer-vision/yolo/yolo-principle/yolo-principle.html
+  "v-7974d4ca": () => import(/* webpackChunkName: "v-7974d4ca" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/computer-vision/yolo/yolo-principle/yolo-principle.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/computer-vision/yolo/yolov5/yolov5.html
+  "v-77d6faca": () => import(/* webpackChunkName: "v-77d6faca" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/computer-vision/yolo/yolov5/yolov5.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/coding/big-data/hadoop/hadoop.html
   "v-463bbead": () => import(/* webpackChunkName: "v-463bbead" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/coding/big-data/hadoop/hadoop.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/coding/big-data/hive/hive.html
@@ -305,16 +315,6 @@ export const pagesData = {
   "v-3bc0fc82": () => import(/* webpackChunkName: "v-3bc0fc82" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/coding/programing-language/c__/c__.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/coding/programing-language/python/python.html
   "v-6b5d26f2": () => import(/* webpackChunkName: "v-6b5d26f2" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/coding/programing-language/python/python.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/computer-vision/image-mark-tool/labelme/labelme.html
-  "v-785ee67e": () => import(/* webpackChunkName: "v-785ee67e" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/computer-vision/image-mark-tool/labelme/labelme.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/computer-vision/image-mark-tool/yolo-mark/yolo-mark.html
-  "v-ed4b0f58": () => import(/* webpackChunkName: "v-ed4b0f58" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/computer-vision/image-mark-tool/yolo-mark/yolo-mark.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/computer-vision/yolo/darknet/darknet.html
-  "v-3853bf8b": () => import(/* webpackChunkName: "v-3853bf8b" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/computer-vision/yolo/darknet/darknet.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/computer-vision/yolo/yolo-principle/yolo-principle.html
-  "v-7974d4ca": () => import(/* webpackChunkName: "v-7974d4ca" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/computer-vision/yolo/yolo-principle/yolo-principle.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/computer-vision/yolo/yolov5/yolov5.html
-  "v-77d6faca": () => import(/* webpackChunkName: "v-77d6faca" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/computer-vision/yolo/yolov5/yolov5.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/deep-learning/beyesian-neural-network/beyesian-neural-network/beyesian-neural-network.html
   "v-2a29da86": () => import(/* webpackChunkName: "v-2a29da86" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/deep-learning/beyesian-neural-network/beyesian-neural-network/beyesian-neural-network.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/deep-learning/beyesian-neural-network/weight-uncertainty-in-neural-networks/Weight-Uncertainty-in-Neural-Networks.html
@@ -351,6 +351,68 @@ export const pagesData = {
   "v-2e44143e": () => import(/* webpackChunkName: "v-2e44143e" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/deep-learning/tips/gradient-explosion-and-vanishing/gradient-explosion-and-vanishing.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/deep-learning/tips/normalization/normalization.html
   "v-3d882fa5": () => import(/* webpackChunkName: "v-3d882fa5" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/deep-learning/tips/normalization/normalization.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/machine-learning-framework/pytorch/basis/basis.html
+  "v-06782012": () => import(/* webpackChunkName: "v-06782012" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning-framework/pytorch/basis/basis.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/machine-learning-framework/supercomputing-cluster/microsoft-supercomputing-cluster-for-chatgpt/microsoft-supercomputing-cluster-for-chatgpt.html
+  "v-4e182709": () => import(/* webpackChunkName: "v-4e182709" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning-framework/supercomputing-cluster/microsoft-supercomputing-cluster-for-chatgpt/microsoft-supercomputing-cluster-for-chatgpt.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/machine-learning-framework/tensorflow/tensorflow-distributed-architecture/tensorflow-distributed-architecture.html
+  "v-323bfb80": () => import(/* webpackChunkName: "v-323bfb80" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning-framework/tensorflow/tensorflow-distributed-architecture/tensorflow-distributed-architecture.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/machine-learning-framework/tensorflow/tensorflow1.0/tensorflow1.0.html
+  "v-6fd8a52e": () => import(/* webpackChunkName: "v-6fd8a52e" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning-framework/tensorflow/tensorflow1.0/tensorflow1.0.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/machine-learning-framework/tensorflow/tensorflow2.0/tensorflow2.0.html
+  "v-5e3f8cac": () => import(/* webpackChunkName: "v-5e3f8cac" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning-framework/tensorflow/tensorflow2.0/tensorflow2.0.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/machine-learning-framework/tensorflow/tf_serving/tf_serving.html
+  "v-1207e928": () => import(/* webpackChunkName: "v-1207e928" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning-framework/tensorflow/tf_serving/tf_serving.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/machine-learning-framework/tensorflow/tools/tools.html
+  "v-44612de0": () => import(/* webpackChunkName: "v-44612de0" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning-framework/tensorflow/tools/tools.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/mathematics/calculus/convolution/convolution.html
+  "v-40b0a4d4": () => import(/* webpackChunkName: "v-40b0a4d4" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/calculus/convolution/convolution.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/mathematics/calculus/fourier-transform/fourier-transform.html
+  "v-49033da6": () => import(/* webpackChunkName: "v-49033da6" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/calculus/fourier-transform/fourier-transform.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/mathematics/calculus/hilbert-space/hilbert-space.html
+  "v-bf8e0c9c": () => import(/* webpackChunkName: "v-bf8e0c9c" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/calculus/hilbert-space/hilbert-space.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/mathematics/calculus/intuition-of-e/intuition-of-e.html
+  "v-ae275e34": () => import(/* webpackChunkName: "v-ae275e34" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/calculus/intuition-of-e/intuition-of-e.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/mathematics/calculus/taylor-expansion/taylor-expansion.html
+  "v-4b72c766": () => import(/* webpackChunkName: "v-4b72c766" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/calculus/taylor-expansion/taylor-expansion.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/mathematics/gradient-update-algorithm/incremental-learning/incremental-learning.html
+  "v-4a1100ba": () => import(/* webpackChunkName: "v-4a1100ba" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/gradient-update-algorithm/incremental-learning/incremental-learning.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/mathematics/gradient-update-algorithm/offline-learning/offline-learning.html
+  "v-eb73264c": () => import(/* webpackChunkName: "v-eb73264c" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/gradient-update-algorithm/offline-learning/offline-learning.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/mathematics/gradient-update-algorithm/online-learning/online-learning.html
+  "v-70f5dca8": () => import(/* webpackChunkName: "v-70f5dca8" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/gradient-update-algorithm/online-learning/online-learning.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/mathematics/information-theory/information-theory-introduction/information-theory-introduction.html
+  "v-1edc7566": () => import(/* webpackChunkName: "v-1edc7566" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/information-theory/information-theory-introduction/information-theory-introduction.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/mathematics/linear-algebra/eigenvalue/eigenvalue.html
+  "v-e553b0a0": () => import(/* webpackChunkName: "v-e553b0a0" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/linear-algebra/eigenvalue/eigenvalue.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/mathematics/linear-algebra/matrix-derivative/matrix-derivative.html
+  "v-216b2b68": () => import(/* webpackChunkName: "v-216b2b68" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/linear-algebra/matrix-derivative/matrix-derivative.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/mathematics/linear-algebra/norm/norm.html
+  "v-17231ad0": () => import(/* webpackChunkName: "v-17231ad0" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/linear-algebra/norm/norm.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/mathematics/linear-algebra/singular-value-decomposition/singular-value-decomposition.html
+  "v-9c2d6420": () => import(/* webpackChunkName: "v-9c2d6420" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/linear-algebra/singular-value-decomposition/singular-value-decomposition.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/mathematics/math-courses/functional-analysis/functional-analysis.html
+  "v-53fa132f": () => import(/* webpackChunkName: "v-53fa132f" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/math-courses/functional-analysis/functional-analysis.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/mathematics/math-courses/linear-algebra/linear-algebra.html
+  "v-27008f7d": () => import(/* webpackChunkName: "v-27008f7d" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/math-courses/linear-algebra/linear-algebra.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/mathematics/math-courses/math-principle/math-principle.html
+  "v-15a93f46": () => import(/* webpackChunkName: "v-15a93f46" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/math-courses/math-principle/math-principle.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/mathematics/math-courses/variational-principle/variational-principle.html
+  "v-342f7a61": () => import(/* webpackChunkName: "v-342f7a61" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/math-courses/variational-principle/variational-principle.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/mathematics/numerical-calculation-and-optimization/convex-optimization/convex-optimization.html
+  "v-32560ce8": () => import(/* webpackChunkName: "v-32560ce8" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/numerical-calculation-and-optimization/convex-optimization/convex-optimization.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/mathematics/numerical-calculation-and-optimization/lagrangian-multiplier-method/lagrangian-multiplier-method.html
+  "v-476db5f4": () => import(/* webpackChunkName: "v-476db5f4" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/numerical-calculation-and-optimization/lagrangian-multiplier-method/lagrangian-multiplier-method.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/mathematics/numerical-calculation-and-optimization/least-square-method/least-square-method.html
+  "v-f9777c50": () => import(/* webpackChunkName: "v-f9777c50" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/numerical-calculation-and-optimization/least-square-method/least-square-method.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/mathematics/statistics/bayesian-analysis/bayesian-analysis.html
+  "v-01f78655": () => import(/* webpackChunkName: "v-01f78655" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/statistics/bayesian-analysis/bayesian-analysis.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/mathematics/statistics/probability-distribution/probability-distribution.html
+  "v-a19ec066": () => import(/* webpackChunkName: "v-a19ec066" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/statistics/probability-distribution/probability-distribution.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/mathematics/statistics/statistics-introduction/statistics-introduction.html
+  "v-7a2a0583": () => import(/* webpackChunkName: "v-7a2a0583" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/statistics/statistics-introduction/statistics-introduction.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/mathematics/statistics/variance-and-covariance/variance-and-covariance.html
+  "v-5ab80326": () => import(/* webpackChunkName: "v-5ab80326" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/statistics/variance-and-covariance/variance-and-covariance.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/machine-learning/clustering/dbscan-clustering/dbscan-clustering.html
   "v-66888540": () => import(/* webpackChunkName: "v-66888540" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning/clustering/dbscan-clustering/dbscan-clustering.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/machine-learning/clustering/dirichlet-process-mixture-model/dirichlet-process-mixture-model.html
@@ -415,68 +477,6 @@ export const pagesData = {
   "v-7fe68d74": () => import(/* webpackChunkName: "v-7fe68d74" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning/tips/negtive-sampling/negtive-sampling.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/machine-learning/topic-model/latent-dirichlet-allocation/latent-dirichlet-allocation.html
   "v-b954c882": () => import(/* webpackChunkName: "v-b954c882" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning/topic-model/latent-dirichlet-allocation/latent-dirichlet-allocation.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/machine-learning-framework/pytorch/basis/basis.html
-  "v-06782012": () => import(/* webpackChunkName: "v-06782012" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning-framework/pytorch/basis/basis.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/machine-learning-framework/supercomputing-cluster/microsoft-supercomputing-cluster-for-chatgpt/microsoft-supercomputing-cluster-for-chatgpt.html
-  "v-4e182709": () => import(/* webpackChunkName: "v-4e182709" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning-framework/supercomputing-cluster/microsoft-supercomputing-cluster-for-chatgpt/microsoft-supercomputing-cluster-for-chatgpt.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/machine-learning-framework/tensorflow/tensorflow-distributed-architecture/tensorflow-distributed-architecture.html
-  "v-323bfb80": () => import(/* webpackChunkName: "v-323bfb80" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning-framework/tensorflow/tensorflow-distributed-architecture/tensorflow-distributed-architecture.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/machine-learning-framework/tensorflow/tensorflow1.0/tensorflow1.0.html
-  "v-6fd8a52e": () => import(/* webpackChunkName: "v-6fd8a52e" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning-framework/tensorflow/tensorflow1.0/tensorflow1.0.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/machine-learning-framework/tensorflow/tensorflow2.0/tensorflow2.0.html
-  "v-5e3f8cac": () => import(/* webpackChunkName: "v-5e3f8cac" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning-framework/tensorflow/tensorflow2.0/tensorflow2.0.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/machine-learning-framework/tensorflow/tf_serving/tf_serving.html
-  "v-1207e928": () => import(/* webpackChunkName: "v-1207e928" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning-framework/tensorflow/tf_serving/tf_serving.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/machine-learning-framework/tensorflow/tools/tools.html
-  "v-44612de0": () => import(/* webpackChunkName: "v-44612de0" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning-framework/tensorflow/tools/tools.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/mathematics/calculus/convolution/convolution.html
-  "v-40b0a4d4": () => import(/* webpackChunkName: "v-40b0a4d4" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/calculus/convolution/convolution.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/mathematics/calculus/fourier-transform/fourier-transform.html
-  "v-49033da6": () => import(/* webpackChunkName: "v-49033da6" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/calculus/fourier-transform/fourier-transform.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/mathematics/calculus/hilbert-space/hilbert-space.html
-  "v-bf8e0c9c": () => import(/* webpackChunkName: "v-bf8e0c9c" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/calculus/hilbert-space/hilbert-space.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/mathematics/calculus/intuition-of-e/intuition-of-e.html
-  "v-ae275e34": () => import(/* webpackChunkName: "v-ae275e34" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/calculus/intuition-of-e/intuition-of-e.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/mathematics/calculus/taylor-expansion/taylor-expansion.html
-  "v-4b72c766": () => import(/* webpackChunkName: "v-4b72c766" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/calculus/taylor-expansion/taylor-expansion.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/mathematics/gradient-update-algorithm/incremental-learning/incremental-learning.html
-  "v-4a1100ba": () => import(/* webpackChunkName: "v-4a1100ba" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/gradient-update-algorithm/incremental-learning/incremental-learning.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/mathematics/gradient-update-algorithm/offline-learning/offline-learning.html
-  "v-eb73264c": () => import(/* webpackChunkName: "v-eb73264c" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/gradient-update-algorithm/offline-learning/offline-learning.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/mathematics/gradient-update-algorithm/online-learning/online-learning.html
-  "v-70f5dca8": () => import(/* webpackChunkName: "v-70f5dca8" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/gradient-update-algorithm/online-learning/online-learning.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/mathematics/information-theory/information-theory-introduction/information-theory-introduction.html
-  "v-1edc7566": () => import(/* webpackChunkName: "v-1edc7566" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/information-theory/information-theory-introduction/information-theory-introduction.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/mathematics/linear-algebra/eigenvalue/eigenvalue.html
-  "v-e553b0a0": () => import(/* webpackChunkName: "v-e553b0a0" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/linear-algebra/eigenvalue/eigenvalue.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/mathematics/linear-algebra/matrix-derivative/matrix-derivative.html
-  "v-216b2b68": () => import(/* webpackChunkName: "v-216b2b68" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/linear-algebra/matrix-derivative/matrix-derivative.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/mathematics/linear-algebra/norm/norm.html
-  "v-17231ad0": () => import(/* webpackChunkName: "v-17231ad0" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/linear-algebra/norm/norm.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/mathematics/linear-algebra/singular-value-decomposition/singular-value-decomposition.html
-  "v-9c2d6420": () => import(/* webpackChunkName: "v-9c2d6420" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/linear-algebra/singular-value-decomposition/singular-value-decomposition.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/mathematics/math-courses/functional-analysis/functional-analysis.html
-  "v-53fa132f": () => import(/* webpackChunkName: "v-53fa132f" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/math-courses/functional-analysis/functional-analysis.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/mathematics/math-courses/linear-algebra/linear-algebra.html
-  "v-27008f7d": () => import(/* webpackChunkName: "v-27008f7d" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/math-courses/linear-algebra/linear-algebra.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/mathematics/math-courses/math-principle/math-principle.html
-  "v-15a93f46": () => import(/* webpackChunkName: "v-15a93f46" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/math-courses/math-principle/math-principle.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/mathematics/math-courses/variational-principle/variational-principle.html
-  "v-342f7a61": () => import(/* webpackChunkName: "v-342f7a61" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/math-courses/variational-principle/variational-principle.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/mathematics/numerical-calculation-and-optimization/convex-optimization/convex-optimization.html
-  "v-32560ce8": () => import(/* webpackChunkName: "v-32560ce8" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/numerical-calculation-and-optimization/convex-optimization/convex-optimization.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/mathematics/numerical-calculation-and-optimization/lagrangian-multiplier-method/lagrangian-multiplier-method.html
-  "v-476db5f4": () => import(/* webpackChunkName: "v-476db5f4" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/numerical-calculation-and-optimization/lagrangian-multiplier-method/lagrangian-multiplier-method.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/mathematics/numerical-calculation-and-optimization/least-square-method/least-square-method.html
-  "v-f9777c50": () => import(/* webpackChunkName: "v-f9777c50" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/numerical-calculation-and-optimization/least-square-method/least-square-method.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/mathematics/statistics/bayesian-analysis/bayesian-analysis.html
-  "v-01f78655": () => import(/* webpackChunkName: "v-01f78655" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/statistics/bayesian-analysis/bayesian-analysis.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/mathematics/statistics/probability-distribution/probability-distribution.html
-  "v-a19ec066": () => import(/* webpackChunkName: "v-a19ec066" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/statistics/probability-distribution/probability-distribution.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/mathematics/statistics/statistics-introduction/statistics-introduction.html
-  "v-7a2a0583": () => import(/* webpackChunkName: "v-7a2a0583" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/statistics/statistics-introduction/statistics-introduction.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/mathematics/statistics/variance-and-covariance/variance-and-covariance.html
-  "v-5ab80326": () => import(/* webpackChunkName: "v-5ab80326" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/statistics/variance-and-covariance/variance-and-covariance.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/model-deployment/matrix-acceleration-algorithm/im2col/im2col.html
   "v-60df1381": () => import(/* webpackChunkName: "v-60df1381" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/model-deployment/matrix-acceleration-algorithm/im2col/im2col.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/model-deployment/matrix-acceleration-algorithm/winograd/Fast-Algorithms-for-Convolutional-Neural-Networks.html
@@ -759,12 +759,6 @@ export const pagesData = {
   "v-79fbec06": () => import(/* webpackChunkName: "v-79fbec06" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/deep-learning/tips/normalization/batch-normalization/batch-normalization.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/deep-learning/tips/normalization/layer-normalization/layer-normalization.html
   "v-b85716e2": () => import(/* webpackChunkName: "v-b85716e2" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/deep-learning/tips/normalization/layer-normalization/layer-normalization.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/machine-learning/ensemble-learning/bagging/random-forest/random-forest.html
-  "v-72b930ce": () => import(/* webpackChunkName: "v-72b930ce" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning/ensemble-learning/bagging/random-forest/random-forest.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/machine-learning/ensemble-learning/boosting/adaboost/adaboost.html
-  "v-16d4639c": () => import(/* webpackChunkName: "v-16d4639c" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning/ensemble-learning/boosting/adaboost/adaboost.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/machine-learning/ensemble-learning/boosting/gradient-boosting/gradient-boosting.html
-  "v-99e1f050": () => import(/* webpackChunkName: "v-99e1f050" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning/ensemble-learning/boosting/gradient-boosting/gradient-boosting.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/machine-learning-framework/tensorflow/tensorflow1.0/basic-concept-analysis/basic-concept-analysis.html
   "v-ac21292a": () => import(/* webpackChunkName: "v-ac21292a" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning-framework/tensorflow/tensorflow1.0/basic-concept-analysis/basic-concept-analysis.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/machine-learning-framework/tensorflow/tensorflow1.0/basis/basis.html
@@ -817,10 +811,10 @@ export const pagesData = {
   "v-220a5de0": () => import(/* webpackChunkName: "v-220a5de0" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/numerical-calculation-and-optimization/convex-optimization/convex-set-and-convex-function/convex-set-and-convex-function.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/mathematics/statistics/bayesian-analysis/bayes-probability/bayes-probability.html
   "v-001b4a02": () => import(/* webpackChunkName: "v-001b4a02" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/statistics/bayesian-analysis/bayes-probability/bayes-probability.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/mathematics/statistics/bayesian-analysis/conjugate-prior/conjugate-prior.html
-  "v-688a2835": () => import(/* webpackChunkName: "v-688a2835" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/statistics/bayesian-analysis/conjugate-prior/conjugate-prior.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/mathematics/statistics/bayesian-analysis/probability-and-bayesian-prior/probability-and-bayesian-prior.html
   "v-24728b7e": () => import(/* webpackChunkName: "v-24728b7e" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/statistics/bayesian-analysis/probability-and-bayesian-prior/probability-and-bayesian-prior.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/mathematics/statistics/bayesian-analysis/conjugate-prior/conjugate-prior.html
+  "v-688a2835": () => import(/* webpackChunkName: "v-688a2835" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/statistics/bayesian-analysis/conjugate-prior/conjugate-prior.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/mathematics/statistics/probability-distribution/beta-distribution/beta-distribution.html
   "v-a8ca7794": () => import(/* webpackChunkName: "v-a8ca7794" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/statistics/probability-distribution/beta-distribution/beta-distribution.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/mathematics/statistics/probability-distribution/dirichlet-distribution/dirichlet-distribution.html
@@ -839,6 +833,12 @@ export const pagesData = {
   "v-11ead915": () => import(/* webpackChunkName: "v-11ead915" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/statistics/variance-and-covariance/sample-variance-unbiased-estimate/sample-variance-unbiased-estimate.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/mathematics/statistics/variance-and-covariance/welford-algorithm-for-updating-variance/welford-algorithm-for-updating-variance.html
   "v-39e38ea7": () => import(/* webpackChunkName: "v-39e38ea7" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/mathematics/statistics/variance-and-covariance/welford-algorithm-for-updating-variance/welford-algorithm-for-updating-variance.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/machine-learning/ensemble-learning/bagging/random-forest/random-forest.html
+  "v-72b930ce": () => import(/* webpackChunkName: "v-72b930ce" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning/ensemble-learning/bagging/random-forest/random-forest.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/machine-learning/ensemble-learning/boosting/adaboost/adaboost.html
+  "v-16d4639c": () => import(/* webpackChunkName: "v-16d4639c" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning/ensemble-learning/boosting/adaboost/adaboost.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/machine-learning/ensemble-learning/boosting/gradient-boosting/gradient-boosting.html
+  "v-99e1f050": () => import(/* webpackChunkName: "v-99e1f050" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning/ensemble-learning/boosting/gradient-boosting/gradient-boosting.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/multimodal-large-model/industry-application/openai/point-e/point-e.html
   "v-4b190d68": () => import(/* webpackChunkName: "v-4b190d68" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/multimodal-large-model/industry-application/openai/point-e/point-e.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/natural-language-processing/large-language-model/industry-application/alibaba/alibaba.html
@@ -1039,16 +1039,16 @@ export const pagesData = {
   "v-2b770030": () => import(/* webpackChunkName: "v-2b770030" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/coding/programing-language/python/grammar/process-control/process-control.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/coding/programing-language/python/grammar/regular-expression/regular-expression.html
   "v-79aa2b88": () => import(/* webpackChunkName: "v-79aa2b88" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/coding/programing-language/python/grammar/regular-expression/regular-expression.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/machine-learning-framework/tensorflow/tensorflow2.0/keras/keras-metrics/keras-metrics.html
+  "v-563b21ed": () => import(/* webpackChunkName: "v-563b21ed" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning-framework/tensorflow/tensorflow2.0/keras/keras-metrics/keras-metrics.html.js").then(({ data }) => data),
+  // path: /docs/machine-learning/machine-learning-framework/tensorflow/tensorflow2.0/keras/keras-optimizer/keras-optimizer.html
+  "v-6b18efc9": () => import(/* webpackChunkName: "v-6b18efc9" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning-framework/tensorflow/tensorflow2.0/keras/keras-optimizer/keras-optimizer.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/machine-learning/ensemble-learning/boosting/gradient-boosting/gbdt/gbdt.html
   "v-31bd4685": () => import(/* webpackChunkName: "v-31bd4685" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning/ensemble-learning/boosting/gradient-boosting/gbdt/gbdt.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/machine-learning/ensemble-learning/boosting/gradient-boosting/light-gbm/light-gbm.html
   "v-473d28ed": () => import(/* webpackChunkName: "v-473d28ed" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning/ensemble-learning/boosting/gradient-boosting/light-gbm/light-gbm.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/machine-learning/ensemble-learning/boosting/gradient-boosting/xgboost/xgboost.html
   "v-93fe5a0a": () => import(/* webpackChunkName: "v-93fe5a0a" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning/ensemble-learning/boosting/gradient-boosting/xgboost/xgboost.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/machine-learning-framework/tensorflow/tensorflow2.0/keras/keras-metrics/keras-metrics.html
-  "v-563b21ed": () => import(/* webpackChunkName: "v-563b21ed" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning-framework/tensorflow/tensorflow2.0/keras/keras-metrics/keras-metrics.html.js").then(({ data }) => data),
-  // path: /docs/machine-learning/machine-learning-framework/tensorflow/tensorflow2.0/keras/keras-optimizer/keras-optimizer.html
-  "v-6b18efc9": () => import(/* webpackChunkName: "v-6b18efc9" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/machine-learning-framework/tensorflow/tensorflow2.0/keras/keras-optimizer/keras-optimizer.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/natural-language-processing/large-language-model/industry-application/alibaba/gpt3-chinese/gpt3-chinese.html
   "v-3917091d": () => import(/* webpackChunkName: "v-3917091d" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/natural-language-processing/large-language-model/industry-application/alibaba/gpt3-chinese/gpt3-chinese.html.js").then(({ data }) => data),
   // path: /docs/machine-learning/natural-language-processing/large-language-model/industry-application/baichuan-intelligence/baichuan-7B/baichuan-7B.html
@@ -1119,6 +1119,4 @@ export const pagesData = {
   "v-147031f1": () => import(/* webpackChunkName: "v-147031f1" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/docs/machine-learning/natural-language-processing/large-language-model/industry-application/openai/unsupervised-sentiment-neuron/unsupervised-sentiment-neuron/unsupervised-sentiment-neuron.html.js").then(({ data }) => data),
   // path: /404.html
   "v-3706649a": () => import(/* webpackChunkName: "v-3706649a" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/404.html.js").then(({ data }) => data),
-  // path: /.history/blogs/photograph/Tokyo2023/K1/README_20231229150815.html
-  "v-f55e51ea": () => import(/* webpackChunkName: "v-f55e51ea" */"/home/huahua/workspace/doc/reco-theme-demo/reco-doc2-github/docEverything/.vuepress/.temp/pages/.history/blogs/photograph/Tokyo2023/K1/README_20231229150815.html.js").then(({ data }) => data),
 }

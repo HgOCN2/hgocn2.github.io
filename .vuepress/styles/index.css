@@ -1,0 +1,62 @@
+/* @import url('@vuepress-reco/tailwindcss-config/lib/client/styles/tailwindcss-base.css'); */
+
+
+/* 直角主义 
+code {
+  border-radius: 2px !important;
+}
+
+.code-group {
+  border-radius: 0 !important;
+}
+
+div[class*=language-]{
+  border-radius: 0 !important;
+}
+
+.custom-container {
+  border-radius: 0 !important;
+}
+*/
+
+/* 给图片加个边框 
+p > img {
+  margin: 0 auto;
+  border: 1px solid #dddddd15;;
+  border-radius: 0 !important;
+}*/
+
+/* 选中文字背景 
+::selection {
+  background-color: #FF69B475;
+  color: #fff;
+}
+*/
+/* 右侧边栏宽度 
+.page-catalog-container {
+  width: auto !important;
+  min-width: 14em !important;
+  max-width: 22em !important;
+}
+*/
+
+/* .banner-brand__wrapper .banner-brand__content .title {
+  margin-bottom: 1.5rem !important;
+  background-image: linear-gradient(to right, var(--tw-gradient-stops)) !important;
+  --tw-gradient-from: #ff8800 !important;
+  --tw-gradient-to: rgb(93 103 232 / 0) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+  --tw-gradient-to: #ef4486 !important;
+  text-align: left !important;
+  font-size: 3rem !important;
+  line-height: 1 !important;
+} */
+
+/* .banner-brand__wrapper .banner-brand__content .title {
+  --tw-gradient-from: #ff8800 !important;
+  --tw-gradient-to: #7244ef !important;
+} */
+
+/* .banner-brand__wrapper .banner-brand__content .title {
+  @apply bg-gradient-to-r from-orange-500 to-purple-800;
+} */
