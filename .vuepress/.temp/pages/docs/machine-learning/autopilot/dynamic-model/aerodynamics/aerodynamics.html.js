@@ -1,1 +1,0 @@
-export const data = JSON.parse("{\"key\":\"v-2a6d52f4\",\"path\":\"/docs/machine-learning/autopilot/dynamic-model/aerodynamics/aerodynamics.html\",\"title\":\"空气动力学\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/autopilot/dynamic-model/aerodynamics/aerodynamics.md\"}")

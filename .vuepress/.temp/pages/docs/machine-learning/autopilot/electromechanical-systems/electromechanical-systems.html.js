@@ -1,1 +1,0 @@
-export const data = JSON.parse("{\"key\":\"v-572ea8ba\",\"path\":\"/docs/machine-learning/autopilot/electromechanical-systems/electromechanical-systems.html\",\"title\":\"机电系统\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/autopilot/electromechanical-systems/electromechanical-systems.md\"}")

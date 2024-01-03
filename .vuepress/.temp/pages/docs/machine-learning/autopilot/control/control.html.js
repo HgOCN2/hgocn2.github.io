@@ -1,1 +1,0 @@
-export const data = JSON.parse("{\"key\":\"v-acdbc1b8\",\"path\":\"/docs/machine-learning/autopilot/control/control.html\",\"title\":\"控制\",\"lang\":\"en-US\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"docs/machine-learning/autopilot/control/control.md\"}")
