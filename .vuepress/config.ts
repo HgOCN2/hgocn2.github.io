@@ -51,8 +51,8 @@ export default defineUserConfig({
               text: "卷五：伊豆篇",
               children: [
                 { text: "始发：伊豆北川", link: "/blogs/photograph/Tokyo2023/izu/hokkawa" },
-                { text: "途径：爪木崎的黄昏", link: "/blogs/photograph/Tokyo2023/izu/tsumekizaki" },
-                { text: "途径：川奈海水浴场", link: "/blogs/photograph/Tokyo2023/izu/kawana" },
+                { text: "途经：爪木崎的黄昏", link: "/blogs/photograph/Tokyo2023/izu/tsumekizaki" },
+                { text: "途经：川奈海水浴场", link: "/blogs/photograph/Tokyo2023/izu/kawana" },
                 { text: "终点站：城崎海岸徒步", link: "/blogs/photograph/Tokyo2023/izu/jogasaki" },
               ], 
             },
