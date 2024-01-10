@@ -43,8 +43,19 @@ export default defineUserConfig({
         {
           text: "东京2023",
           children: [
-            { text: "卷一：东京市区篇", link: "/blogs/photograph/Tokyo2023/K1" },
-            { text: "卷二：湘南篇", link: "/blogs/photograph/Tokyo2023/K2" },
+            { text: "卷一：东京市区篇", children: [{text: "迷失东京", link: "/blogs/photograph/Tokyo2023/tokyo"},],},
+            { text: "卷二：湘南篇", children: [{text: "湘南蓝", link: "/blogs/photograph/Tokyo2023/syounan"},],},
+            { text: "卷三：横滨篇", children: [{text: "横滨港", link: "/blogs/photograph/Tokyo2023/yokohama"},],},
+            { text: "卷四：热海篇", children: [{text: "热海氲氤", link: "/blogs/photograph/Tokyo2023/atami"},],},
+            { 
+              text: "卷五：伊豆篇",
+              children: [
+                { text: "始发：伊豆北川", link: "/blogs/photograph/Tokyo2023/izu/hokkawa" },
+                { text: "途径：爪木崎的黄昏", link: "/blogs/photograph/Tokyo2023/izu/tsumekizaki" },
+                { text: "途径：川奈海水浴场", link: "/blogs/photograph/Tokyo2023/izu/kawana" },
+                { text: "终点站：城崎海岸徒步", link: "/blogs/photograph/Tokyo2023/izu/jogasaki" },
+              ], 
+            },
           ],
         },
         // {

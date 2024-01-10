@@ -1,5 +1,5 @@
 ---
-title: VOL.1 东京市区篇
+title: VOL.1 迷失东京
 date: 2023/12/8
 tags:
  - TOKYO2023
@@ -7,7 +7,7 @@ categories:
  - 摄影集
 ---
 
-> 第一卷是东京市区篇，主要记录了一些在东京市区内的影像，和生长在东京市内复杂的交通系统上的电车一起呼吸晚秋的凉风。
+> 本卷主要记录了一些在东京市区内的影像，和生长在东京市内复杂的交通系统上的电车一起呼吸晚秋的凉风。
 
 
 
@@ -94,3 +94,35 @@ categories:
 ![35860014](https://cdn.jsdelivr.net/gh/HgOCN2/picx-images-hosting@master/M1/35860014.3qpnx13qjqc0.avif)
 
 ![35860001](https://cdn.jsdelivr.net/gh/HgOCN2/picx-images-hosting@master/M1/35860001.6h1chj7tsxc0.avif)
+
+![35860013](https://cdn.jsdelivr.net/gh/HgOCN2/picx-images-hosting@master/M1/35860013.4ot7qswwsjs0.webp)
+
+
+![35860001](https://cdn.jsdelivr.net/gh/HgOCN2/picx-images-hosting@master/M1/35860001.68foe552zvw0.webp)
+
+![35860002](https://cdn.jsdelivr.net/gh/HgOCN2/picx-images-hosting@master/M1/35860002.5dgysp4akrg0.webp)
+
+![35860003](https://cdn.jsdelivr.net/gh/HgOCN2/picx-images-hosting@master/M1/35860003.6unzqxnvl400.webp)
+
+![35860004](https://cdn.jsdelivr.net/gh/HgOCN2/picx-images-hosting@master/M1/35860004.5jnaqlx094g0.webp)
+
+![35860005](https://cdn.jsdelivr.net/gh/HgOCN2/picx-images-hosting@master/M1/35860005.6u43puh2fvc0.webp)
+
+![35860006](https://cdn.jsdelivr.net/gh/HgOCN2/picx-images-hosting@master/M1/35860006.t0itqfs4cyo.webp)
+
+![35860014](https://cdn.jsdelivr.net/gh/HgOCN2/picx-images-hosting@master/M1/35860014.1sbletqz3akg.webp)
+
+![35860015](https://cdn.jsdelivr.net/gh/HgOCN2/picx-images-hosting@master/M1/35860015.4dorfkud2po0.webp)
+
+![35860016](https://cdn.jsdelivr.net/gh/HgOCN2/picx-images-hosting@master/M1/35860016.6kd2uike5ww0.webp)
+
+![35860017](https://cdn.jsdelivr.net/gh/HgOCN2/picx-images-hosting@master/M1/35860017.56qqtp4rr680.webp)
+
+![35860018](https://cdn.jsdelivr.net/gh/HgOCN2/picx-images-hosting@master/M1/35860018.wt6viet531c.webp)
+
+![35860020](https://cdn.jsdelivr.net/gh/HgOCN2/picx-images-hosting@master/M1/35860020.n6efdryld4g.webp)
+
+![35860021](https://cdn.jsdelivr.net/gh/HgOCN2/picx-images-hosting@master/M1/35860021.5hqrmi224mc0.webp)
+
+![35860024](https://cdn.jsdelivr.net/gh/HgOCN2/picx-images-hosting@master/M1/35860024.3kp54315s2g0.webp)
+

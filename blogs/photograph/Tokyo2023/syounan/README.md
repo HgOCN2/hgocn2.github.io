@@ -1,5 +1,5 @@
 ---
-title: VOL.2 湘南篇
+title: VOL.2 湘南蓝
 date: 2023/12/8
 tags:
  - TOKYO2023
