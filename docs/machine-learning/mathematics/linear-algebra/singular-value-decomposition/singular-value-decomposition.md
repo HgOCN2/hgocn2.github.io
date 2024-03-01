@@ -13,7 +13,7 @@
 
 ![lena](pic/lena.jpg)![lena-whole](pic/lena-whole.jpg)
 
-[福利：女神lena的高清裸照](http://www.lenna.org/full/len_full.html)
+[lena完整图](http://www.lenna.org/full/len_full.html)
 
 工程里，用一些比较简单的东西去表达一个复杂的东西，是很有用的。对应到数学，比如一个复杂的函数，我们可以用泰勒级数去模拟他，这样泰勒级数前几项，就可以近似当做这个函数的值。更自然的是三角函数的级数去模拟一个函数， 工具是傅里叶分析。**在矩阵来说，我们想用一个简单的矩阵，或者说几个数字，去代表一个复杂的矩阵。奇异值就是很好的一个选择**。
 
